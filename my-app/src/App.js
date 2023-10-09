@@ -10,13 +10,13 @@ export default function App() {
 <div class="container">
 
     <img id="Logo" src={require('./logo.png')} alt="img" />
-    <div className="Frame1">
+
 <Products />
     </div>
 
     </div>
 
-</div>
+
     
 </>
 
