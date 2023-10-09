@@ -1,0 +1,33 @@
+/* CSS (Products.css) */
+.Productsitem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* จัดกึ่งกลางตามแนวนอน */
+    align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
+    height: 75vh; /* ให้ความสูงเต็มหน้าจอ */
+  }
+  
+
+  #Logo1, #Logo2, #Logo3 {
+    max-width: 100%;
+    margin: 3%; /* เพิ่มระยะห่างรอบรูปภาพ */
+  }
+
+  @media screen and (max-width: 480px) {
+    #Logo1, #Logo2, #Logo3 {
+      max-width: 40%; /* ปรับขนาดรูปภาพเมื่อหน้าจอเป็นแนวดิ่ง */
+    }
+
+     .Productsitem {
+          flex-direction: row; /* แสดงแนวดิ่งเมื่อหน้าจอต่ำกว่า 480px */
+          height: 75vh; /* ยกเลิกความสูงเต็มหน้าจอ */
+    }
+
+    #Logo1, #Logo2, #Logo3 {
+        margin: 8%; /* เพิ่มระยะห่างรอบรูปภาพ */
+      }
+
+
+}
+
+  
