@@ -6,7 +6,7 @@ export default function Index() {
     <div>
            <div className="Card2">
                   <img id="Logo2" src={require("./combatshirt.png")} alt="img" />
-                  <h5>T-shirt</h5>
+                  <h5>Combatshirt</h5>
             </div>
     </div>
   )

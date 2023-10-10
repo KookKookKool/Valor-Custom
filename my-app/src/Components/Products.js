@@ -2,9 +2,9 @@
 
 import React from "react";
 import "../Components/Products.css";
-import Card1 from "../Components/T-shirt/Index";
-import Card2 from "../Components/Combatshirt/Index"
-import Card3 from "../Components/Cup/Index"
+import Card1 from "../T-shirt/Index";
+import Card2 from "../Combatshirt/Index"
+import Card3 from "../Cup/Index"
 
 
 export default function Products() {
@@ -17,7 +17,6 @@ export default function Products() {
           <div>
             <Card1/>
             </div>
-
             <div>
             <Card2/>
             </div>
