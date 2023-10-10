@@ -11,7 +11,7 @@
 
 #Logo{
   margin-bottom: 3%;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 .container {
@@ -19,6 +19,7 @@
   flex-direction: column; 
   justify-content: center; 
   align-items: center; 
+  margin-bottom: 10%;
 
 }
 
