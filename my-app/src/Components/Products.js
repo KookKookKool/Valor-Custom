@@ -13,17 +13,17 @@ export default function Products() {
       
       <div className="Frame1">
       <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
-          <div className="Productsitem">
+          <ul className="Productsitem">
           <div>
             <Card1/>
             </div>
             <div>
             <Card2/>
             </div>
-            <div >
+            <div>
             <Card3/>
             </div>
-          </div>
+          </ul>
 
       </div>
     </div>
