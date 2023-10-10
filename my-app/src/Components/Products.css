@@ -25,13 +25,10 @@
     height: 60vh; /* ให้ความสูงเต็มหน้าจอ */
     margin-top: -38px;
     gap: 8%;
+    margin-inline-end: 40px;
   }
-  .ul{
 
-padding-right: 40px;
-  }
   
-
 
   @media screen and (max-width: 480px) {
     /*#Logo1, #Logo2, #Logo3 {
