@@ -2,6 +2,9 @@
 
 import React from "react";
 import "../Components/Products.css";
+import Card1 from "../Components/T-shirt/Index";
+import Card2 from "../Components/Combatshirt/Index"
+import Card3 from "../Components/Cup/Index"
 
 
 export default function Products() {
@@ -11,19 +14,15 @@ export default function Products() {
       <div className="Frame1">
       <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
           <div className="Productsitem">
-            
-                <div className="Card1">
-                  <img id="Logo1" src={require("./t-shirt.png")} alt="img" />
-                  <h5>T-shirt</h5>
-                </div>
-
-            <div className="Card2">
-              <img id="Logo2" src={require("./combatshirt.png")} alt="img" />
-              <h5>Cambatshirt</h5>
+          <div>
+            <Card1/>
             </div>
-            <div className="Card3">
-              <img id="Logo3" src={require("./cup.png")} alt="img" />
-              <h5>Cup</h5>
+
+            <div>
+            <Card2/>
+            </div>
+            <div >
+            <Card3/>
             </div>
           </div>
 

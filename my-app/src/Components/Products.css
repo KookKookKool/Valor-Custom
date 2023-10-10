@@ -24,96 +24,35 @@
     align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
     height: 60vh; /* ให้ความสูงเต็มหน้าจอ */
     margin-top: -38px;
+    gap: 8%;
   }
   
 
-  .Card1 {
-    margin: 8%; /* Add your desired spacing here */
-    display: flex; 
-    flex-direction: column;
-    align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
-    transition: all 0.3s;
-  }
-
-
-  .Card2 {
-    margin: 8%; /* Add your desired spacing here */
-    display: flex; 
-    flex-direction: column;
-    align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
-    transition: all 0.3s;
-  }
-
-  .Card3 {
-    margin: 8%; /* Add your desired spacing here */
-    display: flex; 
-    flex-direction: column;
-    align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
-    transition: all 0.3s;
-  }
-
-  .Card1:hover {
-    background: linear-gradient(180deg, rgba(213, 204, 179, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%);
-    border-image-slice: 8; /* กำหนดขอบกรอบ */
-    border-width: 2px; /* ความหนาขอบกรอบ */
-    border-style: solid; /* สไตล์ขอบกรอบ */
-    border-radius: 24px; /* ความโค้งขอบกรอบ */
-    margin: 8%;
-    box-shadow: 0px 9px 7px rgba(0, 0, 0, 0.25);
-    transform: scale(1.2); 
-  }
-
-  .Card2:hover {
-    background: linear-gradient(180deg, rgba(213, 204, 179, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%);
-    border-image-slice: 8; /* กำหนดขอบกรอบ */
-    border-width: 2px; /* ความหนาขอบกรอบ */
-    border-style: solid; /* สไตล์ขอบกรอบ */
-    border-radius: 24px; /* ความโค้งขอบกรอบ */
-    margin: 8%;
-    box-shadow: 0px 9px 7px rgba(0, 0, 0, 0.25);
-    transform: scale(1.2); 
-  }
-
-  .Card3:hover {
-    background: linear-gradient(180deg, rgba(213, 204, 179, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%);
-    border-image-slice: 8; /* กำหนดขอบกรอบ */
-    border-width: 2px; /* ความหนาขอบกรอบ */
-    border-style: solid; /* สไตล์ขอบกรอบ */
-    border-radius: 24px; /* ความโค้งขอบกรอบ */
-    margin: 8%;
-    box-shadow: 0px 9px 7px rgba(0, 0, 0, 0.25);
-    transform: scale(1.2); 
-  }
-
-#Logo1, #Logo2, #Logo3 {
-  width: 150px;
-  height: 130px;
-}
 
   @media screen and (max-width: 480px) {
-    #Logo1, #Logo2, #Logo3 {
+    /*#Logo1, #Logo2, #Logo3 {
 
 
-    }
+    }*/
 
      .Productsitem {
           flex-direction: row; /* แสดงแนวดิ่งเมื่อหน้าจอต่ำกว่า 480px */
           height: 850px; /* ยกเลิกความสูงเต็มหน้าจอ */
-
+          gap: 4%;
     }
 
 }
 
 @media screen and (max-width: 551px) {
-  #Logo1, #Logo2, #Logo3 {
+ /* #Logo1, #Logo2, #Logo3 {
 
 
-  }
+  }*/
 
    .Productsitem {
         flex-direction: row; /* แสดงแนวดิ่งเมื่อหน้าจอต่ำกว่า 480px */
         height: 850px; /* ยกเลิกความสูงเต็มหน้าจอ */
-
+        gap: 6%;
   }
 
 }
