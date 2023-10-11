@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Style.css";
 import Navigation from "../Components/Navigation";
+import Back from "../Asset/icon/Back.png";
 
 function White({ setProductsitemOpen }) {
   const handleGoBack = () => {
@@ -14,7 +15,9 @@ function White({ setProductsitemOpen }) {
 
   return (
     <div>
-<button onClick={handleGoBack}>ย้อนกลับ</button>
+      <button id="Bnt1" onClick={handleGoBack}>
+        <img src={Back} alt="Back" />
+      </button>
 
 <Navigation/>
 
