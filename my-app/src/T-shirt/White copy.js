@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import "./Style.css";
-import Navigation from "../Components/Navigation";
+
 
 function White({ setProductsitemOpen }) {
   const handleGoBack = () => {
@@ -14,14 +14,9 @@ function White({ setProductsitemOpen }) {
 
   return (
     <div>
-<button onClick={handleGoBack}>ย้อนกลับ</button>
-
-<Navigation/>
-
-
       <h2>White T-shirt</h2>
-
-
+      {/* เนื้อหาของหน้า White ที่คุณต้องการ */}
+      <button onClick={handleGoBack}>ย้อนกลับ</button>
     </div>
   );
 }
