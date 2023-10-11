@@ -26,6 +26,11 @@
     margin-inline-end: 40px;
   }
 
+  a:-webkit-any-link {
+    color: black; /* ใช้สีที่ถูกอิงจากส่วนแม่ */
+    cursor: none; /* กำหนดค่าเริ่มต้นของ cursor */
+  }
+
   @media screen and (max-width: 480px) {
     /*#Logo1, #Logo2, #Logo3 {
 
