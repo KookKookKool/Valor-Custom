@@ -41,7 +41,7 @@ export default function Products() {
         <Routes>
           <Route path="/T-shirt/White" element={<White setProductsitemOpen={setIsProductsitemOpen} />} />
           <Route path="/Combatshirt/Combatshirt" element={<Combatshirt setProductsitemOpen={setIsProductsitemOpen} />} />
-          <Route path="Cup/Cup" element={<Cup setProductsitemOpen={setIsProductsitemOpen} />} />
+          <Route path="/Cup/Cup" element={<Cup setProductsitemOpen={setIsProductsitemOpen} />} />
         </Routes>
         <button onClick={handleGoBack} style={{ display: "none" }}>ย้อนกลับ</button>
       </div>
