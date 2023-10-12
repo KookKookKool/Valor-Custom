@@ -15,7 +15,7 @@ function White({ setProductsitemOpen }) {
 
   return (
     <div>
-      <button id="Bnt1" onClick={handleGoBack}>
+      <button id="BntBack" onClick={handleGoBack}>
         <img src={Back} alt="Back" />
       </button>
 
