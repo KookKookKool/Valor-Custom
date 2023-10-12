@@ -11,7 +11,12 @@
   .Icon img{
     border-radius: 48%;
     box-shadow: 0px 9px 7px rgba(0, 0, 0, 0.25);
-    margin-bottom: 14%;
+
+  }
+
+  .Icon {
+
+
   }
 
   .Icon img:hover{
@@ -21,4 +26,12 @@
   .Menu-iconsWhite {
         display: flex;
         flex-direction: column;
+        gap: 10px;
+        align-items: center;
+  }
+
+  .Icon.active {
+    border: 4px solid red; /* เพิ่มเส้นขอบสีแดงเมื่อเลือก */
+    height: 51px;
+    border-radius: 30px;
   }

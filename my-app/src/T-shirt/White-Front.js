@@ -20,6 +20,7 @@ function WhiteFront({ setProductsitemOpen }) {
 
   return (
     <>
+    <div className="Layout">
       <div className="Box">
         <div className="Box2">
           <button id="BntBack" onClick={handleGoBack}>
@@ -34,6 +35,7 @@ function WhiteFront({ setProductsitemOpen }) {
           <MenuW />
         </div>
       </div>
+    </div>
     </>
   );
 }
