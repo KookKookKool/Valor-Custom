@@ -9,6 +9,9 @@ import White from "../T-shirt/White-Front";
 import Combatshirt from "../Combatshirt/Combatshirt";
 import Cup from "../Cup/Cup";
 
+import Black from "../T-shirt/Black-Front";
+import Navy from "../T-shirt/Navy-Front";
+
 export default function Products() {
   const [isProductsitemOpen, setIsProductsitemOpen] = useState(true);
 
@@ -39,9 +42,14 @@ export default function Products() {
           </div>
         </ul>
         <Routes>
+
           <Route path="/T-shirt/White-Front" element={<White setProductsitemOpen={setIsProductsitemOpen} />} />
           <Route path="/Combatshirt/Combatshirt" element={<Combatshirt setProductsitemOpen={setIsProductsitemOpen} />} />
           <Route path="/Cup/Cup" element={<Cup setProductsitemOpen={setIsProductsitemOpen} />} />
+
+          <Route path="/T-shirt/Black-Front" element={<Black setProductsitemOpen={setIsProductsitemOpen} />} />
+          <Route path="/T-shirt/Navy-Front" element={<Navy setProductsitemOpen={setIsProductsitemOpen} />} />
+            
         </Routes>
         <button onClick={handleGoBack} style={{ display: "none" }}>ย้อนกลับ</button>
       </div>

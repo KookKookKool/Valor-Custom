@@ -3,11 +3,11 @@ import React from 'react';
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
-import BlackFrontMockup from "../Asset/T-shirt/Black-Front.png";
+import NavyFrontMockup from "../Asset/T-shirt/Navy-Front.png";
 
 import MenuW from "../Components/MenuWhite";
 
-function BlackFront({ setProductsitemOpen }) {
+function NavyFront({ setProductsitemOpen }) {
   const handleGoBack = () => {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
@@ -30,7 +30,7 @@ function BlackFront({ setProductsitemOpen }) {
             <Navigation />
           </div>
         </div>
-        <img id="MockupFront" src={BlackFrontMockup} alt="Mockup" />
+        <img id="MockupFront" src={NavyFrontMockup} alt="Mockup" />
         <div className="Box3">
           <MenuW />
         </div>
@@ -40,4 +40,4 @@ function BlackFront({ setProductsitemOpen }) {
   );
 }
 
-export default BlackFront;
+export default NavyFront;

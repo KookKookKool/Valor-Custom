@@ -25,12 +25,12 @@ const Navigation = () => {
           </Link>
         </div>
         <div className={`Icon ${selectedIcon === "Black" ? "active" : ""}`}>
-          <Link to="/" onClick={() => handleIconClick("Black")}>
+          <Link to="/T-shirt/Black-Front" onClick={() => handleIconClick("Black")}>
             <img src={Black} alt="BlackIcon" />
           </Link>
         </div>
         <div className={`Icon ${selectedIcon === "Navy" ? "active" : ""}`}>
-          <Link to="/" onClick={() => handleIconClick("Navy")}>
+          <Link to="/T-shirt/Navy-Front" onClick={() => handleIconClick("Navy")}>
             <img src={Navy} alt="NavyIcon" />
           </Link>
         </div>
