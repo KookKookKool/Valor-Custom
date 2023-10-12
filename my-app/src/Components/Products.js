@@ -5,7 +5,7 @@ import Card1 from "../T-shirt/Index";
 import Card2 from "../Combatshirt/Index";
 import Card3 from "../Cup/Index";
 
-import White from "../T-shirt/White";
+import White from "../T-shirt/White-Front";
 import Combatshirt from "../Combatshirt/Combatshirt";
 import Cup from "../Cup/Cup";
 
@@ -23,7 +23,7 @@ export default function Products() {
         <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
         <ul className="Productsitem" style={{ display: isProductsitemOpen ? "" : "none" }}>
           <div className="Link">
-            <Link to="/T-shirt/White" onClick={() => setIsProductsitemOpen(false)}>
+            <Link to="/T-shirt/White-Front" onClick={() => setIsProductsitemOpen(false)}>
               <Card1 />
             </Link>
           </div>
@@ -39,7 +39,7 @@ export default function Products() {
           </div>
         </ul>
         <Routes>
-          <Route path="/T-shirt/White" element={<White setProductsitemOpen={setIsProductsitemOpen} />} />
+          <Route path="/T-shirt/White-Front" element={<White setProductsitemOpen={setIsProductsitemOpen} />} />
           <Route path="/Combatshirt/Combatshirt" element={<Combatshirt setProductsitemOpen={setIsProductsitemOpen} />} />
           <Route path="/Cup/Cup" element={<Cup setProductsitemOpen={setIsProductsitemOpen} />} />
         </Routes>

@@ -13,6 +13,8 @@ const Navigation = () => {
    
     <nav className="navigation">
     <h4 className="HeaderNavi">COLORS</h4>
+
+    <div className="Menu-iconsWhite">
     <div className="Icon">
       <Link to="/">
         <img src={White} alt="WhiteIcon" />
@@ -32,6 +34,7 @@ const Navigation = () => {
       <Link to="/">
         <img src={Green} alt="GreenIcon" />
       </Link>
+      </div>
     </div>
     </nav>
 
