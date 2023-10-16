@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./MenuWhiteRight.css"; // สร้างไฟล์ CSS สำหรับสไตล์ Navigation2
+import "./MenuBlack.css"; // สร้างไฟล์ CSS สำหรับสไตล์ Navigation2
 
 const MenuW = () => {
   return (
@@ -8,16 +8,16 @@ const MenuW = () => {
       <h4 className="HeaderMenuWhite">MENU</h4>
 
       <div className="Menu-icons">
-        <Link to="/T-shirt/White-Front">
-          <div className="Btn11">หน้า</div>
+        <Link to="/T-shirt/Black-Front">
+          <div className="Btn1">หน้า</div>
         </Link>
-        <Link to="/T-shirt/White-Back">
+        <Link to="/T-shirt/Black-Back">
           <div className="Btn22">หลัง</div>
         </Link>
-        <Link to="/T-shirt/White-Right">
-          <div className="Btn3">แขนขวา</div>
+        <Link to="/T-shirt/Black-Right">
+          <div className="Btn33">แขนขวา</div>
         </Link>
-        <Link to="/T-shirt/White-Left">
+        <Link to="/T-shirt/Black-Left">
           <div className="Btn44">แขนซ้าย</div>
         </Link>
       </div>

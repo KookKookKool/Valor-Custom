@@ -10,10 +10,15 @@ import WhiteBack from "../T-shirt/White-Back";
 import WhiteRight from "../T-shirt/White-Right";
 import WhiteLeft from "../T-shirt/White-Left";
 
+import Black from "../T-shirt/Black-Front";
+import BlackBack from "../T-shirt/Black-Back";
+import BlackRight from "../T-shirt/Black-Right";
+import BlackLeft from "../T-shirt/Black-Left";
+
 import Combatshirt from "../Combatshirt/Combatshirt";
 import Cup from "../Cup/Cup";
 
-import Black from "../T-shirt/Black-Front";
+
 import Navy from "../T-shirt/Navy-Front";
 
 
@@ -48,16 +53,21 @@ export default function Products() {
           </div>
         </ul>
         <Routes>
-
-          <Route path="/T-shirt/White-Front" element={<White setProductsitemOpen={setIsProductsitemOpen} />} />
+          {/*เสื้อขาว*/}
+          <Route path="/T-shirt/White-Front" element={<White setProductsitemOpen={setIsProductsitemOpen} />} /> 
           <Route path="/T-shirt/White-Back" element={<WhiteBack setProductsitemOpen={setIsProductsitemOpen} />} />
           <Route path="/T-shirt/White-Right" element={<WhiteRight setProductsitemOpen={setIsProductsitemOpen} />} /> 
-          <Route path="/T-shirt/White-Left" element={<WhiteLeft setProductsitemOpen={setIsProductsitemOpen} />} />          
+          <Route path="/T-shirt/White-Left" element={<WhiteLeft setProductsitemOpen={setIsProductsitemOpen} />} />    
+
+          {/*เสื้อดำ*/}          
+          <Route path="/T-shirt/Black-Front" element={<Black setProductsitemOpen={setIsProductsitemOpen} />} />      
+          <Route path="/T-shirt/Black-Back" element={<BlackBack setProductsitemOpen={setIsProductsitemOpen} />} /> 
+          <Route path="/T-shirt/Black-Right" element={<BlackRight setProductsitemOpen={setIsProductsitemOpen} />} /> 
+          <Route path="/T-shirt/Black-Left" element={<BlackLeft setProductsitemOpen={setIsProductsitemOpen} />} /> 
 
           <Route path="/Combatshirt/Combatshirt" element={<Combatshirt setProductsitemOpen={setIsProductsitemOpen} />} />
           <Route path="/Cup/Cup" element={<Cup setProductsitemOpen={setIsProductsitemOpen} />} />
 
-          <Route path="/T-shirt/Black-Front" element={<Black setProductsitemOpen={setIsProductsitemOpen} />} />
           <Route path="/T-shirt/Navy-Front" element={<Navy setProductsitemOpen={setIsProductsitemOpen} />} />
 
 
