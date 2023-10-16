@@ -4,8 +4,7 @@ import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
 import WhiteRightMockup from "../Asset/T-shirt/White-Right.png";
-
-import MenuWhiteRight from "../Components/White/MenuWhiteright";
+import MenuWhiteRight from "../Components/White/MenuWhiteRight";
 
 function WhiteRight({ setProductsitemOpen }) {
   const handleGoBack = () => {
