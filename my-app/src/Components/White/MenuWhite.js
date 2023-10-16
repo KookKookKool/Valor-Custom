@@ -8,17 +8,17 @@ const MenuW = () => {
       <h4 className="HeaderMenuWhite">MENU</h4>
 
       <div className="Menu-icons">
-        <Link to="/">
-          <div className="Btn">หน้า</div>
+        <Link to="/T-shirt/White-Front">
+          <div className="Btn1">หน้า</div>
         </Link>
-        <Link to="/">
-          <div className="Btn">หลัง</div>
+        <Link to="/T-shirt/White-Back">
+          <div className="Btn22">หลัง</div>
         </Link>
-        <Link to="/">
-          <div className="Btn">แขนขวา</div>
+        <Link to="/T-shirt/White-Right">
+          <div className="Btn33">แขนขวา</div>
         </Link>
-        <Link to="/">
-          <div className="Btn">แขนซ้าย</div>
+        <Link to="/T-shirt/White-Left">
+          <div className="Btn44">แขนซ้าย</div>
         </Link>
       </div>
 

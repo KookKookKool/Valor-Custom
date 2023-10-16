@@ -34,6 +34,20 @@ button {
     margin-top: 100px;
   }
 
+  #MockupBack {
+    width: 280px;
+    margin-top: 100px;
+  }
+
+  #MockupRight {
+    width: 280px;
+    margin-top: 100px;
+  }
+
+  #MockupLeft {
+    width: 280px;
+    margin-top: 100px;
+  }
   /*.Box2 {
 
   }

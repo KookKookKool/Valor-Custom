@@ -5,7 +5,7 @@ import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
 import NavyFrontMockup from "../Asset/T-shirt/Navy-Front.png";
 
-import MenuW from "../Components/MenuWhite";
+import MenuW from "../Components/White/MenuWhite";
 
 function NavyFront({ setProductsitemOpen }) {
   const handleGoBack = () => {

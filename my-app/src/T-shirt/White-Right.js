@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
+
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
-import BlackFrontMockup from "../Asset/T-shirt/Black-Front.png";
+import WhiteRightMockup from "../Asset/T-shirt/White-Right.png";
 
-import MenuW from "../Components/White/MenuWhite";
+import MenuWhiteRight from "../Components/White/MenuWhiteright";
 
-function BlackFront({ setProductsitemOpen }) {
+function WhiteRight({ setProductsitemOpen }) {
   const handleGoBack = () => {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล
+      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล                                                                               
       window.history.back();
     }
   };
-  const [selectedIcon, setSelectedIcon] = useState("Black");
 
   return (
     <>
@@ -30,9 +30,9 @@ function BlackFront({ setProductsitemOpen }) {
             <Navigation />
           </div>
         </div>
-        <img id="MockupFront" src={BlackFrontMockup} alt="Mockup" />
+        <img id="MockupRight" src={WhiteRightMockup} alt="Mockup" />
         <div className="Box3">
-          <MenuW />
+          <MenuWhiteRight />
         </div>
       </div>
     </div>
@@ -40,4 +40,4 @@ function BlackFront({ setProductsitemOpen }) {
   );
 }
 
-export default BlackFront;
+export default WhiteRight;

@@ -5,7 +5,7 @@ import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
 import WhiteFrontMockup from "../Asset/T-shirt/White-Front.png";
 
-import MenuW from "../Components/MenuWhite";
+import MenuW from "../Components/White/MenuWhite";
 
 function WhiteFront({ setProductsitemOpen }) {
   const handleGoBack = () => {
@@ -13,7 +13,7 @@ function WhiteFront({ setProductsitemOpen }) {
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล
+      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล                                                                               
       window.history.back();
     }
   };
