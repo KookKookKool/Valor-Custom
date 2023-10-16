@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { useState } from "react";
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
@@ -17,6 +16,7 @@ function BlackFront({ setProductsitemOpen }) {
       window.history.back();
     }
   };
+  const [selectedIcon, setSelectedIcon] = useState("Black");
 
   return (
     <>
