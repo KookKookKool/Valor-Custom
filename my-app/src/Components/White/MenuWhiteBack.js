@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./MenuWhiteBack.css";
 
 const MenuW = () => {
-  return (
+  return ( 
     <nav className="MenuW">
       <h4 className="HeaderMenuWhite">MENU</h4>
 
