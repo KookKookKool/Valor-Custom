@@ -15,11 +15,16 @@ import BlackBack from "../T-shirt/Black-Back";
 import BlackRight from "../T-shirt/Black-Right";
 import BlackLeft from "../T-shirt/Black-Left";
 
+import Navy from "../T-shirt/Navy-Front";
+import NavyBack from "../T-shirt/Navy-Back";
+import NavyRight from "../T-shirt/Navy-Right";
+import NavyLeft from "../T-shirt/Navy-Left";
+
 import Combatshirt from "../Combatshirt/Combatshirt";
 import Cup from "../Cup/Cup";
 
 
-import Navy from "../T-shirt/Navy-Front";
+
 
 
 
@@ -65,10 +70,16 @@ export default function Products() {
           <Route path="/T-shirt/Black-Right" element={<BlackRight setProductsitemOpen={setIsProductsitemOpen} />} /> 
           <Route path="/T-shirt/Black-Left" element={<BlackLeft setProductsitemOpen={setIsProductsitemOpen} />} /> 
 
+          {/*เสื้อกรม*/}    
+          <Route path="/T-shirt/Navy-Front" element={<Navy setProductsitemOpen={setIsProductsitemOpen} />} />
+          <Route path="/T-shirt/Navy-Back" element={<NavyBack setProductsitemOpen={setIsProductsitemOpen} />} />
+          <Route path="/T-shirt/Navy-Right" element={<NavyRight setProductsitemOpen={setIsProductsitemOpen} />} />
+          <Route path="/T-shirt/Navy-Left" element={<NavyLeft setProductsitemOpen={setIsProductsitemOpen} />} />
+
           <Route path="/Combatshirt/Combatshirt" element={<Combatshirt setProductsitemOpen={setIsProductsitemOpen} />} />
           <Route path="/Cup/Cup" element={<Cup setProductsitemOpen={setIsProductsitemOpen} />} />
 
-          <Route path="/T-shirt/Navy-Front" element={<Navy setProductsitemOpen={setIsProductsitemOpen} />} />
+
 
 
 

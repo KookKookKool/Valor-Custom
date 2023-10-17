@@ -3,17 +3,17 @@ import React from 'react';
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
-import NavyFrontMockup from "../Asset/T-shirt/Navy-Front.png";
+import NavyBackMockup from "../Asset/T-shirt/Navy-Back.png";
 
-import MenuW from "../Components/Navy/MenuNavy";
+import MenuB from "../Components/Navy/MenuNavyBack";
 
-function NavyFront({ setProductsitemOpen }) {
+function NavyBack({ setProductsitemOpen }) {
   const handleGoBack = () => {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล
+      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล                                                                               
       window.history.back();
     }
   };
@@ -30,9 +30,9 @@ function NavyFront({ setProductsitemOpen }) {
             <Navigation />
           </div>
         </div>
-        <img id="MockupFront" src={NavyFrontMockup} alt="Mockup" />
+        <img id="MockupFront" src={NavyBackMockup} alt="Mockup" />
         <div className="Box3">
-          <MenuW />
+          <MenuB />
         </div>
       </div>
     </div>
@@ -40,4 +40,4 @@ function NavyFront({ setProductsitemOpen }) {
   );
 }
 
-export default NavyFront;
+export default NavyBack;
