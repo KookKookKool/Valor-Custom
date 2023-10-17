@@ -35,7 +35,7 @@ const Navigation = () => {
           </Link>
         </div>
         <div className={`Icon ${selectedIcon === "Green" ? "active" : ""}`}>
-          <Link to="/" onClick={() => handleIconClick("Green")}>
+          <Link to="/T-shirt/Green-Front" onClick={() => handleIconClick("Green")}>
             <img src={Green} alt="GreenIcon" />
           </Link>
         </div>
