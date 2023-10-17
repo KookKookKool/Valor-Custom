@@ -14,10 +14,10 @@ const MenuW = () => {
         <Link to="/T-shirt/Black-Back">
           <div className="Btn22">หลัง</div>
         </Link>
-        <Link to="/T-shirt/White-Right">
+        <Link to="/T-shirt/Black-Right">
           <div className="Btn3">แขนขวา</div>
         </Link>
-        <Link to="/T-shirt/White-Left">
+        <Link to="/T-shirt/Black-Left">
           <div className="Btn44">แขนซ้าย</div>
         </Link>
       </div>

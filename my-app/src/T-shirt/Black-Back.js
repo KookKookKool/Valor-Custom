@@ -5,7 +5,7 @@ import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
 import BlackBackMockup from "../Asset/T-shirt/Black-Back.png";
 
-import MenuW from "../Components/White/MenuWhite";
+import MenuB from "../Components/Black/MenuBlackBack";
 
 function BlackBack({ setProductsitemOpen }) {
   const handleGoBack = () => {
@@ -32,7 +32,7 @@ function BlackBack({ setProductsitemOpen }) {
         </div>
         <img id="MockupFront" src={BlackBackMockup} alt="Mockup" />
         <div className="Box3">
-          <MenuW />
+          <MenuB />
         </div>
       </div>
     </div>
