@@ -4,6 +4,7 @@ import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
 import WhiteFrontMockup from "../Asset/T-shirt/White-Front.png";
+import FieldFull from "../Asset/T-shirt/Field-Full-Black.png";
 
 import MenuW from "../Components/White/MenuWhite";
 
@@ -30,7 +31,13 @@ function WhiteFront({ setProductsitemOpen }) {
             <Navigation />
           </div>
         </div>
+
+        <div className='FieldCustom'>
+        <img id='FieldFull' src={FieldFull} alt="FieldDesign" />
         <img id="MockupFront" src={WhiteFrontMockup} alt="Mockup" />
+
+        </div>
+
         <div className="Box3">
           <MenuW />
         </div>

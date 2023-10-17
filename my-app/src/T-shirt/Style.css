@@ -26,13 +26,31 @@ button {
     height: 60vh;
     margin-top: -140px;
   }
-
- 
-
+  
+  .FieldCustom {
+    position: relative;
+    text-align: center; 
+  }
+  
   #MockupFront {
+    position: relative;
+    z-index: 1; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
+    /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
+    top: 0;
+    left: 0;
     width: 280px;
     margin-top: 100px;
   }
+  
+  #FieldFull {
+    position: absolute;
+    z-index: 2; 
+    display: block;
+    margin: 61% 22%; 
+  }
+  
+
+ 
 
   #MockupBack {
     width: 280px;
