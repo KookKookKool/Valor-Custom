@@ -4,6 +4,7 @@ import White from "../Asset/icon/White.png";
 import Black from "../Asset/icon/Black.png";
 import Navy from "../Asset/icon/Navi.png";
 import Green from "../Asset/icon/Green.png";
+import Upload from "../Upload/Upload1";
 
 import "./Navigation.css";
 
@@ -38,6 +39,9 @@ const Navigation = () => {
           <Link to="/T-shirt/Green-Front" onClick={() => handleIconClick("Green")}>
             <img src={Green} alt="GreenIcon" />
           </Link>
+        </div>
+        <div>
+            <Upload />
         </div>
       </div>
     </nav>

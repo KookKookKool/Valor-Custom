@@ -1,12 +1,10 @@
 .navigation {
     display: flex;
     flex-direction: column; /* กำหนดให้แสดงเป็นแนวดิ่ง */
-    align-items: left; /* จัดตำแหน่งสไตล์ให้กลางจากแนวตั้ง */
+    align-items: center; /* จัดตำแหน่งสไตล์ให้กลางจากแนวตั้ง */
     margin-left: 5%;
   }
-  .HeaderNavi{
-    margin-left: -8px;
-  }
+ 
 
   .Icon img{
     border-radius: 48%;
