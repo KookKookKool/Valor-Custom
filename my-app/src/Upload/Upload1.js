@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import "./Upload1.css"
+import React from "react";
+import "./Upload1.css";
 
 function Upload({ onUpload }) {
-  const [file, setFile] = useState();
-
   function handleChange(e) {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
-      setFile(URL.createObjectURL(selectedFile));
+      // const fileURL = URL.createObjectURL(selectedFile);
       onUpload(selectedFile);
     }
   }
