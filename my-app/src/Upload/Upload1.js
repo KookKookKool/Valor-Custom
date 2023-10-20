@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "./Upload1.css"
 
-function Upload() {
+function Upload({ onUpload }) {
   const [file, setFile] = useState();
 
   function handleChange(e) {
-    console.log(e.target.files);
-    setFile(URL.createObjectURL(e.target.files[0]));
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      setFile(URL.createObjectURL(selectedFile));
+      onUpload(selectedFile);
+    }
   }
 
   return (
@@ -16,11 +19,11 @@ function Upload() {
         id="fileInput"
         accept="image/*"
         onChange={handleChange}
-        style={{ display: "none" }}/>
-        <label htmlFor="fileInput" className="upload-button center-text">
-            อัพโหลดรูปภาพ
-        </label>
-      {file && <img src={file} alt="" />}
+        style={{ display: "none" }}
+      />
+      <label htmlFor="fileInput" className="upload-button center-text">
+        อัพโหลดรูปภาพ
+      </label>
     </div>
   );
 }
