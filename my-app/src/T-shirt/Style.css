@@ -26,53 +26,31 @@ button {
     height: 60vh;
     margin-top: -140px;
   }
-
-
-  /*Design Field*/
+  
   .FieldCustom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* ความสูงของหน้าเว็บทั้งหมดหรือความสูงตามที่คุณต้องการ */
-  }
-  
-  .CustomFront {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #MockupFront {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  #FieldUpload,
-  #FieldDesign {   
-    position: absolute;
-    top: 208px;
-    max-width: 100%;
-    max-height: 100%;
-    z-index: 1; 
-  }
-  #FieldUpload{
-    width: 148px;
-  }
-  
 
+
+  }
   
   #MockupFront {
     position: relative;
-    z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
+    z-index: 1; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
     /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
     top: 0;
     left: 0;
     width: 280px;
     margin-top: 128px;
   }
+  
+  #FieldFull {
+    position: absolute;
+    z-index: 2; 
+    display: block;
+    margin: 4% 22%; 
+  }
+  
+
+ 
 
   #MockupBack {
     width: 280px;

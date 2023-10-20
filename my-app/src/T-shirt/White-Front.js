@@ -38,22 +38,24 @@ function WhiteFront({ setProductsitemOpen }) {
           </div>
 
           <div className="FieldCustom">
-            <div className="CustomFront">
-              <img id="MockupFront" src={WhiteFrontMockup} alt="Mockup" />
-              {uploadedImage ? (
-                <img id="FieldUpload" src={uploadedImage} alt="FieldUpload" />
-              ) : (
-                <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
-              )}
-            </div>
-            <Upload onUpload={handleImageUpload} />
+            <img id="MockupFront" src={WhiteFrontMockup} alt="Mockup" />
+            {uploadedImage ? (
+              <img id="FieldUpload" src={uploadedImage} alt="FieldDesign" />
+            ) : (
+              <img id="FielDesign" src={FieldFull} alt="FieldDesign" />
+            )}
+
+          <div className="BoxCustom">
+          <Upload onUpload={handleImageUpload} />
+          </div>
           </div>
 
-          <div className="Box3">
-            <MenuW />
-          </div>
+
+        <div className="Box3">
+          <MenuW />
         </div>
       </div>
+              </div>
     </>
   );
 }
