@@ -43,7 +43,7 @@ function WhiteFront({ setProductsitemOpen }) {
               {uploadedImage ? (
                 <img id="FieldUpload" src={uploadedImage} alt="FieldUpload" />
               ) : (
-                <img id="FielDesign" src={FieldFull} alt="FieldDesign" />
+                <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
               )}
             </div>
             <Upload onUpload={handleImageUpload} />
