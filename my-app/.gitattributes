@@ -1,0 +1,2 @@
+my-app/public/SQ1.mp4 filter=lfs diff=lfs merge=lfs -text
+my-app/public/SQ1_2.mp4 filter=lfs diff=lfs merge=lfs -text

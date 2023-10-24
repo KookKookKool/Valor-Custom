@@ -21,6 +21,7 @@
   align-items: center; 
   margin-bottom: 10%;
 
+
 }
 
 a {
@@ -31,4 +32,14 @@ a {
 a:hover, a:active {
   text-decoration: none; 
 }
+
+.HomePage {
+  /* รายละเอียด CSS สำหรับ HomePage ตามที่คุณต้องการ */
+}
+
+
+.Content1.visible {
+  display: block; /* แสดง Content1 ถ้ามีคลาส 'visible' */
+}
+
 

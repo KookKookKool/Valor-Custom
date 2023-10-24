@@ -1,0 +1,17 @@
+.video-container {
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .Video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ให้วิดีโอเต็มหน้าจอ */
+  }
+  
+
+  .Video::-webkit-media-controls {
+    display: none;
+  }
