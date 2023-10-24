@@ -1,0 +1,43 @@
+/* App.css */
+.Main {
+  /* กำหนดสีพื้นหลังเป็น linear-gradient ตามที่คุณต้องการ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* สไตล์อื่น ๆ ที่คุณต้องการ */
+}
+
+
+#Logo{
+  margin-bottom: 3%;
+  margin-top: 5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 10%;
+  background: linear-gradient(180deg, black 0%, rgba(255, 255, 255, 0) 100%, white 100%);
+}
+
+a {
+  text-decoration: none; 
+}
+
+
+a:hover, a:active {
+  text-decoration: none; 
+}
+
+.HomePage {
+  /* รายละเอียด CSS สำหรับ HomePage ตามที่คุณต้องการ */
+}
+
+
+.Content1.visible {
+  display: block; /* แสดง Content1 ถ้ามีคลาส 'visible' */
+}
+
+

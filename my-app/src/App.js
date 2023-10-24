@@ -1,16 +1,21 @@
-// App.js
-import React from 'react';
-import '../src/App.css';
-import Products from '../src/Components/Products';
+import React, { useState } from "react";
+import Home from './Home';
+import Main from './Main';
 
 export default function App() {
+  const [isMainVisible, setIsMainVisible] = useState(false);
+
   return (
-    <div className="App">
-      <div className="container">
-        <img id="Logo" src={require('./logo.png')} alt="img" />
-        
-        <Products />
-      </div>
+    <div>
+      {isMainVisible ? (
+        <Main />
+      ) : (
+        <Home />
+      )}
+
+      <button onClick={() => setIsMainVisible(!isMainVisible)}>
+        {isMainVisible ? 'ปิด Home' : 'เปิด Home'}
+      </button>
     </div>
   );
 }
