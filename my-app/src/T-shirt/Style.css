@@ -1,3 +1,16 @@
+#Logo{
+  margin-bottom: 3%;
+  margin-top: 5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 10%;
+  background: linear-gradient(180deg, black 0%, rgba(255, 255, 255, 0) 100%, white 100%);
+}
 
 button {
     background: none;

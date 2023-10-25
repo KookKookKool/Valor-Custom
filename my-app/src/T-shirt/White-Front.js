@@ -7,6 +7,9 @@ import MenuW from "../Components/White/MenuWhite";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่คือการ import 'FieldFull'
 
+
+import "../Components/Products.css";
+
 function WhiteFront({ setProductsitemOpen }) {
   const [uploadedImage, setUploadedImage] = useState(null);
 
@@ -18,16 +21,16 @@ function WhiteFront({ setProductsitemOpen }) {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
-    if (confirmed) {
-      setProductsitemOpen(true);
-      window.history.back();
-    }
   };
 
   return (
     <>
-      <div className="Layout">
-        <div className="Box">
+      <div className="container">
+      <img id="Logo" src={require('../logo.png')} alt="img" />
+      <div className="Frame1">
+      <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+
+      <div className="Box">
           <div className="Box2">
             <button id="BntBack" onClick={handleGoBack}>
               <img src={Back} alt="Back" />
@@ -36,7 +39,6 @@ function WhiteFront({ setProductsitemOpen }) {
               <Navigation />
             </div>
           </div>
-
           <div className="FieldCustom">
             <div className="CustomFront">
               <img id="MockupFront" src={WhiteFrontMockup} alt="Mockup" />
@@ -53,6 +55,7 @@ function WhiteFront({ setProductsitemOpen }) {
             <MenuW />
           </div>
         </div>
+      </div>
       </div>
     </>
   );
