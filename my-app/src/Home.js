@@ -1,51 +1,8 @@
 import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import ProductCarousel from '../src/ProductsSlider/ProductCarrousel';
+import HorizontalImageGallery from "./Components/HorizontalImageGallery";
 
-const products = [
-  {
-    id: 1,
-    name: 'Product 1',
-    image: '',
-  },
-  {
-    id: 2,
-    name: 'Product 2',
-    image: '',
-  },
-  {
-    id: 3,
-    name: 'Product 3',
-    image: '',
-  },
-  {
-    id: 4,
-    name: 'Product 4',
-    image: '',
-  },
-  {
-    id: 5,
-    name: 'Product 5',
-    image: '',
-  },
-  {
-    id: 6,
-    name: 'Product 6',
-    image: '',
-  },
-  {
-    id: 7,
-    name: 'Product 7',
-    image: '',
-  },
-  {
-    id: 8,
-    name: 'Product 8',
-    image: '',
-  },
-  // เพิ่มสินค้าอื่น ๆ ต่อไป...
-];
 
 export default function Home() {
   return (
@@ -58,8 +15,9 @@ export default function Home() {
         </Link>
       </div>
 
-      <div>
-        <ProductCarousel products={products} />
+      <div className="MockupSlider"> 
+      <HorizontalImageGallery/>
+
       </div>
     </>
   );
