@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Style.css";
 import Navigation from "../Components/Navigation";
 import Back from "../Asset/icon/Back.png";
-import WhiteFrontMockup from "../Asset/T-shirt/Black-Front.png";
+import BlackFrontMockup from "../Asset/T-shirt/Black-Front.png";
 import MenuW from "../Components/Black/MenuBlack";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-White.png"; // นี่คือการ import 'FieldFull'
@@ -10,7 +10,7 @@ import FieldFull from "../Asset/T-shirt/Field-Full-White.png"; // นี่ค�
 
 import "../Components/Products.css";
 
-function WhiteFront({ setProductsitemOpen }) {
+function BlackFront({ setProductsitemOpen }) {
   const [uploadedImage, setUploadedImage] = useState(null);
 
   const handleImageUpload = (selectedImage) => {
@@ -41,7 +41,7 @@ function WhiteFront({ setProductsitemOpen }) {
           </div>
           <div className="FieldCustom">
             <div className="CustomFront">
-              <img id="MockupFront" src={WhiteFrontMockup} alt="Mockup" />
+              <img id="MockupFront" src={BlackFrontMockup} alt="Mockup" />
               {uploadedImage ? (
                 <img id="FieldUpload" src={uploadedImage} alt="FieldUpload" />
               ) : (
@@ -61,4 +61,4 @@ function WhiteFront({ setProductsitemOpen }) {
   );
 }
 
-export default WhiteFront;
+export default BlackFront;

@@ -18,6 +18,7 @@ const Navigation = () => {
 
 
   return (
+    <>
     <nav className="navigation">
       <h4 className="HeaderNavi">COLORS</h4>
 
@@ -44,6 +45,8 @@ const Navigation = () => {
         </div>
       </div>
     </nav>
+
+    </>
   );
 };
 
