@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
@@ -13,29 +13,34 @@ function WhiteBack({ setProductsitemOpen }) {
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล                                                                               
+      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล
       window.history.back();
     }
   };
 
   return (
     <>
-    <div className="Layout">
-      <div className="Box">
-        <div className="Box2">
-          <button id="BntBack" onClick={handleGoBack}>
-            <img src={Back} alt="Back" />
-          </button>
-          <div className="Box3">
-            <Navigation />
+      <div className="container">
+        <img id="Logo" src={require("../logo.png")} alt="img" />
+        <div className="Frame1">
+          <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+
+          <div className="Box">
+            <div className="Box2">
+              <button id="BntBack" onClick={handleGoBack}>
+                <img src={Back} alt="Back" />
+              </button>
+              <div className="Box3">
+                <Navigation />
+              </div>
+            </div>
+            <img id="MockupBack" src={WhiteBackMockup} alt="Mockup" />
+            <div className="Box3">
+              <MenuWhiteBack />
+            </div>
           </div>
         </div>
-        <img id="MockupBack" src={WhiteBackMockup} alt="Mockup" />
-        <div className="Box3">
-          <MenuWhiteBack />
-        </div>
       </div>
-    </div>
     </>
   );
 }
