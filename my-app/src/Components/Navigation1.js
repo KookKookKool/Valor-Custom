@@ -23,12 +23,12 @@ const Navigation = () => {
       <h4 className="HeaderNavi">COLORS</h4>
 
       <div className="Menu-iconsWhite">
-        <div className={`Icon1 ${selectedIcon === "White" ? "active" : ""}`}>
+        <div className={`Icon ${selectedIcon === "White" ? "active" : ""}`}>
           <Link to="../T-shirt/White-Front" onClick={() => handleIconClick("White")}>
             <img src={White} alt="WhiteIcon" />
           </Link>
         </div>
-        <div className={`Icon ${selectedIcon === "Black" ? "active" : ""}`}>
+        <div className={`Icon1 ${selectedIcon === "Black" ? "active" : ""}`}>
           <Link to="../T-shirt/Black-Front" onClick={() => handleIconClick("Black")}>
             <img src={Black} alt="BlackIcon" />
           </Link>

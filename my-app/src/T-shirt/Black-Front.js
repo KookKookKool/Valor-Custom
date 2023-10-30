@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Style.css";
-import Navigation from "../Components/Navigation";
+import Navigation from "../Components/Navigation1";
 import Back from "../Asset/icon/Back.png";
 import BlackFrontMockup from "../Asset/T-shirt/Black-Front.png";
 import MenuW from "../Components/Black/MenuBlack";
@@ -17,9 +17,13 @@ function BlackFront({ setProductsitemOpen }) {
   };
 
   const handleGoBack = () => {
-   window.confirm(
+    const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
+    if (confirmed) {
+      window.location.href = "/Main";
+    }
+
   };
 
   return (

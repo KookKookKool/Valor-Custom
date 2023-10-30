@@ -30,7 +30,7 @@ export default function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/main" element={<Main />} />
+        <Route path="/Main" element={<Main />} />
 
         {/*เสื้อขาว*/}
         <Route path="/T-shirt/White-Front" element={<WhiteFront />} />

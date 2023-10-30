@@ -1,7 +1,7 @@
 import React from 'react';
 
 import "./Style.css";
-import Navigation from "../Components/Navigation"; //เลือกสี
+import Navigation from "../Components/Navigation3"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
 import GreenRightMockup from "../Asset/T-shirt/Green-Left.png";
 import MenuGreenRight from "../Components/Green/MenuGreenRight";

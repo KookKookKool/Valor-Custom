@@ -7,14 +7,15 @@ import WhiteRightMockup from "../Asset/T-shirt/White-Right.png";
 import MenuWhiteRight from "../Components/White/MenuWhiteRight";
 
 function WhiteRight({ setProductsitemOpen }) {
+
   const handleGoBack = () => {
     const confirmed = window.confirm(
-      "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
+      "คุณต้องการย้อนกลับ ?"
     );
     if (confirmed) {
-      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล
-      window.history.back();
+      window.location.href = "/T-shirt/White-Back";
     }
+
   };
 
   return (

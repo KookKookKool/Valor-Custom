@@ -8,14 +8,15 @@ import WhiteBackMockup from "../Asset/T-shirt/White-Back.png";
 import MenuWhiteBack from "../Components/White/MenuWhiteBack";
 
 function WhiteBack({ setProductsitemOpen }) {
+
   const handleGoBack = () => {
     const confirmed = window.confirm(
-      "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
+      "คุณต้องการย้อนกลับ ?"
     );
     if (confirmed) {
-      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล
-      window.history.back();
+      window.location.href = "/T-shirt/White-Front";
     }
+
   };
 
   return (

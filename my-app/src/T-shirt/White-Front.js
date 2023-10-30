@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./Style.css";
 import Navigation from "../Components/Navigation";
 import Back from "../Asset/icon/Back.png";
@@ -7,8 +8,8 @@ import MenuW from "../Components/White/MenuWhite";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่คือการ import 'FieldFull'
 
-import "../Components/Products.css";
 
+import "../Components/Products.css";
 function WhiteFront({ setProductsitemOpen }) {
   const [uploadedImage, setUploadedImage] = useState(null);
 
@@ -17,9 +18,13 @@ function WhiteFront({ setProductsitemOpen }) {
   };
 
   const handleGoBack = () => {
-    window.confirm(
+    const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
+    if (confirmed) {
+      window.location.href = "/Main";
+    }
+
   };
 
   return (

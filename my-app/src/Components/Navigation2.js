@@ -23,7 +23,7 @@ const Navigation = () => {
       <h4 className="HeaderNavi">COLORS</h4>
 
       <div className="Menu-iconsWhite">
-        <div className={`Icon1 ${selectedIcon === "White" ? "active" : ""}`}>
+        <div className={`Icon ${selectedIcon === "White" ? "active" : ""}`}>
           <Link to="../T-shirt/White-Front" onClick={() => handleIconClick("White")}>
             <img src={White} alt="WhiteIcon" />
           </Link>
@@ -33,7 +33,7 @@ const Navigation = () => {
             <img src={Black} alt="BlackIcon" />
           </Link>
         </div>
-        <div className={`Icon ${selectedIcon === "Navy" ? "active" : ""}`}>
+        <div className={`Icon1 ${selectedIcon === "Navy" ? "active" : ""}`}>
           <Link to="../T-shirt/Navy-Front" onClick={() => handleIconClick("Navy")}>
             <img src={Navy} alt="NavyIcon" />
           </Link>
