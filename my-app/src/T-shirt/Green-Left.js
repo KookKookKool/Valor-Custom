@@ -3,7 +3,7 @@ import React from 'react';
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
-import GreenLeftMockup from "../Asset/T-shirt/Green-Left.png";
+import GreenLeftMockup from "../Asset/T-shirt/Green-Right.png";
 
 import MenuGreenLeft from "../Components/Green/MenuGreenLeft";
 
@@ -20,7 +20,11 @@ function GreenLeft({ setProductsitemOpen }) {
 
   return (
     <>
-    <div className="Layout">
+      <div className="container">
+      <img id="Logo" src={require('../logo.png')} alt="img" />
+      <div className="Frame1">
+      <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+
       <div className="Box">
         <div className="Box2">
           <button id="BntBack" onClick={handleGoBack}>
@@ -35,6 +39,7 @@ function GreenLeft({ setProductsitemOpen }) {
           <MenuGreenLeft />
         </div>
       </div>
+    </div>
     </div>
     </>
   );

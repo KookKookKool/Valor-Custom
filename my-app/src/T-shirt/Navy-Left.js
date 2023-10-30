@@ -20,7 +20,10 @@ function NavyLeft({ setProductsitemOpen }) {
 
   return (
     <>
-    <div className="Layout">
+      <div className="container">
+      <img id="Logo" src={require('../logo.png')} alt="img" />
+      <div className="Frame1">
+      <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
       <div className="Box">
         <div className="Box2">
           <button id="BntBack" onClick={handleGoBack}>
@@ -35,6 +38,7 @@ function NavyLeft({ setProductsitemOpen }) {
           <MenuNavyLeft />
         </div>
       </div>
+    </div>
     </div>
     </>
   );

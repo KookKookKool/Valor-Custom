@@ -3,7 +3,7 @@ import React from 'react';
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
-import GreenRightMockup from "../Asset/T-shirt/Green-Right.png";
+import GreenRightMockup from "../Asset/T-shirt/Green-Left.png";
 import MenuGreenRight from "../Components/Green/MenuGreenRight";
 
 function GreenRight({ setProductsitemOpen }) {
@@ -19,7 +19,11 @@ function GreenRight({ setProductsitemOpen }) {
 
   return (
     <>
-    <div className="Layout">
+      <div className="container">
+      <img id="Logo" src={require('../logo.png')} alt="img" />
+      <div className="Frame1">
+      <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+
       <div className="Box">
         <div className="Box2">
           <button id="BntBack" onClick={handleGoBack}>
@@ -34,6 +38,7 @@ function GreenRight({ setProductsitemOpen }) {
           <MenuGreenRight />
         </div>
       </div>
+    </div>
     </div>
     </>
   );
