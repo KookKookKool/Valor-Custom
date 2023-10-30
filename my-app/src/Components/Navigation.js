@@ -24,22 +24,22 @@ const Navigation = () => {
 
       <div className="Menu-iconsWhite">
         <div className={`Icon ${selectedIcon === "White" ? "active" : ""}`}>
-          <Link to="/T-shirt/White-Front" onClick={() => handleIconClick("White")}>
+          <Link to="../T-shirt/White-Front" onClick={() => handleIconClick("White")}>
             <img src={White} alt="WhiteIcon" />
           </Link>
         </div>
         <div className={`Icon ${selectedIcon === "Black" ? "active" : ""}`}>
-          <Link to="/T-shirt/Black-Front" onClick={() => handleIconClick("Black")}>
+          <Link to="../T-shirt/Black-Front" onClick={() => handleIconClick("Black")}>
             <img src={Black} alt="BlackIcon" />
           </Link>
         </div>
         <div className={`Icon ${selectedIcon === "Navy" ? "active" : ""}`}>
-          <Link to="/T-shirt/Navy-Front" onClick={() => handleIconClick("Navy")}>
+          <Link to="../T-shirt/Navy-Front" onClick={() => handleIconClick("Navy")}>
             <img src={Navy} alt="NavyIcon" />
           </Link>
         </div>
         <div className={`Icon ${selectedIcon === "Green" ? "active" : ""}`}>
-          <Link to="/T-shirt/Green-Front" onClick={() => handleIconClick("Green")}>
+          <Link to="../T-shirt/Green-Front" onClick={() => handleIconClick("Green")}>
             <img src={Green} alt="GreenIcon" />
           </Link>
         </div>

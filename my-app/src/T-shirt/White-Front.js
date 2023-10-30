@@ -7,7 +7,6 @@ import MenuW from "../Components/White/MenuWhite";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่คือการ import 'FieldFull'
 
-
 import "../Components/Products.css";
 
 function WhiteFront({ setProductsitemOpen }) {
@@ -18,7 +17,7 @@ function WhiteFront({ setProductsitemOpen }) {
   };
 
   const handleGoBack = () => {
-    const confirmed = window.confirm(
+    window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
   };

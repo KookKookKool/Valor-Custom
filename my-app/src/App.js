@@ -45,22 +45,22 @@ export default function App() {
                 
         {/*เสื้อดำ*/}
         <Route
-        path="./T-shirt/Black-Front"
+        path="/T-shirt/Black-Front"
         element={<BlackFront/>}
         />
 
         <Route
-        path="./T-shirt/Black-Back"
+        path="/T-shirt/Black-Back"
         element={<BlackBack/>}
         />
 
         <Route
-        path="./T-shirt/Black-Right"
+        path="/T-shirt/Black-Right"
         element={<BlackRight/>}
         />
 
         <Route
-        path="./T-shirt/Black-Left"
+        path="/T-shirt/Black-Left"
         element={<BlackLeft/>}
         />
 
