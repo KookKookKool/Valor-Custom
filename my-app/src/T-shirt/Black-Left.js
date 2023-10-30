@@ -10,12 +10,12 @@ import MenuBlackLeft from "../Components/Black/MenuBlackLeft";
 function BlackLeft({ setProductsitemOpen }) {
   const handleGoBack = () => {
     const confirmed = window.confirm(
-      "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
+      "คุณต้องการย้อนกลับ ?"
     );
     if (confirmed) {
-      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล                                                                               
-      window.history.back();
+      window.location.href = "/T-shirt/Black-Right";
     }
+
   };
 
   return (
