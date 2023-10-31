@@ -53,6 +53,7 @@ function WhiteFront({ setProductsitemOpen }) {
               )}
             </div>
             <Upload onUpload={handleImageUpload} />
+            {/* เรียกใช้ปุ่มเพื่อบันทึกค่า จาก SRC WhiteFrontMockup กับ uploadedImage */}
           </div>
 
           <div className="Box3">

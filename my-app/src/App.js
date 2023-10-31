@@ -3,6 +3,7 @@ import Home from "./Home";
 import Main from "./Main";
 import { Route, Routes } from "react-router-dom";
 
+
 import "../src/Components/Products.css";
 
 import WhiteFront from "./T-shirt/White-Front";
@@ -25,13 +26,10 @@ import GreenBack from "./T-shirt/Green-Back";
 import GreenLeft from "./T-shirt/Green-Left";
 import GreenRight from "./T-shirt/Green-Right";
 
-import FrontMockup from "./Custom-Design/ShowUploadFront";
-
-
-
 export default function App() {
   return (
     <div>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Main" element={<Main />} />
@@ -60,10 +58,9 @@ export default function App() {
         <Route path="/T-shirt/Green-Right" element={<GreenLeft />} />
         <Route path="/T-shirt/Green-Left" element={<GreenRight />} />
 
-        <Route path="/Custom-Design/ShowUploadFront" element={<FrontMockup />} />
-
 
       </Routes>
+
     </div>
   );
 }
