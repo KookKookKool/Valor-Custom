@@ -26,11 +26,15 @@ import GreenBack from "./T-shirt/Green-Back";
 import GreenLeft from "./T-shirt/Green-Left";
 import GreenRight from "./T-shirt/Green-Right";
 
+
+import Main2 from "./Custom-Design/Main2"; //แสดงรูปบันทึกส่วนหน้ารูปภาพที่ทำการอัพโหลด
+
 export default function App() {
   return (
     <div>
 
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path="/Main" element={<Main />} />
 
@@ -58,6 +62,7 @@ export default function App() {
         <Route path="/T-shirt/Green-Right" element={<GreenLeft />} />
         <Route path="/T-shirt/Green-Left" element={<GreenRight />} />
 
+        <Route path="/Custom-Design/Main2" element={<Main2 />} />
 
       </Routes>
 

@@ -26,8 +26,6 @@ button {
 
   #BntBack {
     margin-left: 5%;
-
-
   }
 
   .Box {
@@ -36,7 +34,7 @@ button {
     justify-content: center; /* จัดกึ่งกลางตามแนวนอน */
     align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
     gap: 20%;
-    height: 60vh;
+    height: 72vh;
     margin-top: -140px;
   }
   
@@ -46,6 +44,7 @@ button {
     justify-content: center;
     align-items: center;
     height: 100vh; /* ความสูงของหน้าเว็บทั้งหมดหรือความสูงตามที่คุณต้องการ */
+    gap: 1%;
   }
   
   .CustomFront {
@@ -59,24 +58,54 @@ button {
     max-width: 100%;
     max-height: 100%;
   }
+
+  #MockupBack {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
   
   #FieldUpload {
     width: 138px;
+    position: absolute;
+    top: 50%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1; 
+    margin-top: 0px;
+    height: 800px;
   }
-  #FieldUpload,
+
+  img#FieldUpload {
+    object-fit: contain; /* ไม่ยืดเต็มพื้นที่แต่จะไม่ตัดขอบของรูปภาพ */
+  }
+
+ 
   #FieldDesign {
     position: absolute;
     top: 50%;
-    left: 49%;
+    left: 49.5%;
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
     z-index: 1; 
     margin-top: 82px;
   }
+
+  #FieldDesign2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1; 
+    margin-top: 54px;
+  }
   
-  
-  #MockupFront {
+  #MockupFront1 {
     position: relative;
     z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
     /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
@@ -86,11 +115,49 @@ button {
     margin-top: 128px;
   }
   
+  #MockupFront2 {
+    position: relative;
+    z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
+    /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
+    top: 0;
+    left: 0;
+    width: 290px;
+    margin-top: 128px;
+  }
+  #MockupBack2 {
+    position: relative;
+    z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
+    /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
+    top: -20px;
+    left: 0;
+    width: 290px;
+    margin-top: 128px;
+  }
 
+  #MockupFront3 {
+    position: relative;
+    z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
+    /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
+    top: 0;
+    left: 0;
+    width: 310px;
+    margin-top: 128px;
+  }
+
+  #MockupBack3 {
+    position: relative;
+    z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
+    /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
+    top: 0;
+    left: 0;
+    width: 338px;
+    margin-top: 128px;
+  }
+  
   
   #MockupBack {
     width: 280px;
-    margin-top: 100px;
+    margin-top: 126px;
   }
 
   #MockupRight {
@@ -102,6 +169,7 @@ button {
     width: 280px;
     margin-top: 100px;
   }
+
   /*.Box2 {
 
   }

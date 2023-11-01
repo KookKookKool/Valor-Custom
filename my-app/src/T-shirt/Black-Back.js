@@ -34,7 +34,7 @@ function BlackBack({ setProductsitemOpen }) {
                 <Navigation />
               </div>
             </div>
-            <img id="MockupFront" src={BlackBackMockup} alt="Mockup" />
+            <img id="MockupBack2" src={BlackBackMockup} alt="Mockup" />
             <div className="Box3">
               <MenuB />
             </div>

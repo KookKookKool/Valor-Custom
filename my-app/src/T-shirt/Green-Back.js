@@ -34,7 +34,7 @@ function GreenBack({ setProductsitemOpen }) {
             <Navigation />
           </div>
         </div>
-        <img id="MockupFront" src={GreenBackMockup} alt="Mockup" />
+        <img id="MockupBack3" src={GreenBackMockup} alt="Mockup" />
         <div className="Box3">
           <MenuB />
         </div>

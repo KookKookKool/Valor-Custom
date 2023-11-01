@@ -44,7 +44,7 @@ function BlackFront({ setProductsitemOpen }) {
           </div>
           <div className="FieldCustom">
             <div className="CustomFront">
-              <img id="MockupFront" src={BlackFrontMockup} alt="Mockup" />
+              <img id="MockupFront2" src={BlackFrontMockup} alt="Mockup" />
               {uploadedImage ? (
                 <img id="FieldUpload" src={uploadedImage} alt="FieldUpload" />
               ) : (

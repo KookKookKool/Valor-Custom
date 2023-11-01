@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
@@ -7,7 +7,24 @@ import WhiteBackMockup from "../Asset/T-shirt/White-Back.png";
 
 import MenuWhiteBack from "../Components/White/MenuWhiteBack";
 
+import Upload from "../Upload/Upload1";
+import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่คือการ import 'FieldFull'
+
+import ImageSaveButton from "../Custom-Design/ImageSaveButton";
+
 function WhiteBack({ setProductsitemOpen }) {
+
+  const [uploadedImage, setUploadedImage] = useState(null);
+  const [savedImage, setSavedImage] = useState(null);
+
+  const handleImageUpload = (selectedImage) => {
+    setUploadedImage(URL.createObjectURL(selectedImage));
+  };
+
+  const handleSaveImage = () => {
+    setSavedImage(uploadedImage);
+    // บันทึกรูปภาพที่อัพโหลดเข้าสู่ savedImage state
+  };
 
   const handleGoBack = () => {
     const confirmed = window.confirm(
@@ -16,8 +33,8 @@ function WhiteBack({ setProductsitemOpen }) {
     if (confirmed) {
       window.location.href = "/T-shirt/White-Front";
     }
-
   };
+
 
   return (
     <>
@@ -35,7 +52,21 @@ function WhiteBack({ setProductsitemOpen }) {
                 <Navigation />
               </div>
             </div>
-            <img id="MockupBack" src={WhiteBackMockup} alt="Mockup" />
+
+            <div className="FieldCustom">
+            <div className="CustomFront">
+              <img id="MockupBack" src={WhiteBackMockup} alt="Mockup" />
+              {uploadedImage ? (
+                <img id="FieldUpload" src={uploadedImage} alt="FieldUpload" />
+              ) : (
+                <img id="FieldDesign2" src={FieldFull} alt="FieldDesign2" />
+              )}
+            </div>
+            <Upload onUpload={handleImageUpload} />
+            {/* เรียกใช้ปุ่มเพื่อบันทึกค่า จาก SRC WhiteFrontMockup กับ uploadedImage */}
+            <ImageSaveButton onSave={handleSaveImage} savedImage={savedImage} />
+          </div>
+ 
             <div className="Box3">
               <MenuWhiteBack />
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./Style.css";
 import Navigation from "../Components/Navigation";
@@ -8,13 +8,87 @@ import MenuW from "../Components/White/MenuWhite";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่คือการ import 'FieldFull'
 
+import ImageSaveButton from "../Custom-Design/ImageSaveButton";
 
 import "../Components/Products.css";
+
 function WhiteFront({ setProductsitemOpen }) {
   const [uploadedImage, setUploadedImage] = useState(null);
+  const [savedImage, setSavedImage] = useState(null);
+
+  const [showDropdown] = useState(true);
+  const [imageStyle, setImageStyle] = useState({
+    width: "100%",
+    height: "auto",
+    objectPosition: "center center",
+  });
+
+  useEffect(() => {
+    if (showDropdown) {
+      // สร้างชุดรูปแบบของรูปภาพที่จะถูกแสดงผล
+      switch (imageStyleOption) {
+        case 1:
+          setImageStyle({
+            width: "80%",
+            height: "auto",
+            objectPosition: "center center",
+          });
+          break;
+        case 2:
+          setImageStyle({
+            width: "60%",
+            height: "auto",
+            objectPosition: "center center",
+          });
+          break;
+        case 3:
+          setImageStyle({
+            width: "40%",
+            height: "auto",
+            objectPosition: "center center",
+          });
+          break;
+        case 4:
+          setImageStyle({
+            width: "100%",
+            height: "auto",
+            objectPosition: "left top",
+          });
+          break;
+        case 5:
+          setImageStyle({
+            width: "100%",
+            height: "auto",
+            objectPosition: "left top",
+          });
+          break;
+          case 5:
+            setImageStyle({
+              width: "100%",
+              height: "auto",
+              objectPosition: "left top",
+            });
+            break;
+        default:
+          setImageStyle({
+            width: "100%",
+            height: "auto",
+            objectPosition: "center center",
+          });
+          break;
+      }
+    }
+  }, [showDropdown]);
+
+  const [imageStyleOption, setImageStyleOption] = useState(1);
 
   const handleImageUpload = (selectedImage) => {
     setUploadedImage(URL.createObjectURL(selectedImage));
+  };
+
+  const handleSaveImage = () => {
+    setSavedImage(uploadedImage);
+    // บันทึกรูปภาพที่อัพโหลดเข้าสู่ savedImage state
   };
 
   const handleGoBack = () => {
@@ -24,43 +98,60 @@ function WhiteFront({ setProductsitemOpen }) {
     if (confirmed) {
       window.location.href = "/Main";
     }
-
   };
-
   return (
     <>
       <div className="container">
-      <img id="Logo" src={require('../logo.png')} alt="img" />
-      <div className="Frame1">
-      <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+        <img id="Logo" src={require("../logo.png")} alt="img" />
+        <div className="Frame1">
+          <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
 
-      <div className="Box">
-          <div className="Box2">
-            <button id="BntBack" onClick={handleGoBack}>
-              <img src={Back} alt="Back" />
-            </button>
-            <div className="Box3">
-              <Navigation />
+          <div className="Box">
+            <div className="Box2">
+              <button id="BntBack" onClick={handleGoBack}>
+                <img src={Back} alt="Back" />
+              </button>
+              <div className="Box3">
+                <Navigation />
+              </div>
             </div>
-          </div>
-          <div className="FieldCustom">
-            <div className="CustomFront">
-              <img id="MockupFront" src={WhiteFrontMockup} alt="Mockup" />
-              {uploadedImage ? (
-                <img id="FieldUpload" src={uploadedImage} alt="FieldUpload" />
-              ) : (
-                <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
+            <div className="FieldCustom">
+              <div className="CustomFront">
+                <img id="MockupFront1" src={WhiteFrontMockup} alt="Mockup" />
+                {uploadedImage ? (
+                  <img id="FieldUpload" src={uploadedImage} alt="FieldUpload" />
+                ) : (
+                  <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
+                )}
+              </div>
+              <Upload onUpload={handleImageUpload} />
+              <ImageSaveButton
+                onSave={handleSaveImage}
+                savedImage={savedImage}
+              />
+            </div>
+            <div className="Box3">
+              <MenuW />
+              {showDropdown && (
+                <div className="dropdown">
+                  <label>ขนาด:</label>
+                  <select
+                    value={imageStyleOption}
+                    onChange={(e) => setImageStyleOption(e.target.value)}
+                  >
+                    <option value="1,default">A3</option>
+                    <option value="2">A4</option>
+                    <option value="3">A5</option>
+                    <option value="4">A6</option>
+                    <option value="5">A7</option>
+                    <option value="6">A8</option>
+
+                  </select>
+                </div>
               )}
             </div>
-            <Upload onUpload={handleImageUpload} />
-            {/* เรียกใช้ปุ่มเพื่อบันทึกค่า จาก SRC WhiteFrontMockup กับ uploadedImage */}
-          </div>
-
-          <div className="Box3">
-            <MenuW />
           </div>
         </div>
-      </div>
       </div>
     </>
   );

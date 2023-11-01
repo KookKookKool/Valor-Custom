@@ -45,7 +45,7 @@ function GreenFront({ setProductsitemOpen }) {
         </div>
         <div className="FieldCustom">
             <div className="CustomFront">
-              <img id="MockupFront" src={GreenFrontMockup} alt="Mockup" />
+              <img id="MockupFront3" src={GreenFrontMockup} alt="Mockup" />
               {uploadedImage ? (
                 <img id="FieldUpload" src={uploadedImage} alt="FieldUpload" />
               ) : (

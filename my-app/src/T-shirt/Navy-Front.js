@@ -45,7 +45,7 @@ function NavyFront({ setProductsitemOpen }) {
           </div>
           <div className="FieldCustom">
             <div className="CustomFront">
-              <img id="MockupFront" src={NavyFrontMockup} alt="Mockup" />
+              <img id="MockupFront3" src={NavyFrontMockup} alt="Mockup" />
               {uploadedImage ? (
                 <img id="FieldUpload" src={uploadedImage} alt="FieldUpload" />
               ) : (
