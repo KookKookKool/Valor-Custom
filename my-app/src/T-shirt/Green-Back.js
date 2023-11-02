@@ -1,22 +1,84 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
 import "./Style.css";
 import Navigation from "../Components/Navigation3"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
 import GreenBackMockup from "../Asset/T-shirt/Green-Back.png";
+import FieldFull from "../Asset/T-shirt/Field-Full-White.png";
+import Upload from "../Upload/Upload1";
+import ImageSaveButton from "../Custom-Design/ImageSaveButton";
 
 import MenuB from "../Components/Green/MenuGreenBack";
 
 function GreenBack({ setProductsitemOpen }) {
+  const [uploadedImage, setUploadedImage] = useState(null);
+  const [savedImage, setSavedImage] = useState(null);
+  const [showDropdown] = useState(true);
+  const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
+  const [imageStyle, setImageStyle] = useState({
+    width: "48%", // ค่าเริ่มต้นสำหรับ A3
+
+    objectPosition: "left 0px top 182px",
+  });
+
+  const handleImageStyleChange = (selectedOption) => {
+    setImageStyleOption(selectedOption);
+  };
+
+  useEffect(() => {
+    if (showDropdown) {
+      switch (imageStyleOption) {
+        case "1, default":
+          setImageStyle({
+            width: "48%",
+            objectPosition: "left 0px top 182px",
+          });
+          break;
+        case "2":
+          setImageStyle({
+            width: "40%",
+
+            objectPosition: "left 0px top 182px",
+          });
+          break;
+        case "3":
+          setImageStyle({
+            width: "32%",
+
+            objectPosition: "left 0px top 182px",
+          });
+          break;
+        case "4":
+          setImageStyle({
+            width: "24%",
+
+            objectPosition: "left 0px top 182px",
+          });
+          break;
+
+          default:
+            // กระทำเมื่อไม่มี case ไหนตรงกับ imageStyleOption
+            break;
+        }
+      }
+    }, [showDropdown, imageStyleOption]);
+    
+  const handleImageUpload = (selectedImage) => {
+    setUploadedImage(URL.createObjectURL(selectedImage));
+  };
+
+  const handleSaveImage = () => {
+    setSavedImage(uploadedImage);
+  };
   const handleGoBack = () => {
     const confirmed = window.confirm(
-      "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
+      "คุณต้องการย้อนกลับ ?"
     );
     if (confirmed) {
-      setProductsitemOpen(true); // ตั้งค่าเพื่อให้ ul แสดงผล                                                                               
-      window.history.back();
+      window.location.href = "/T-shirt/Green-Front";
     }
   };
+
 
   return (
     <>
@@ -34,9 +96,42 @@ function GreenBack({ setProductsitemOpen }) {
             <Navigation />
           </div>
         </div>
-        <img id="MockupBack3" src={GreenBackMockup} alt="Mockup" />
-        <div className="Box3">
-          <MenuB />
+        <div className="FieldCustom">
+            <div className="CustomFront">
+              <img id="MockupBack3" src={GreenBackMockup} alt="Mockup" />
+              {uploadedImage ? (
+                  <img
+                    id="FieldUpload2"
+                    src={uploadedImage}
+                    alt="FieldUpload2"
+                    style={imageStyle}
+                  />
+                ) : (
+                  <img id="FieldDesign4" src={FieldFull} alt="FieldDesign" />
+                )}
+            </div>
+            <Upload onUpload={handleImageUpload} />
+            <ImageSaveButton
+                onSave={handleSaveImage}
+                savedImage={savedImage}
+              />
+            </div>
+            <div className="Box3">
+              <MenuB />
+              {showDropdown && (
+                <div className="dropdown">
+                  <label>ขนาด:</label>
+                  <select
+                    value={imageStyleOption}
+                    onChange={(e) => handleImageStyleChange(e.target.value)}
+                  >
+                    <option value="1, default">A3</option>
+                    <option value="2">A4</option>
+                    <option value="3">A5</option>
+                    <option value="4">A6</option>
+                  </select>
+                </div>
+              )}
         </div>
       </div>
     </div>

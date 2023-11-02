@@ -72,13 +72,13 @@ function WhiteFront({ setProductsitemOpen }) {
             objectPosition: "left 0px top 218px",
           });
           break;
-          default:
-            // กระทำเมื่อไม่มี case ไหนตรงกับ imageStyleOption
-            break;
-        }
+        default:
+          // กระทำเมื่อไม่มี case ไหนตรงกับ imageStyleOption
+          break;
       }
-    }, [showDropdown, imageStyleOption]);
-    
+    }
+  }, [showDropdown, imageStyleOption]);
+
   const handleImageUpload = (selectedImage) => {
     setUploadedImage(URL.createObjectURL(selectedImage));
   };
@@ -101,8 +101,9 @@ function WhiteFront({ setProductsitemOpen }) {
       <div className="container">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
-          <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
-
+          <div>
+        <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+        </div>
           <div className="Box">
             <div className="Box2">
               <button id="BntBack" onClick={handleGoBack}>
@@ -126,13 +127,35 @@ function WhiteFront({ setProductsitemOpen }) {
                   <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
                 )}
               </div>
-              <Upload onUpload={handleImageUpload} />
-              <ImageSaveButton
-                onSave={handleSaveImage}
-                savedImage={savedImage}
-              />
+
+              <div className="Box5">
+                <MenuW />
+                {showDropdown && (
+                  <div className="dropdown">
+                    <label>ขนาด:</label>
+                    <select
+                      value={imageStyleOption}
+                      onChange={(e) => handleImageStyleChange(e.target.value)}
+                    >
+                      <option value="1, default">A3</option>
+                      <option value="2">A4</option>
+                      <option value="3">A5</option>
+                      <option value="4">A6</option>
+                      <option value="5">A7</option>
+                      <option value="6">A8</option>
+                    </select>
+                  </div>
+                )}
+              </div>
+              <div className="Box6">
+                <Upload onUpload={handleImageUpload} />
+                <ImageSaveButton
+                  onSave={handleSaveImage}
+                  savedImage={savedImage}
+                />
+              </div>
             </div>
-            <div className="Box3">
+            <div className="Box4">
               <MenuW />
               {showDropdown && (
                 <div className="dropdown">
@@ -149,11 +172,13 @@ function WhiteFront({ setProductsitemOpen }) {
                     <option value="6">A8</option>
                   </select>
                 </div>
+                
               )}
             </div>
           </div>
         </div>
       </div>
+
     </>
   );
 }

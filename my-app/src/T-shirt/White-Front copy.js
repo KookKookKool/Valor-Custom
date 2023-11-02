@@ -17,78 +17,74 @@ function WhiteFront({ setProductsitemOpen }) {
   const [savedImage, setSavedImage] = useState(null);
 
   const [showDropdown] = useState(true);
+  const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
-    width: "100%",
-    height: "auto",
-    objectPosition: "center center",
+    width: "54%", // ค่าเริ่มต้นสำหรับ A3
+
+    objectPosition: "left 0px top 202px",
   });
+
+  const handleImageStyleChange = (selectedOption) => {
+    setImageStyleOption(selectedOption);
+  };
 
   useEffect(() => {
     if (showDropdown) {
-      // สร้างชุดรูปแบบของรูปภาพที่จะถูกแสดงผล
       switch (imageStyleOption) {
-        case 1:
+        case "1, default":
           setImageStyle({
-            width: "80%",
-            height: "auto",
-            objectPosition: "center center",
+            width: "54%",
+            objectPosition: "left 0px top 202px",
           });
           break;
-        case 2:
+        case "2":
           setImageStyle({
-            width: "60%",
-            height: "auto",
-            objectPosition: "center center",
+            width: "48%",
+
+            objectPosition: "left 0px top 202px",
           });
           break;
-        case 3:
+        case "3":
           setImageStyle({
             width: "40%",
-            height: "auto",
-            objectPosition: "center center",
+
+            objectPosition: "left 0px top 202px",
           });
           break;
-        case 4:
+        case "4":
           setImageStyle({
-            width: "100%",
-            height: "auto",
-            objectPosition: "left top",
+            width: "28%",
+
+            objectPosition: "left 0px top 202px",
           });
           break;
-        case 5:
+        case "5":
           setImageStyle({
-            width: "100%",
-            height: "auto",
-            objectPosition: "left top",
+            width: "18%",
+            paddingLeft: "24%",
+            objectPosition: "left 0px top 212px",
           });
           break;
-          case 5:
-            setImageStyle({
-              width: "100%",
-              height: "auto",
-              objectPosition: "left top",
-            });
+        case "6":
+          setImageStyle({
+            width: "14%",
+            paddingLeft: "29%",
+            objectPosition: "left 0px top 218px",
+          });
+          break;
+          default:
+            // กระทำเมื่อไม่มี case ไหนตรงกับ imageStyleOption
             break;
-        default:
-          setImageStyle({
-            width: "100%",
-            height: "auto",
-            objectPosition: "center center",
-          });
-          break;
+        }
       }
-    }
-  }, [showDropdown]);
-
-  const [imageStyleOption, setImageStyleOption] = useState(1);
-
+    }, [showDropdown, imageStyleOption]);
+    
   const handleImageUpload = (selectedImage) => {
     setUploadedImage(URL.createObjectURL(selectedImage));
   };
 
   const handleSaveImage = () => {
     setSavedImage(uploadedImage);
-    // บันทึกรูปภาพที่อัพโหลดเข้าสู่ savedImage state
   };
 
   const handleGoBack = () => {
@@ -99,6 +95,7 @@ function WhiteFront({ setProductsitemOpen }) {
       window.location.href = "/Main";
     }
   };
+
   return (
     <>
       <div className="container">
@@ -119,33 +116,58 @@ function WhiteFront({ setProductsitemOpen }) {
               <div className="CustomFront">
                 <img id="MockupFront1" src={WhiteFrontMockup} alt="Mockup" />
                 {uploadedImage ? (
-                  <img id="FieldUpload" src={uploadedImage} alt="FieldUpload" />
+                  <img
+                    id="FieldUpload"
+                    src={uploadedImage}
+                    alt="FieldUpload"
+                    style={imageStyle}
+                  />
                 ) : (
                   <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
                 )}
               </div>
-              <Upload onUpload={handleImageUpload} />
-              <ImageSaveButton
-                onSave={handleSaveImage}
-                savedImage={savedImage}
-              />
-            </div>
-            <div className="Box3">
+
+              <div className="Box5">
               <MenuW />
               {showDropdown && (
                 <div className="dropdown">
                   <label>ขนาด:</label>
                   <select
                     value={imageStyleOption}
-                    onChange={(e) => setImageStyleOption(e.target.value)}
+                    onChange={(e) => handleImageStyleChange(e.target.value)}
                   >
-                    <option value="1,default">A3</option>
+                    <option value="1, default">A3</option>
                     <option value="2">A4</option>
                     <option value="3">A5</option>
                     <option value="4">A6</option>
                     <option value="5">A7</option>
                     <option value="6">A8</option>
+                  </select>
+                </div>
+              )}
+            </div>
 
+              <Upload onUpload={handleImageUpload} />
+              <ImageSaveButton
+                onSave={handleSaveImage}
+                savedImage={savedImage}
+              />
+            </div>
+            <div className="Box4">
+              <MenuW />
+              {showDropdown && (
+                <div className="dropdown">
+                  <label>ขนาด:</label>
+                  <select
+                    value={imageStyleOption}
+                    onChange={(e) => handleImageStyleChange(e.target.value)}
+                  >
+                    <option value="1, default">A3</option>
+                    <option value="2">A4</option>
+                    <option value="3">A5</option>
+                    <option value="4">A6</option>
+                    <option value="5">A7</option>
+                    <option value="6">A8</option>
                   </select>
                 </div>
               )}

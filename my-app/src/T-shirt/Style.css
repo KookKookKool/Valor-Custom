@@ -1,151 +1,189 @@
-#Logo{
+#Logo {
   margin-bottom: 3%;
   margin-top: 5%;
 }
 
 .container {
   display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10%;
-  background: linear-gradient(180deg, black 0%, rgba(255, 255, 255, 0) 100%, white 100%);
+  background: linear-gradient(
+    180deg,
+    black 0%,
+    rgba(255, 255, 255, 0) 100%,
+    white 100%
+  );
 }
 
 button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: 24px;
-  }
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 24px;
+}
 
-  button:hover {
-    transform: scale(1.2); 
-  }
+button:hover {
+  transform: scale(1.2);
+}
 
+#BntBack {
+  margin-left: 5%;
+}
 
-  #BntBack {
-    margin-left: 5%;
-  }
+.Box {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; /* จัดกึ่งกลางตามแนวนอน */
+  align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
+  gap: 20%;
+  height: 752px;
+  margin-top: -140px;
+}
 
-  .Box {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center; /* จัดกึ่งกลางตามแนวนอน */
-    align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
-    gap: 20%;
-    height: 72vh;
-    margin-top: -140px;
-  }
-  
-  .FieldCustom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* ความสูงของหน้าเว็บทั้งหมดหรือความสูงตามที่คุณต้องการ */
-    gap: 1%;
-  }
-  
-  .CustomFront {
-    position: relative;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #MockupFront {
-    max-width: 100%;
-    max-height: 100%;
-  }
+.FieldCustom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ความสูงของหน้าเว็บทั้งหมดหรือความสูงตามที่คุณต้องการ */
+  gap: 1%;
+}
 
-  #MockupBack {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  
-  #FieldUpload {
-    width: 138px;
-    position: absolute;
-    top: 50%;
-    left: 49.5%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 100%;
-    z-index: 1; 
-    margin-top: 0px;
-    height: 800px;
-  }
+.CustomFront {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
 
-  img#FieldUpload {
-    object-fit: contain; /* ไม่ยืดเต็มพื้นที่แต่จะไม่ตัดขอบของรูปภาพ */
-  }
+#MockupFront {
+  max-width: 100%;
+  max-height: 100%;
+}
 
- 
-  #FieldDesign {
-    position: absolute;
-    top: 50%;
-    left: 49.5%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 100%;
-    z-index: 1; 
-    margin-top: 82px;
-  }
+#MockupBack {
+  max-width: 100%;
+  max-height: 100%;
+}
 
-  #FieldDesign2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 100%;
-    z-index: 1; 
-    margin-top: 54px;
-  }
+#FieldUpload {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+}
 
-  #FieldDesign3 {
-    position: absolute;
-    top: 50%;
-    left: 50.5%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 100%;
-    z-index: 1;
-    margin-top: 82px;
+#FieldUpload1 {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+}
+
+#FieldUpload2 {
+  width: 138px;
+  position: absolute;
+  top: 47%;
+  left: 48.5%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+}
+
+img#FieldUpload {
+  object-fit: contain; /* ไม่ยืดเต็มพื้นที่แต่จะไม่ตัดขอบของรูปภาพ */
+}
+
+img#FieldUpload1 {
+  object-fit: contain; /* ไม่ยืดเต็มพื้นที่แต่จะไม่ตัดขอบของรูปภาพ */
+}
+
+img#FieldUpload2 {
+  object-fit: contain; /* ไม่ยืดเต็มพื้นที่แต่จะไม่ตัดขอบของรูปภาพ */
+}
+
+#FieldDesign {
+  position: absolute;
+  top: 50%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 82px;
+}
+
+#FieldDesign2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 54px;
+}
+
+#FieldDesign3 {
+  position: absolute;
+  top: 50%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 82px;
+}
+
+#FieldDesign4 {
+  position: absolute;
+  top: 46%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 54px;
+}
+
+#MockupFront1 {
+  position: relative;
+  z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
+  /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
+  top: 0;
+  left: 0;
+  width: 280px;
+  margin-top: 128px;
+}
+
+#MockupFront2 {
+  position: relative;
+  z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
+  /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
+  top: 0;
+  left: 0;
+  width: 290px;
+  margin-top: 128px;
 }
   
-  #MockupFront1 {
-    position: relative;
-    z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
-    /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
-    top: 0;
-    left: 0;
-    width: 280px;
-    margin-top: 128px;
-  }
-  
-  #MockupFront2 {
-    position: relative;
-    z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
-    /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
-    top: 0;
-    left: 0;
-    width: 290px;
-    margin-top: 128px;
-  }
-  #MockupBack2 {
-    position: relative;
-    z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
-    /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
-    top: -20px;
-    left: 0;
-    width: 290px;
-    margin-top: 128px;
-  }
-
-  #MockupFront3 {
+#MockupFront3 {
     position: relative;
     z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
     /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
@@ -155,33 +193,52 @@ button {
     margin-top: 128px;
   }
 
-  #MockupBack3 {
-    position: relative;
-    z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
-    /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
-    top: 0;
-    left: 0;
-    width: 338px;
-    margin-top: 128px;
-  }
-  
-  
-  #MockupBack {
-    width: 280px;
-    margin-top: 126px;
-  }
 
-  #MockupRight {
-    width: 280px;
-    margin-top: 100px;
-  }
+#MockupBack2 {
+  position: relative;
+  z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
+  /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
+  top: -20px;
+  left: 0;
+  width: 290px;
+  margin-top: 128px;
+}
 
-  #MockupLeft {
-    width: 280px;
-    margin-top: 100px;
-  }
+#MockupBack3 {
+  position: relative;
+  z-index: 0; /* ความสูงสูงสุดของรูปภาพตามต้องการ */
+  /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
+  top: 0;
+  left: 0;
+  width: 338px;
+  margin-top: 128px;
+}
 
-  /*.Box2 {
+#MockupBack {
+  width: 280px;
+  margin-top: 126px;
+}
+
+#MockupBack1 {
+  width: 293px;
+  margin-top: 126px;
+}
+
+#MockupRight {
+  width: 280px;
+  margin-top: 100px;
+}
+
+#MockupLeft {
+  width: 280px;
+  margin-top: 100px;
+}
+
+.Box5 {
+  display: none;
+}
+
+/*.Box2 {
 
   }
 
@@ -195,3 +252,168 @@ button {
     }
 
   }*/
+
+/* Responsive 1100Px */
+
+@media (max-width: 1100px) {
+  #Logo {
+    width: 16%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+
+  .Frame1 {
+    width: 80vw;
+
+  }
+
+  .Box {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; /* จัดกึ่งกลางตามแนวนอน */
+    align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
+    gap: 5%;
+    height: 800px;
+    margin-top: 28px;
+    max-height: 946.5px;
+    flex-direction: column;
+  }
+
+  #BntBack {
+    margin-left: -16%;
+    margin-right: 15%;
+    margin-top: 0px;
+  }
+
+  .Box2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* align-content: center; */
+    justify-content: center;
+  }
+
+  .FieldCustom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    gap: 1%;
+  }
+
+  #MockupFront1 {
+    position: relative;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 280px;
+    margin-top: 7px;
+  }
+
+  #FieldDesign {
+    position: absolute;
+    top: 50%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    margin-top: 20px;
+  }
+
+  .CustomFront {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #FieldUpload {
+    top: 21%;
+  }
+
+
+  .Menu-icons {
+    display: flex;
+    gap: 6%;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+  }
+  .dropdown {
+    margin-left: 26px;
+  }
+
+  .Box4 {
+    display: none;
+  }
+
+  .Box5 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: -45px;
+    height: 220px;
+    margin-bottom: -52px;
+  }
+
+  .Box6 {
+    display: flex;
+    gap: 1%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 540px) {
+
+  .Frame1 {
+    height: 925px;
+  }
+
+
+#BntBack {
+  margin-left: 5%;
+  margin-right: 15%;
+  margin-top: 0px;
+}
+
+.dropdown {
+  margin-left: 19px;
+  margin-right: 24px;
+}
+
+.Menu-iconsWhite {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  width: 150px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.Menu-icons {
+  display: flex;
+  gap: 4%;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 182px;
+}
+
+}

@@ -79,13 +79,28 @@
     transform: scale(1.2); 
   }
   
-
-  .Menu-icons {    
-    display: grid;
-    gap: 20%;
-    justify-items: center;
-  }
-
   .HeaderMenuWhite {
     margin-top: -12%;
+  }
+
+  @media (min-width: 1101px) {
+    .Menu-icons {    
+      display: grid;
+      gap: 20%;
+      justify-items: center;
+    }
+  }
+
+
+  @media (max-width: 1100px) {
+
+    .Menu-icons {
+      display: flex;
+      gap: 4%;
+      justify-items: center;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+
   }
