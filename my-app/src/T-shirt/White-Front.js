@@ -72,10 +72,13 @@ function WhiteFront({ setProductsitemOpen }) {
             objectPosition: "left 0px top 218px",
           });
           break;
+          default:
+            // กระทำเมื่อไม่มี case ไหนตรงกับ imageStyleOption
+            break;
+        }
       }
-    }
-  }, [showDropdown, imageStyleOption]);
-
+    }, [showDropdown, imageStyleOption]);
+    
   const handleImageUpload = (selectedImage) => {
     setUploadedImage(URL.createObjectURL(selectedImage));
   };

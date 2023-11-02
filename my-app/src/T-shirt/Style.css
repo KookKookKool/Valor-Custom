@@ -104,6 +104,17 @@ button {
     z-index: 1; 
     margin-top: 54px;
   }
+
+  #FieldDesign3 {
+    position: absolute;
+    top: 50%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    margin-top: 82px;
+}
   
   #MockupFront1 {
     position: relative;
