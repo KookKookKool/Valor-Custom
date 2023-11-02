@@ -43,6 +43,12 @@
           height: 850px; /* ยกเลิกความสูงเต็มหน้าจอ */
           gap: 4%;
     }
+    
+    a:-webkit-any-link {
+      color: black;
+      cursor: none;
+      margin-bottom: 7%;
+  }
 
 }
 
