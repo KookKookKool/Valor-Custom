@@ -20,5 +20,22 @@
 
   #Logo3 {
     width: 150px;
-    height: 130px;
+    height: auto;
+  }
+
+  @media (min-width: 1200px) {
+
+    #Logo1 {
+      width: 240px;
+      height: auto;
+    }
+    #Logo2 {
+      width: 240px;
+      height: auto;
+    }
+    #Logo3 {
+      width: 240px;
+      height: auto;
+    }
+    
   }

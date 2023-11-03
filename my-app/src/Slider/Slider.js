@@ -1,120 +1,82 @@
 import React from 'react';
-import 'Slider.css';
-
-
+import './Slider.css';
+import M1 from '../Asset/Mockup/1.png';
+import M2 from '../Asset/Mockup/2.png';
+import M3 from '../Asset/Mockup/3.png';
+import M4 from '../Asset/Mockup/4.png';
+import M5 from '../Asset/Mockup/5.png';
+import M6 from '../Asset/Mockup/6.png';
+import M7 from '../Asset/Mockup/7.png';
+import M8 from '../Asset/Mockup/8.png';
+import M9 from '../Asset/Mockup/9.png';
+import M10 from '../Asset/Mockup/10.png';
+import M11 from '../Asset/Mockup/11.png';
+import M12 from '../Asset/Mockup/12.png';
+import M13 from '../Asset/Mockup/13.png';
+import M14 from '../Asset/Mockup/14.png';
+import M15 from '../Asset/Mockup/15.png';
+import M16 from '../Asset/Mockup/16.png';
+import M17 from '../Asset/Mockup/17.png';
 
 
 function Slider() {
   return (
     <div>
-
+<h1 className="">CUSTOM DESIGN</h1>
 <div class="logo-slider">
 	<div class="logo-slide-track">
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/4Rivers.png" alt="" />
+			<img src={M1} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/AVT.png" alt="" />
+			<img src={M2} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/CareerSource.png" alt="" />
+			<img src={M3} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/CFEC.png" alt="" />
+			<img src={M4} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/CityofOrlando.png" alt="" />
+			<img src={M5} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/CommunityCoordinatedCare.png" alt="" />
+			<img src={M6} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/DentalSociety.png" alt="" />
+			<img src={M7} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/DrPhillips.png" alt="" />
+			<img src={M8} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/Ferran.png" alt="" />
+			<img src={M9} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/FloridaADA.png" alt="" />
+			<img src={M10} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/FloridaHospital.png" alt="" />
+			<img src={M11} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/Goodwill.png" alt="" />
+			<img src={M12} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/HarvardJolly.png" alt="" />
+			<img src={M13} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/HiltonOrlando.png" alt="" />
+			<img src={M14} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/IndraSystems.png" alt="" />
+			<img src={M15} alt="" />
 		</div>   
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/JobsPartnership.png" alt="" />
+			<img src={M16} alt="" />
 		</div>
 		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/Kenworth.png" alt="" />
+			<img src={M17} alt="" />
 		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/L3.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/Lockheed.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/MACF.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/Marriott.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/Mitsubishi.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/NCS.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/Northrop.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/OrangeCountyFarmBureau.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/OrlandoHealth.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/ProImageSolutions.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/PublicAllies.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/SeaWorld.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/SecondHarvest.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/UF.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/Universal.png" alt="" />
-		</div>   
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/UP.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/WaltDisney.png" alt="" />
-		</div>
-		<div class="slide">
-			<img src="https://www.orangetechcollege.net/UserFiles/Servers/Server_86919/Image/Partners/Wyndham.png" alt="" />
-		</div>
+		
 	</div>
 </div>
 

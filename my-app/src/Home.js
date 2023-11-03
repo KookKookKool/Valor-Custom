@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import Slider from "./Slider/Slider";
 
 
 
@@ -16,7 +17,7 @@ export default function Home() {
           </video>
         </Link>
       </div>
-
+      <Slider />
 
 
 

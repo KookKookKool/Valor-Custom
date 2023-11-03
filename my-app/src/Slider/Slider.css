@@ -11,8 +11,8 @@
 }
 
 .logo-slider::before, .logo-slider::after {
-	background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
-	background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+	
+
 	content: "";
 	height: 175px;
 	position: absolute;
@@ -44,8 +44,8 @@
 }
 
 .logo-slider .slide {
-	height: 150px;
-	width: 250px;
+	height: 100%;
+	width: 100%;
 	padding: 20px;
 }
 
