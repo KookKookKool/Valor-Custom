@@ -1,12 +1,14 @@
 import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import HorizontalImageGallery from "./Components/HorizontalImageGallery";
+
 
 
 export default function Home() {
   return (
     <>
+
+
       <div className="video-container">
         <Link to="/main">
           <video className="Video" autoPlay loop muted playsInline>
@@ -15,10 +17,9 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="MockupSlider"> 
-      <HorizontalImageGallery/>
 
-      </div>
+
+
     </>
   );
 }
