@@ -94,21 +94,21 @@
     opacity: 4; /* แสดงปุ่มเมื่อ hover บน video-container */
   }
 
-  @media (max-width: 1570px) {
+  @media (max-width: 1614px) {
     .TextFooter {
       font-size: 36px;
     }
 
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1260px) {
     .TextFooter {
       font-size: 28px;
     }
 
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 975px) {
     .TextFooter {
       font-size: 18px;
     }
