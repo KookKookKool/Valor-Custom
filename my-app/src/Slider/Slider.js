@@ -22,7 +22,7 @@ import M17 from '../Asset/Mockup/17.png';
 function Slider() {
   return (
     <div>
-<h1 className="">CUSTOM DESIGN</h1>
+<h1 className="head">CUSTOM DESIGN</h1>
 <div class="logo-slider">
 	<div class="logo-slide-track">
 		<div class="slide">

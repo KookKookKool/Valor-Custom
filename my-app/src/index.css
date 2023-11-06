@@ -11,6 +11,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.centered-button {
+  font-family: 'Dameron', sans-serif; /* ใช้ font ที่กำหนด */
+}
 
 code {
   font-family: 'Dameron', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

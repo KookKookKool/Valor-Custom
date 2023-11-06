@@ -21,3 +21,84 @@
     width: 100vw;
     height: 30vh;
   }
+
+  #bgfooter {
+    width: 70%;
+  }
+
+  .Footergroup{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .TextFooter {
+    display: flex;
+    font-size: 50px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .centered-button {
+    font-family: 'Dameron', sans-serif; /* ใช้ font ที่กำหนด */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0; /* กำหนดค่าความโปร่งแสงเริ่มต้นเป็น 0 */
+    transition: opacity 0.3s; /* เพิ่มการเปลี่ยนแปลงความโปร่งแสง */
+  }
+  
+  .centered-button button {
+    font-family: 'Dameron', sans-serif; /* ใช้ font ที่กำหนด */
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  
+
+  .video-container:hover .centered-button {
+    opacity: 1; /* แสดงปุ่มเมื่อ hover บน video-container */
+  }
+
+  @media (max-width: 1570px) {
+    .TextFooter {
+      font-size: 38px;
+    }
+
+  }
+
+  @media (max-width: 1200px) {
+    .TextFooter {
+      font-size: 28px;
+    }
+
+  }
+
+  @media (max-width: 900px) {
+    .TextFooter {
+      font-size: 18px;
+    }
+
+  }
+
+  /* mobile */
+
+  .TextFooter {
+    flex: 3; /* ส่วนซ้ายเป็น 30% */
+    margin: 0;
+    padding: 0;
+  }
+  
+  #bgfooter {
+    flex: 7; /* ส่วนขวาเป็น 70% */
+  }
+  
