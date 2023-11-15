@@ -89,10 +89,10 @@ function WhiteBack({ setProductsitemOpen }) {
 
   const handleGoBack = () => {
     const confirmed = window.confirm(
-      "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
+      "คุณต้องการย้อนกลับ ?"
     );
     if (confirmed) {
-      window.location.href = "/Main";
+      window.location.href = "/T-shirt/White-Front";
     }
   };
 
@@ -124,7 +124,7 @@ function WhiteBack({ setProductsitemOpen }) {
                     style={imageStyle}
                   />
                 ) : (
-                  <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
+                  <img id="FieldDesign2" src={FieldFull} alt="FieldDesign" />
                 )}
               </div>
 
