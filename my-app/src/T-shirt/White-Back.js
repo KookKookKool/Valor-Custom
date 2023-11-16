@@ -21,7 +21,7 @@ function WhiteBack({ setProductsitemOpen }) {
   const [imageStyle, setImageStyle] = useState({
     width: "54%", // ค่าเริ่มต้นสำหรับ A3
 
-    objectPosition: "left 0px top 202px",
+    objectPosition: "left 0px top 164px",
   });
 
   const handleImageStyleChange = (selectedOption) => {
@@ -34,42 +34,42 @@ function WhiteBack({ setProductsitemOpen }) {
         case "1, default":
           setImageStyle({
             width: "54%",
-            objectPosition: "left 0px top 202px",
+            objectPosition: "left 0px top 164px",
           });
           break;
         case "2":
           setImageStyle({
             width: "48%",
 
-            objectPosition: "left 0px top 202px",
+            objectPosition: "left 0px top 174px",
           });
           break;
         case "3":
           setImageStyle({
             width: "40%",
 
-            objectPosition: "left 0px top 202px",
+            objectPosition: "left 0px top 168px",
           });
           break;
         case "4":
           setImageStyle({
             width: "28%",
 
-            objectPosition: "left 0px top 202px",
+            objectPosition: "left 0px top 158px",
           });
           break;
         case "5":
           setImageStyle({
             width: "18%",
-            paddingLeft: "24%",
-            objectPosition: "left 0px top 212px",
+            /*paddingLeft: "24%",*/
+            objectPosition: "left 0px top 162px",
           });
           break;
         case "6":
           setImageStyle({
             width: "14%",
-            paddingLeft: "29%",
-            objectPosition: "left 0px top 218px",
+            /*paddingLeft: "29%",*/
+            objectPosition: "left 0px top 168px",
           });
           break;
         default:
@@ -124,7 +124,7 @@ function WhiteBack({ setProductsitemOpen }) {
                     style={imageStyle}
                   />
                 ) : (
-                  <img id="FieldDesign2" src={FieldFull} alt="FieldDesign" />
+                  <img id="FieldDesignBack" src={FieldFull} alt="FieldDesign" />
                 )}
               </div>
 
