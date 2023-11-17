@@ -70,7 +70,7 @@ function BlackRight({ setProductsitemOpen }) {
       "คุณต้องการย้อนกลับ ?"
     );
     if (confirmed) {
-      window.location.href = "/T-shirt/White-Front";
+      window.location.href = "/T-shirt/Black-Back";
     }
   };
 
