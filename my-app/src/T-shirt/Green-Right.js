@@ -103,7 +103,7 @@ function GreenRight({ setProductsitemOpen }) {
                     style={imageStyle}
                   />
                 ) : (
-                  <img id="FieldDesignRight2" src={FieldFull} alt="FieldDesign" />
+                  <img id="FieldDesignLeft2" src={FieldFull} alt="FieldDesign" />
                 )}
               </div>
 
