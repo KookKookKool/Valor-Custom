@@ -68,19 +68,6 @@ button:hover {
   max-height: 100%;
 }
 
-#FieldUpload {
-  width: 138px;
-  position: absolute;
-  top: 50%;
-  left: 49.2%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
-  z-index: 1;
-  margin-top: 0px;
-  height: 800px;
-}
-
 #FieldUploadRight {
   width: 138px;
   position: absolute;
@@ -193,12 +180,51 @@ button:hover {
   object-fit: contain;
 }
 
+#FieldUpload {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 49.2%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+}
+
+#FieldUploadB {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 49.2%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+}
+
 
 #FieldUpload1 {
   width: 138px;
   position: absolute;
   top: 50%;
-  left: 50.5%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+}
+
+#FieldUploadB1 {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 49.5%;
   transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 100%;
@@ -220,18 +246,23 @@ button:hover {
   height: 800px;
 }
 
-img#FieldUpload {
-  object-fit: contain; /* ไม่ยืดเต็มพื้นที่แต่จะไม่ตัดขอบของรูปภาพ */
+#FieldUploadB2 {
+  width: 138px;
+  position: absolute;
+  top: 48%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
 }
 
-img#FieldUpload1 {
+
+img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#FieldUploadB1, img#FieldUploadB2  {
   object-fit: contain; /* ไม่ยืดเต็มพื้นที่แต่จะไม่ตัดขอบของรูปภาพ */
 }
-
-img#FieldUpload2 {
-  object-fit: contain; /* ไม่ยืดเต็มพื้นที่แต่จะไม่ตัดขอบของรูปภาพ */
-}
-
 
 
 #FieldDesign {
@@ -771,17 +802,28 @@ img#FieldUpload2 {
   }
 
   #FieldUpload {
+    top: 19%;
+  }
+
+  #FieldUploadB {
     top: 21%;
   }
 
   #FieldUpload1 {
-    top: 16%;
+    top: 18%;
+  }
+
+  #FieldUploadB1 {
+    top: 20%;
   }
 
   #FieldUpload2 {
-    top: 14%;
+    top: 18%;
   }
 
+  #FieldUploadB2 {
+    top: 22%;
+  }
 
 
   .Menu-icons {

@@ -116,7 +116,7 @@ function NavyBack({ setProductsitemOpen }) {
                 <img id="MockupBack3" src={NavyBackMockup} alt="Mockup" />
                 {uploadedImage ? (
                   <img
-                    id="FieldUpload"
+                    id="FieldUploadB2"
                     src={uploadedImage}
                     alt="FieldUpload"
                     style={imageStyle}

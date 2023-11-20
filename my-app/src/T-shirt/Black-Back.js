@@ -116,7 +116,7 @@ function BlackBack({ setProductsitemOpen }) {
                 <img id="MockupFront1" src={BlackBackMockup} alt="Mockup" />
                 {uploadedImage ? (
                   <img
-                    id="FieldUpload"
+                    id="FieldUploadB1"
                     src={uploadedImage}
                     alt="FieldUpload"
                     style={imageStyle}

@@ -19,7 +19,7 @@ function GreenBack({ setProductsitemOpen }) {
   const [imageStyle, setImageStyle] = useState({
     width: "54%", // ค่าเริ่มต้นสำหรับ A3
 
-    objectPosition: "left 0px top 132px",
+    objectPosition: "left 0px top 172px",
   });
 
   const handleImageStyleChange = (selectedOption) => {
@@ -32,42 +32,42 @@ function GreenBack({ setProductsitemOpen }) {
         case "1, default":
           setImageStyle({
             width: "54%",
-            objectPosition: "left 0px top 132px",
+            objectPosition: "left 0px top 172px",
           });
           break;
         case "2":
           setImageStyle({
             width: "48%",
 
-            objectPosition: "left 0px top 132px",
+            objectPosition: "left 0px top 172px",
           });
           break;
         case "3":
           setImageStyle({
             width: "40%",
 
-            objectPosition: "left 0px top 132px",
+            objectPosition: "left 0px top 172px",
           });
           break;
         case "4":
           setImageStyle({
             width: "28%",
 
-            objectPosition: "left 0px top 138px",
+            objectPosition: "left 0px top 178px",
           });
           break;
         case "5":
           setImageStyle({
             width: "18%",
             /*paddingLeft: "24%",*/
-            objectPosition: "left 0px top 136px",
+            objectPosition: "left 0px top 176px",
           });
           break;
         case "6":
           setImageStyle({
             width: "14%",
             /*paddingLeft: "29%",*/
-            objectPosition: "left 0px top 136px",
+            objectPosition: "left 0px top 176px",
           });
           break;
         default:
@@ -116,7 +116,7 @@ function GreenBack({ setProductsitemOpen }) {
                 <img id="MockupBack3" src={GreenBackMockup} alt="Mockup" />
                 {uploadedImage ? (
                   <img
-                    id="FieldUpload"
+                    id="FieldUploadB2"
                     src={uploadedImage}
                     alt="FieldUpload"
                     style={imageStyle}

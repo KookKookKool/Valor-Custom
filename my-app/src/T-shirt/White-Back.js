@@ -118,7 +118,7 @@ function WhiteBack({ setProductsitemOpen }) {
                 <img id="MockupFront1" src={WhiteBackMockup} alt="Mockup" />
                 {uploadedImage ? (
                   <img
-                    id="FieldUpload"
+                    id="FieldUploadB"
                     src={uploadedImage}
                     alt="FieldUpload"
                     style={imageStyle}
