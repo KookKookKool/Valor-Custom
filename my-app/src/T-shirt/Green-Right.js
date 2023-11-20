@@ -18,7 +18,7 @@ function GreenRight({ setProductsitemOpen }) {
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
-    width: "28%", 
+    width: "25%", 
     paddingLeft: "8px",
     objectPosition: "left 0px top 210px",
   });
@@ -32,7 +32,7 @@ function GreenRight({ setProductsitemOpen }) {
       switch (imageStyleOption) {
         case "1":
           setImageStyle({
-            width: "28%", 
+            width: "25%", 
             paddingLeft: "8px",
             objectPosition: "left 0px top 210px",
           });
@@ -97,13 +97,13 @@ function GreenRight({ setProductsitemOpen }) {
                 <img id="MockupFront1" src={GreenRightMockup} alt="Mockup" />
                 {uploadedImage ? (
                   <img
-                    id="FieldUpload"
+                    id="FieldUploadRight3"
                     src={uploadedImage}
                     alt="FieldUpload"
                     style={imageStyle}
                   />
                 ) : (
-                  <img id="FieldDesignLeft2" src={FieldFull} alt="FieldDesign" />
+                  <img id="FieldDesignRight2" src={FieldFull} alt="FieldDesign" />
                 )}
               </div>
 

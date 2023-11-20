@@ -81,6 +81,119 @@ button:hover {
   height: 800px;
 }
 
+#FieldUploadRight {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 49.2%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+  object-fit: contain;
+}
+
+#FieldUploadLeft {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 47.1%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+  object-fit: contain;
+}
+
+#FieldUploadRight1 {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 41%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+  object-fit: contain;
+}
+
+#FieldUploadLeft1 {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 54.5%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+  object-fit: contain;
+}
+
+#FieldUploadRight2 {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+  object-fit: contain;
+}
+
+#FieldUploadLeft2 {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+  object-fit: contain;
+}
+
+#FieldUploadRight3 {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+  object-fit: contain;
+}
+
+#FieldUploadLeft3 {
+  width: 138px;
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+  margin-top: 0px;
+  height: 800px;
+  object-fit: contain;
+}
+
+
 #FieldUpload1 {
   width: 138px;
   position: absolute;
@@ -118,6 +231,8 @@ img#FieldUpload1 {
 img#FieldUpload2 {
   object-fit: contain; /* ไม่ยืดเต็มพื้นที่แต่จะไม่ตัดขอบของรูปภาพ */
 }
+
+
 
 #FieldDesign {
   position: absolute;
@@ -414,7 +529,6 @@ img#FieldUpload2 {
     margin-top: 18px;
 }
 
-
   #FieldDesign {
     position: absolute;
     top: 50%;
@@ -534,6 +648,118 @@ img#FieldUpload2 {
     max-height: 100%;
     z-index: 1;
     margin-top: -72px;
+  }
+
+  #FieldUploadRight {
+    width: 138px;
+    position: absolute;
+    top: 50%;
+    left: 49.2%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    margin-top: -116px;
+    height: 800px;
+    object-fit: contain;
+  }
+  
+  #FieldUploadLeft {
+    width: 138px;
+    position: absolute;
+    top: 50%;
+    left: 47.1%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    margin-top: -116px;
+    height: 800px;
+    object-fit: contain;
+  }
+  
+  #FieldUploadRight1 {
+    width: 138px;
+    position: absolute;
+    top: 50%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    margin-top: -118px;
+    height: 800px;
+    object-fit: contain;
+  }
+  
+  #FieldUploadLeft1 {
+    width: 138px;
+    position: absolute;
+    top: 50%;
+    left: 54.5%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    margin-top: -118px;
+    height: 800px;
+    object-fit: contain;
+  }
+  
+  #FieldUploadRight2 {
+    width: 138px;
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    margin-top: -116px;
+    height: 800px;
+    object-fit: contain;
+  }
+  
+  #FieldUploadLeft2 {
+    width: 138px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    margin-top: -116px;
+    height: 800px;
+    object-fit: contain;
+  }
+  
+  #FieldUploadRight3 {
+    width: 138px;
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    margin-top: -116px;
+    height: 800px;
+    object-fit: contain;
+  }
+  
+  #FieldUploadLeft3 {
+    width: 138px;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    margin-top: -116px;
+    height: 800px;
+    object-fit: contain;
   }
 
   .CustomFront {

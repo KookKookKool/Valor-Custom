@@ -17,7 +17,7 @@ function BlackLeft({ setProductsitemOpen }) {
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
-    width: "28%", 
+    width: "25%", 
     paddingLeft: "8px",
     objectPosition: "left 0px top 210px",
   });
@@ -31,7 +31,7 @@ function BlackLeft({ setProductsitemOpen }) {
       switch (imageStyleOption) {
         case "1":
           setImageStyle({
-            width: "28%", 
+            width: "25%", 
             paddingLeft: "8px",
             objectPosition: "left 0px top 210px",
           });
@@ -96,7 +96,7 @@ function BlackLeft({ setProductsitemOpen }) {
                 <img id="MockupFront1" src={BlackLeftMockup} alt="Mockup" />
                 {uploadedImage ? (
                   <img
-                    id="FieldUpload"
+                    id="FieldUploadLeft1"
                     src={uploadedImage}
                     alt="FieldUpload"
                     style={imageStyle}
