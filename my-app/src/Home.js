@@ -7,7 +7,7 @@ import CTicon from "./Asset/icon/ValorCustom.png";
 
 export default function Home() {
   return (
-    <>
+    <div className="MainAll">
       <div className="video-container">
         <Link to="/main">
 
@@ -23,6 +23,6 @@ export default function Home() {
       </div>
       <Slider />
       <Footer />
-    </>
+    </div>
   );
 }

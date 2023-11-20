@@ -23,57 +23,57 @@ function Slider() {
   return (
     <div>
 <h1 className="head">CUSTOM DESIGN</h1>
-<div class="logo-slider">
-	<div class="logo-slide-track">
-		<div class="slide">
+<div className="logo-slider">
+	<div className="logo-slide-track">
+		<div className="slide">
 			<img src={M1} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M2} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M3} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M4} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M5} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M6} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M7} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M8} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M9} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M10} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M11} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M12} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M13} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M14} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M15} alt="" />
 		</div>   
-		<div class="slide">
+		<div className="slide">
 			<img src={M16} alt="" />
 		</div>
-		<div class="slide">
+		<div className="slide">
 			<img src={M17} alt="" />
 		</div>
 		
