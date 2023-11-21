@@ -1,4 +1,13 @@
 /* App.css */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  overflow-y: auto; /* เพิ่มการเลื่อนแนวตั้งเมื่อเนื้อหาเกินหน้าจอ */
+}
+
 .App {
   background: linear-gradient(180deg, black 0%, rgba(255, 255, 255, 0) 100%, white 100%);
   /* กำหนดสีพื้นหลังเป็น linear-gradient ตามที่คุณต้องการ */
@@ -6,6 +15,7 @@
   justify-content: center;
   align-items: center;
   /* สไตล์อื่น ๆ ที่คุณต้องการ */
+  height: 100vh;
 }
 
 

@@ -1,15 +1,30 @@
 .MainAll {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* ทำให้ความสูงของ body เต็มหน้าจอ */
   width: 100vw;
-  height: 100vh;
+  margin: 0; /* ลบ margin ที่ถูกกำหนดใน body โดยปริยาย */
 }
 
 .video-container {
     width: 100%;
-    height: 65%;
+    height: 60%;
     overflow: hidden;
     position: relative;
     margin-bottom: 2%;
 
+  }
+
+  .centered-button {
+    display: flex;
+  }
+
+  .centered-button2 {
+    display: none;
+  }
+  
+  .Submain {
+    height: 40%;
   }
 
   .video-container::before {
@@ -25,7 +40,7 @@
   
   .Video {
     width: 100vw;
-    height: 55vh;
+    height: 60vh;
     object-fit: cover; 
     z-index: 1;
   }
@@ -42,7 +57,7 @@
 
   #bgfooter {
     width: 100%;
-    height: 7vh;
+    height: 8vh;
   }
 
   .Footergroup{
@@ -86,6 +101,30 @@
     border-radius: 8px;
     z-index: 3; 
   }
+
+  .centered-button2 {
+    display: none;
+    font-family: 'Dameron', sans-serif; /* ใช้ font ที่กำหนด */
+    text-align: center;
+    transition: opacity 0.3s; /* เพิ่มการเปลี่ยนแปลงความโปร่งแสง */
+    z-index: 3; 
+    justify-content: center;
+    padding: 8px;
+
+  }
+  
+  .centered-button2 button {
+    font-family: 'Dameron', sans-serif; /* ใช้ font ที่กำหนด */
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    z-index: 3; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
   
   .image-overlay {
     position: absolute;
@@ -100,6 +139,7 @@
   .video-container:hover .centered-button {
     opacity: 4; /* แสดงปุ่มเมื่อ hover บน video-container */
   }
+
 
   @media (max-width: 1614px) {
     .TextFooter {
@@ -120,6 +160,31 @@
       font-size: 18px;
     }
 
+    .centered-button {
+      display: none;
+    }
+  
+    .centered-button2 {
+      display: flex;
+    }
+
+    .Footergroup {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+
+    .Logo {
+      width: 100% !important;
+    }
+
+
+    .LogoGroup {
+      margin-left: 2% !important;
+      margin-right: 2%;
+    }
+
   }
 
   /* mobile */
@@ -128,9 +193,33 @@
     flex: 3; /* ส่วนซ้ายเป็น 30% */
     margin-left: 3%;
     padding: 0;
+    color: #D5CCB3;
+  }
+
+  .Logo {
+    position: relative;
+    width: 70%; /* ปรับความกว้างเป็น 70% */
+    margin-left: auto; /* ทำให้ตำแหน่งของพื้นหลังชิดขวา */
   }
   
   #bgfooter {
-    flex: 7; /* ส่วนขวาเป็น 70% */
+    position: absolute;
+    top: 0;
+    right: 0; /* ทำให้ตำแหน่งของรูปพื้นหลังชิดขวา */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
+  
+  .LogoGroup {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around; /* จัดวางโลโก้ต่าง ๆ ในรูปแบบที่คุณต้องการ */
+    margin-left: 8%;
+  }
+  
+  /* เพิ่มสไตล์ตัวอื่น ๆ ที่คุณต้องการสำหรับโลโก้ */
+
+  
   

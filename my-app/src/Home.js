@@ -21,8 +21,15 @@ export default function Home() {
           </div>
         </Link>
       </div>
+      <Link to="/main">
+      <div className="centered-button2">
+            <button>CUSTOM DESIGN</button>
+          </div>
+      </Link>
+      <div className="Submain">
       <Slider />
       <Footer />
+      </div>
     </div>
   );
 }
