@@ -62,7 +62,7 @@ export default function App() {
         <Route path="/T-shirt/Green-Right" element={<GreenLeft />} />
         <Route path="/T-shirt/Green-Left" element={<GreenRight />} />
 
-        <Route path="/Custom-Design/Main2" element={<Main2 />} />
+        <Route path="/Custom-Design/Main2/*" element={<Main2 />} />
 
       </Routes>
 

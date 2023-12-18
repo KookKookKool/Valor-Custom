@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-
+import { useState, useEffect } from 'react';
 import "./Style.css";
 import Navigation from "../Components/Navigation";
 import Back from "../Asset/icon/Back.png";
@@ -13,9 +12,9 @@ import ImageSaveButton from "../Custom-Design/ImageSaveButton";
 import "../Components/Products.css";
 
 function WhiteFront({ setProductsitemOpen }) {
+  
   const [uploadedImage, setUploadedImage] = useState(null);
   const [savedImage, setSavedImage] = useState(null);
-
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
@@ -23,6 +22,20 @@ function WhiteFront({ setProductsitemOpen }) {
 
     objectPosition: "left 0px top 202px",
   });
+
+  const handleImageUpload = (selectedImage) => {
+    setUploadedImage(URL.createObjectURL(selectedImage));
+  };
+
+  const handleSaveImage = () => {
+    setSavedImage(uploadedImage);
+  
+    // Pass uploadedImage to OtherPage
+    window.location.href = `/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImage)}`;
+    // Alternatively, you can use React Router's history object to navigate and pass state
+    // history.push("/Custom-Design/Main2", { uploadedImage });
+  };
+  
 
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
@@ -78,14 +91,6 @@ function WhiteFront({ setProductsitemOpen }) {
       }
     }
   }, [showDropdown, imageStyleOption]);
-
-  const handleImageUpload = (selectedImage) => {
-    setUploadedImage(URL.createObjectURL(selectedImage));
-  };
-
-  const handleSaveImage = () => {
-    setSavedImage(uploadedImage);
-  };
 
   const handleGoBack = () => {
     const confirmed = window.confirm(
@@ -148,12 +153,9 @@ function WhiteFront({ setProductsitemOpen }) {
                 )}
               </div>
               <div className="Box6">
-                <Upload onUpload={handleImageUpload} />
-                <ImageSaveButton
-                  onSave={handleSaveImage}
-                  savedImage={savedImage}
-                />
-              </div>
+              <Upload onUpload={handleImageUpload} />
+        <ImageSaveButton onSave={handleSaveImage} savedImage={savedImage}/> 
+      </div>
             </div>
             <div className="Box4">
               <MenuW />

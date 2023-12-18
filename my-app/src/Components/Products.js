@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Route, Link, Routes, } from "react-router-dom"; // ลบ BrowserRouter ออก
 import "../Components/Products.css";
 import Card1 from "../T-shirt/Index";
-import Card2 from "../Combatshirt/Index";
+//import Card2 from "../Combatshirt/Index";
 import Card3 from "../Cup/Index";
+import Card4 from "../LaserPatch/Index";
 
 // เราจะเปลี่ยนการเรียกใช้ Components อื่น ๆ ให้ตรงกับโครงสร้างของ Routes
 import White from "../T-shirt/White-Front";
@@ -59,10 +60,10 @@ export default function Products() {
         </div>
         <div className="Link">
           <Link
-            to="/Combatshirt/Combatshirt"
+            to="/LaserPatch"
             onClick={() => setIsProductsitemOpen(false)}
           >
-            <Card2 />
+            <Card4 />
           </Link>
         </div>
         <div className="Link">

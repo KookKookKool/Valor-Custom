@@ -1,13 +1,16 @@
-// Main2.js
-import React from "react";
+import React from 'react';
 
-const Main2 = ({ savedImage }) => {
+const Main2 = () => {
+  // Retrieve the uploaded image from the query parameters
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const uploadedImage = urlSearchParams.get('uploadedImage');
+
   return (
-    <div className="Main2">
-      <h1>หน้า Main2</h1>
-      {savedImage && <img src={savedImage} alt="SavedImage" />}
-      {/* แสดงรูปภาพที่บันทึกไว้ */}
-      {/* สามารถแสดงรูปภาพที่บันทึกไว้ที่นี่ */}
+    <div>
+      {/* Display the uploaded image */}
+      {uploadedImage && (
+        <img src={decodeURIComponent(uploadedImage)} alt="Uploaded Design" />
+      )}
     </div>
   );
 };
