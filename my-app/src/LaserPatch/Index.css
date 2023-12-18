@@ -75,3 +75,8 @@
     justify-content: center;
     align-items: center;
   }
+
+  .HeaderText {
+    display: flex;
+    justify-content: center;
+  }

@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
 import "./Index.css";
-import Navigation from "../Components/Navigation";
 import Back from "../Asset/icon/Back.png";
 import LaserPatchMockup from "../LaserPatch/LaserPatchHover.png";
 import Zone from "../LaserPatch/Zone.png";
-import MenuW from "../Components/White/MenuWhite";
 import Upload from "../Upload/Upload1";
 
 import ImageSaveButton from "../Custom-Design/ImageSaveButton";
@@ -106,15 +104,16 @@ function LaserPatch({ setProductsitemOpen }) {
       <div className="container">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
-          <div>
-        <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
-        </div>
-          <div className="Box">
-            <div className="Box2">
+          <div className='HeaderText'>
+          <div className="Box2">
               <button id="BntBack" onClick={handleGoBack}>
                 <img src={Back} alt="Back" />
               </button>
             </div>
+        <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+        </div>
+          <div className="Box">
+
             <div className="FieldCustom">
               <div className="CustomFront">
                 <img id="MockupFront1" src={Zone} alt="Mockup" />
@@ -149,30 +148,30 @@ function LaserPatch({ setProductsitemOpen }) {
                   </div>
                 )}
               </div>
+              <div className="Box4">
+
+{showDropdown && (
+  <div className="dropdown">
+    <label>ขนาด:</label>
+    <select
+      value={imageStyleOption}
+      onChange={(e) => handleImageStyleChange(e.target.value)}
+    >
+      <option value="1, default">A3</option>
+      <option value="2">A4</option>
+      <option value="3">A5</option>
+      <option value="4">A6</option>
+      <option value="5">A7</option>
+      <option value="6">A8</option>
+    </select>
+  </div>
+  
+)}
+</div>
               <div className="Box6">
               <Upload onUpload={handleImageUpload} />
         <ImageSaveButton onSave={handleSaveImage} savedImage={savedImage}/> 
       </div>
-            </div>
-            <div className="Box4">
-
-              {showDropdown && (
-                <div className="dropdown">
-                  <label>ขนาด:</label>
-                  <select
-                    value={imageStyleOption}
-                    onChange={(e) => handleImageStyleChange(e.target.value)}
-                  >
-                    <option value="1, default">A3</option>
-                    <option value="2">A4</option>
-                    <option value="3">A5</option>
-                    <option value="4">A6</option>
-                    <option value="5">A7</option>
-                    <option value="6">A8</option>
-                  </select>
-                </div>
-                
-              )}
             </div>
           </div>
         </div>
