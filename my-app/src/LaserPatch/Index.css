@@ -26,6 +26,8 @@
 
   #Logo2Hover {
     display: none;
+    width: 150px;
+    height: auto;
   }
 
   .Card2:hover #Logo2 {
@@ -33,7 +35,7 @@
   }
 
   .Card2:hover #Logo2Hover {
-    display: block;
+    display: flex;
   }
 
   @media (min-width: 1200px) {
@@ -47,6 +49,12 @@
       height: auto;
     }
     #Logo3 {
+      width: 240px;
+      height: auto;
+    }
+
+    #Logo2Hover {
+      display: none;
       width: 240px;
       height: auto;
     }
