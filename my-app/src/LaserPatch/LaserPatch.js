@@ -15,9 +15,9 @@ function LaserPatch({ setProductsitemOpen }) {
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
-    width: "54%", // ค่าเริ่มต้นสำหรับ A3
+    width: "100%", // ค่าเริ่มต้นสำหรับ A3
 
-    objectPosition: "left 0px top 268px",
+    objectPosition: "left 0px top 105px",
   });
 
   const handleImageUpload = (selectedImage) => {
@@ -44,32 +44,38 @@ function LaserPatch({ setProductsitemOpen }) {
       switch (imageStyleOption) {
         case "1, default":
           setImageStyle({
-            width: "54%",
+            width: "100%",
+            objectPosition: "left 0px top 105px",
           });
           break;
         case "2":
           setImageStyle({
-            width: "48%",
+            width: "100%",
+            objectPosition: "left 0px top 105px",
           });
           break;
         case "3":
           setImageStyle({
-            width: "40%",
+            width: "100%",
+            objectPosition: "left 0px top 105px",
           });
           break;
         case "4":
           setImageStyle({
-            width: "28%",
+            width: "100%",
+            objectPosition: "left 0px top 105px",
           });
           break;
         case "5":
           setImageStyle({
-            width: "18%",
+            width: "100%",
+            objectPosition: "left 0px top 105px",
           });
           break;
         case "6":
           setImageStyle({
-            width: "14%",
+            width: "100%",
+            objectPosition: "left 0px top 105px",
           });
           break;
         default:
@@ -107,7 +113,7 @@ function LaserPatch({ setProductsitemOpen }) {
                 <img id="MockupLaserPatch" src={Zone} alt="Mockup" />
                 {uploadedImage ? (
                   <img
-                    id="FieldUpload"
+                    id="FieldUploadPatch"
                     src={uploadedImage}
                     alt="FieldUpload"
                     style={imageStyle}
