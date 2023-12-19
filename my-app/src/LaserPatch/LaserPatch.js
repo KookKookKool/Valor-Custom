@@ -17,7 +17,7 @@ function LaserPatch({ setProductsitemOpen }) {
   const [imageStyle, setImageStyle] = useState({
     width: "54%", // ค่าเริ่มต้นสำหรับ A3
 
-    objectPosition: "left 0px top 202px",
+    objectPosition: "left 0px top 268px",
   });
 
   const handleImageUpload = (selectedImage) => {
@@ -45,42 +45,31 @@ function LaserPatch({ setProductsitemOpen }) {
         case "1, default":
           setImageStyle({
             width: "54%",
-            objectPosition: "left 0px top 202px",
           });
           break;
         case "2":
           setImageStyle({
             width: "48%",
-
-            objectPosition: "left 0px top 202px",
           });
           break;
         case "3":
           setImageStyle({
             width: "40%",
-
-            objectPosition: "left 0px top 202px",
           });
           break;
         case "4":
           setImageStyle({
             width: "28%",
-
-            objectPosition: "left 0px top 202px",
           });
           break;
         case "5":
           setImageStyle({
             width: "18%",
-            paddingLeft: "24%",
-            objectPosition: "left 0px top 212px",
           });
           break;
         case "6":
           setImageStyle({
             width: "14%",
-            paddingLeft: "29%",
-            objectPosition: "left 0px top 218px",
           });
           break;
         default:
@@ -115,7 +104,7 @@ function LaserPatch({ setProductsitemOpen }) {
           <div className="Box">
             <div className="FieldCustom">
               <div className="CustomFront">
-                <img id="MockupFront1" src={Zone} alt="Mockup" />
+                <img id="MockupLaserPatch" src={Zone} alt="Mockup" />
                 {uploadedImage ? (
                   <img
                     id="FieldUpload"
@@ -125,7 +114,7 @@ function LaserPatch({ setProductsitemOpen }) {
                   />
                 ) : (
                   <img
-                    id="FieldDesign"
+                    id="FieldDesignPatch"
                     src={LaserPatchMockup}
                     alt="FieldDesign"
                   />
