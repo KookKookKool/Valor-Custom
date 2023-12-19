@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import "./Index.css";
 import Back from "../Asset/icon/Back.png";
 import LaserPatchMockup from "../LaserPatch/LaserPatchHover.png";
@@ -10,7 +10,6 @@ import ImageSaveButton from "../Custom-Design/ImageSaveButton";
 import "../Components/Products.css";
 
 function LaserPatch({ setProductsitemOpen }) {
-  
   const [uploadedImage, setUploadedImage] = useState(null);
   const [savedImage, setSavedImage] = useState(null);
   const [showDropdown] = useState(true);
@@ -27,13 +26,14 @@ function LaserPatch({ setProductsitemOpen }) {
 
   const handleSaveImage = () => {
     setSavedImage(uploadedImage);
-  
+
     // Pass uploadedImage to OtherPage
-    window.location.href = `/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImage)}`;
+    window.location.href = `/Custom-Design/Main2?uploadedImage=${encodeURIComponent(
+      uploadedImage
+    )}`;
     // Alternatively, you can use React Router's history object to navigate and pass state
     // history.push("/Custom-Design/Main2", { uploadedImage });
   };
-  
 
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
@@ -104,16 +104,15 @@ function LaserPatch({ setProductsitemOpen }) {
       <div className="container">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
-          <div className='HeaderText'>
-          <div className="Box2">
-              <button id="BntBack" onClick={handleGoBack}>
+          <div className="HeaderText1">
+            <h3 className="CenteredHeader1">CUSTOM DESIGN</h3>
+          </div>
+          <div className="Box7">
+              <button id="BntBack1" onClick={handleGoBack}>
                 <img src={Back} alt="Back" />
               </button>
             </div>
-        <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
-        </div>
           <div className="Box">
-
             <div className="FieldCustom">
               <div className="CustomFront">
                 <img id="MockupFront1" src={Zone} alt="Mockup" />
@@ -125,12 +124,15 @@ function LaserPatch({ setProductsitemOpen }) {
                     style={imageStyle}
                   />
                 ) : (
-                  <img id="FieldDesign" src={LaserPatchMockup} alt="FieldDesign" />
+                  <img
+                    id="FieldDesign"
+                    src={LaserPatchMockup}
+                    alt="FieldDesign"
+                  />
                 )}
               </div>
 
               <div className="Box5">
-
                 {showDropdown && (
                   <div className="dropdown">
                     <label>ขนาด:</label>
@@ -149,34 +151,34 @@ function LaserPatch({ setProductsitemOpen }) {
                 )}
               </div>
               <div className="Box4">
-
-{showDropdown && (
-  <div className="dropdown">
-    <label>ขนาด:</label>
-    <select
-      value={imageStyleOption}
-      onChange={(e) => handleImageStyleChange(e.target.value)}
-    >
-      <option value="1, default">A3</option>
-      <option value="2">A4</option>
-      <option value="3">A5</option>
-      <option value="4">A6</option>
-      <option value="5">A7</option>
-      <option value="6">A8</option>
-    </select>
-  </div>
-  
-)}
-</div>
+                {showDropdown && (
+                  <div className="dropdown">
+                    <label>ขนาด:</label>
+                    <select
+                      value={imageStyleOption}
+                      onChange={(e) => handleImageStyleChange(e.target.value)}
+                    >
+                      <option value="1, default">A3</option>
+                      <option value="2">A4</option>
+                      <option value="3">A5</option>
+                      <option value="4">A6</option>
+                      <option value="5">A7</option>
+                      <option value="6">A8</option>
+                    </select>
+                  </div>
+                )}
+              </div>
               <div className="Box6">
-              <Upload onUpload={handleImageUpload} />
-        <ImageSaveButton onSave={handleSaveImage} savedImage={savedImage}/> 
-      </div>
+                <Upload onUpload={handleImageUpload} />
+                <ImageSaveButton
+                  onSave={handleSaveImage}
+                  savedImage={savedImage}
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </>
   );
 }
