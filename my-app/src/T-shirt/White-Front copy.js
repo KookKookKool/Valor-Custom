@@ -1,36 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
-import { setUploadedImage } from '../Actions/actions';
-import { useNavigate } from 'react-router-dom'; // เปลี่ยนการ import useHistory เป็น useNavigate
+import { useState, useEffect } from 'react';
 import "./Style.css";
 import Navigation from "../Components/Navigation";
 import Back from "../Asset/icon/Back.png";
 import WhiteFrontMockup from "../Asset/T-shirt/White-Front.png";
 import MenuW from "../Components/White/MenuWhite";
 import Upload from "../Upload/Upload1";
-import FieldFull from "../Asset/T-shirt/Field-Full-Black.png";
-//import ImageSaveButton from "../Custom-Design/ImageSaveButton";
+import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่คือการ import 'FieldFull'
+
+import ImageSaveButton from "../Custom-Design/ImageSaveButton";
+
+import { ImageProvider, useImageContext } from '../Upload/ImageContext'; // Import ImageProvider, useImageContext
+
 import "../Components/Products.css";
 
-function WhiteFront({ uploadedImage, setUploadedImage }) {
-  //const [savedImage, setSavedImage] = useState(null);
+function WhiteFront({ setProductsitemOpen }) {
+  
+  const [uploadedImage, setUploadedImage] = useState(null);
+  const [savedImage, setSavedImage] = useState(null);
   const [showDropdown] = useState(true);
-  const [imageStyleOption, setImageStyleOption] = useState("1");
+  const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
-    width: "54%",
+    width: "54%", // ค่าเริ่มต้นสำหรับ A3
+
     objectPosition: "left 0px top 202px",
   });
-
-  const navigate = useNavigate(); // ใช้ useNavigate แทน useHistory
 
   const handleImageUpload = (selectedImage) => {
     setUploadedImage(URL.createObjectURL(selectedImage));
   };
 
   const handleSaveImage = () => {
-    //setSavedImage(uploadedImage);
-    navigate(`/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImage)}`);
+    setSavedImage(uploadedImage);
+  
+    // Pass uploadedImage to OtherPage
+    window.location.href = `/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImage)}`;
+    // Alternatively, you can use React Router's history object to navigate and pass state
+    // history.push("/Custom-Design/Main2", { uploadedImage });
   };
+  
 
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
@@ -85,15 +92,14 @@ function WhiteFront({ uploadedImage, setUploadedImage }) {
           break;
       }
     }
-    },
-   [showDropdown, imageStyleOption]);
+  }, [showDropdown, imageStyleOption]);
 
   const handleGoBack = () => {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      navigate("/Main");
+      window.location.href = "/Main";
     }
   };
 
@@ -103,8 +109,8 @@ function WhiteFront({ uploadedImage, setUploadedImage }) {
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
           <div>
-            <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
-          </div>
+        <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+        </div>
           <div className="Box">
             <div className="Box2">
               <button id="BntBack" onClick={handleGoBack}>
@@ -149,9 +155,9 @@ function WhiteFront({ uploadedImage, setUploadedImage }) {
                 )}
               </div>
               <div className="Box6">
-                <Upload onUpload={handleImageUpload} />
-                <button onClick={handleSaveImage}>บันทึกรูป</button>
-              </div>
+              <Upload onUpload={handleImageUpload} />
+        <ImageSaveButton onSave={handleSaveImage} savedImage={savedImage}/> 
+      </div>
             </div>
             <div className="Box4">
               <MenuW />
@@ -170,17 +176,15 @@ function WhiteFront({ uploadedImage, setUploadedImage }) {
                     <option value="6">A8</option>
                   </select>
                 </div>
+                
               )}
             </div>
           </div>
         </div>
       </div>
+
     </>
   );
 }
 
-const mapStateToProps = (state) => ({
-  uploadedImage: state.uploadedImage,
-});
-
-export default connect(mapStateToProps, { setUploadedImage })(WhiteFront);
+export default WhiteFront;

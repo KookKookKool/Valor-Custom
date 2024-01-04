@@ -1,16 +1,14 @@
-// Upload1.js
 import React from "react";
 import "./Upload1.css";
-import { connect } from 'react-redux';
-import { setUploadedImage } from '../Actions/actions';
 
-function Upload({ onUpload, setUploadedImage }) {
+
+
+function Upload({ onUpload }) {
   function handleChange(e) {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
-      const fileURL = URL.createObjectURL(selectedFile);
+      // const fileURL = URL.createObjectURL(selectedFile);
       onUpload(selectedFile);
-      setUploadedImage(fileURL);
     }
   }
 
@@ -30,4 +28,4 @@ function Upload({ onUpload, setUploadedImage }) {
   );
 }
 
-export default connect(null, { setUploadedImage })(Upload);
+export default Upload;

@@ -40,6 +40,7 @@ button:hover {
   gap: 20%;
   height: 752px;
   margin-top: -140px;
+  z-index: 1;
 }
 
 .FieldCustom {
@@ -49,6 +50,7 @@ button:hover {
   align-items: center;
   height: 100vh; /* ความสูงของหน้าเว็บทั้งหมดหรือความสูงตามที่คุณต้องการ */
   gap: 1%;
+  z-index: 0;
 }
 
 .CustomFront {
@@ -513,6 +515,7 @@ img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#Field
     align-items: center;
     /* align-content: center; */
     justify-content: center;
+    z-index: 1;
   }
 
   .FieldCustom {

@@ -1,13 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const Main2 = () => {
-  // Retrieve the uploaded image from the query parameters
-  const urlSearchParams = new URLSearchParams(window.location.search);
-  const uploadedImage = urlSearchParams.get('uploadedImage');
-
+const Main2 = ({ uploadedImage }) => {
   return (
     <div>
-      {/* Display the uploaded image */}
       {uploadedImage && (
         <img src={decodeURIComponent(uploadedImage)} alt="Uploaded Design" />
       )}
@@ -15,4 +11,8 @@ const Main2 = () => {
   );
 };
 
-export default Main2;
+const mapStateToProps = (state) => ({
+  uploadedImage: state.uploadedImage,
+});
+
+export default connect(mapStateToProps)(Main2);
