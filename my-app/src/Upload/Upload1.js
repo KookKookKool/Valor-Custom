@@ -2,15 +2,15 @@
 import React from "react";
 import "./Upload1.css";
 import { connect } from 'react-redux';
-import { setUploadedImage } from '../Actions/actions';
+import { setUploadedImageFront } from '../Actions/actions';
 
-function Upload({ onUpload, setUploadedImage }) {
+function Upload({ onUpload, setUploadedImageFront }) {
   function handleChange(e) {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
       const fileURL = URL.createObjectURL(selectedFile);
       onUpload(selectedFile);
-      setUploadedImage(fileURL);
+      setUploadedImageFront(fileURL);
     }
   }
 
@@ -30,4 +30,4 @@ function Upload({ onUpload, setUploadedImage }) {
   );
 }
 
-export default connect(null, { setUploadedImage })(Upload);
+export default connect(null, { setUploadedImageFront })(Upload);

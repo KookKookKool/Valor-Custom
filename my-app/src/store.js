@@ -1,7 +1,11 @@
 // store.js
-import { createStore } from 'redux';
-import imageReducer from './Actions/reducer';
+import { createStore, combineReducers } from 'redux';
+import imagesReducer from './Actions/reducer'; 
 
-const store = createStore(imageReducer);
+const rootReducer = combineReducers({
+  images: imagesReducer,
+});
+
+const store = createStore(rootReducer);  
 
 export default store;

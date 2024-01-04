@@ -1,7 +1,9 @@
+// WhiteFront.js
 import React, { useState, useEffect } from 'react';
+//import { useDispatch, connect } from 'react-redux';
 import { connect } from 'react-redux';
-import { setUploadedImage } from '../Actions/actions';
-import { useNavigate } from 'react-router-dom'; // เปลี่ยนการ import useHistory เป็น useNavigate
+import { setUploadedImageFront } from '../Actions/actions';  // แก้ชื่อ action creator ที่นี่
+import { useNavigate } from 'react-router-dom';
 import "./Style.css";
 import Navigation from "../Components/Navigation";
 import Back from "../Asset/icon/Back.png";
@@ -9,11 +11,10 @@ import WhiteFrontMockup from "../Asset/T-shirt/White-Front.png";
 import MenuW from "../Components/White/MenuWhite";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png";
-//import ImageSaveButton from "../Custom-Design/ImageSaveButton";
 import "../Components/Products.css";
 
-function WhiteFront({ uploadedImage, setUploadedImage }) {
-  //const [savedImage, setSavedImage] = useState(null);
+function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
+  //const dispatch = useDispatch();
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1");
   const [imageStyle, setImageStyle] = useState({
@@ -21,15 +22,14 @@ function WhiteFront({ uploadedImage, setUploadedImage }) {
     objectPosition: "left 0px top 202px",
   });
 
-  const navigate = useNavigate(); // ใช้ useNavigate แทน useHistory
+  const navigate = useNavigate();
 
   const handleImageUpload = (selectedImage) => {
-    setUploadedImage(URL.createObjectURL(selectedImage));
+    setUploadedImageFront(selectedImage);
   };
 
   const handleSaveImage = () => {
-    //setSavedImage(uploadedImage);
-    navigate(`/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImage)}`);
+    navigate(`/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImageFront)}`);
   };
 
   const handleImageStyleChange = (selectedOption) => {
@@ -48,21 +48,18 @@ function WhiteFront({ uploadedImage, setUploadedImage }) {
         case "2":
           setImageStyle({
             width: "48%",
-
             objectPosition: "left 0px top 202px",
           });
           break;
         case "3":
           setImageStyle({
             width: "40%",
-
             objectPosition: "left 0px top 202px",
           });
           break;
         case "4":
           setImageStyle({
             width: "28%",
-
             objectPosition: "left 0px top 202px",
           });
           break;
@@ -81,12 +78,10 @@ function WhiteFront({ uploadedImage, setUploadedImage }) {
           });
           break;
         default:
-          // กระทำเมื่อไม่มี case ไหนตรงกับ imageStyleOption
           break;
       }
     }
-    },
-   [showDropdown, imageStyleOption]);
+  }, [showDropdown, imageStyleOption]);
 
   const handleGoBack = () => {
     const confirmed = window.confirm(
@@ -117,10 +112,10 @@ function WhiteFront({ uploadedImage, setUploadedImage }) {
             <div className="FieldCustom">
               <div className="CustomFront">
                 <img id="MockupFront1" src={WhiteFrontMockup} alt="Mockup" />
-                {uploadedImage ? (
+                {uploadedImageFront ? (
                   <img
                     id="FieldUpload"
-                    src={uploadedImage}
+                    src={uploadedImageFront}
                     alt="FieldUpload"
                     style={imageStyle}
                   />
@@ -180,7 +175,7 @@ function WhiteFront({ uploadedImage, setUploadedImage }) {
 }
 
 const mapStateToProps = (state) => ({
-  uploadedImage: state.uploadedImage,
+  uploadedImageFront: state.images.uploadedImageFront,
 });
 
-export default connect(mapStateToProps, { setUploadedImage })(WhiteFront);
+export default connect(mapStateToProps, { setUploadedImageFront })(WhiteFront);
