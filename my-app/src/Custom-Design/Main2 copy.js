@@ -1,19 +1,23 @@
 // Main2.js
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-const Main2 = ({ uploadedImageFront }) => {
-  return (
-    <div>
-      {uploadedImageFront && (
-        <img src={decodeURIComponent(uploadedImageFront)} alt="Uploaded Design" />
-      )}
-    </div>
-  );
-};
+class Main2 extends Component {
+  render() {
+    const { uploadedImageFront } = this.props;
 
-const mapStateToProps = (state) => ({
+    return (
+      <div>
+        {uploadedImageFront && <img src={uploadedImageFront} alt="" />}
+        {/* ทำอะไรต่อไป */}
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
   uploadedImageFront: state.images.uploadedImageFront,
 });
 
 export default connect(mapStateToProps)(Main2);
+

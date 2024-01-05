@@ -2,8 +2,10 @@
 import React, { useState, useEffect } from 'react';
 //import { useDispatch, connect } from 'react-redux';
 import { connect } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import { setUploadedImageFront } from '../Actions/actions';  // แก้ชื่อ action creator ที่นี่
 import { useNavigate } from 'react-router-dom';
+import { persistor } from '../store';
 import "./Style.css";
 import Navigation from "../Components/Navigation";
 import Back from "../Asset/icon/Back.png";
@@ -28,9 +30,19 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
     setUploadedImageFront(selectedImage);
   };
 
+  //const handleSaveImage = () => {
+    //navigate(`/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImageFront)}`);
+  //};
+
   const handleSaveImage = () => {
-    navigate(`/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImageFront)}`);
+    // ทำการ dispatch action เพื่อบันทึกรูป
+    setUploadedImageFront(uploadedImageFront);
+    //navigate('/Custom-Design/Main2');
+    navigate('/T-shirt/White-Back');
   };
+
+
+
 
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
@@ -94,6 +106,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
 
   return (
     <>
+    <PersistGate loading={null} persistor={persistor}>
       <div className="container">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
@@ -145,7 +158,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
               </div>
               <div className="Box6">
                 <Upload onUpload={handleImageUpload} />
-                <button onClick={handleSaveImage}>บันทึกรูป</button>
+                <button onClick={handleSaveImage}>บันทึกและถัดไป</button>
               </div>
             </div>
             <div className="Box4">
@@ -170,6 +183,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
           </div>
         </div>
       </div>
+      </PersistGate>
     </>
   );
 }
