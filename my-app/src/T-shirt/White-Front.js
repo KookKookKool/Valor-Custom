@@ -26,8 +26,8 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
 
   const navigate = useNavigate();
 
-  const handleImageUpload = (selectedImage) => {
-    setUploadedImageFront(selectedImage);
+  const handleImageUpload = (uploadedImageFront) => {
+    setUploadedImageFront(uploadedImageFront);
   };
 
   //const handleSaveImage = () => {
@@ -37,7 +37,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
   const handleSaveImage = () => {
     // ทำการ dispatch action เพื่อบันทึกรูป
     setUploadedImageFront(uploadedImageFront);
-    //navigate('/Custom-Design/Main2');
+    //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
     navigate('/T-shirt/White-Back');
   };
 
@@ -123,19 +123,19 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
               </div>
             </div>
             <div className="FieldCustom">
-              <div className="CustomFront">
-                <img id="MockupFront1" src={WhiteFrontMockup} alt="Mockup" />
-                {uploadedImageFront ? (
-                  <img
-                    id="FieldUpload"
-                    src={uploadedImageFront}
-                    alt="FieldUpload"
-                    style={imageStyle}
-                  />
-                ) : (
-                  <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
-                )}
-              </div>
+            <div className="CustomFront">
+              <img id="MockupFront1" src={WhiteFrontMockup} alt="Mockup" />
+              {uploadedImageFront ? (
+                <img
+                  id="FieldUpload"
+                  src={uploadedImageFront}
+                  alt="FieldUpload"
+                  style={imageStyle}
+                />
+              ) : (
+                <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
+              )}
+            </div>
 
               <div className="Box5">
                 <MenuW />
@@ -158,7 +158,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
               </div>
               <div className="Box6">
                 <Upload onUpload={handleImageUpload} />
-                <button onClick={handleSaveImage}>บันทึกและถัดไป</button>
+                <button className='Btnsave' onClick={handleSaveImage}>บันทึกและถัดไป</button>
               </div>
             </div>
             <div className="Box4">
@@ -192,4 +192,8 @@ const mapStateToProps = (state) => ({
   uploadedImageFront: state.images.uploadedImageFront,
 });
 
-export default connect(mapStateToProps, { setUploadedImageFront })(WhiteFront);
+const mapDispatchToProps = (dispatch) => ({
+  setUploadedImageFront: (image) => dispatch(setUploadedImageFront(image)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(WhiteFront);

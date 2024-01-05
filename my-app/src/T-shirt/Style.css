@@ -32,6 +32,25 @@ button:hover {
   margin-left: 5%;
 }
 
+.Btnsave {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff; /* เปลี่ยนสีพื้นหลังตามที่คุณต้องการ */
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0px 9px 7px rgba(0, 0, 0, 0.25);
+}
+
+.Btnsave:hover {
+  background-color: #ff0000; /* เปลี่ยนสีพื้นหลังเมื่อนำเมาส์มาอยู่เหนือปุ่ม */
+  transform: scale(1.2); 
+  color: #ffffff;
+}
+
+
 .Box {
   display: flex;
   flex-wrap: nowrap;
@@ -473,6 +492,15 @@ img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#Field
   display: none;
 }
 
+.Box6 {
+  display: flex;
+  gap: 1%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Responsive 1100Px */
 

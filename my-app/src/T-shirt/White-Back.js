@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { connect } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { setUploadedImageBack } from '../Actions/actions'; 
+import { useNavigate } from 'react-router-dom';
+import { persistor } from '../store';
 
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
@@ -8,13 +13,12 @@ import MenuWhiteBack from "../Components/White/MenuWhiteBack";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่คือการ import 'FieldFull'
 
-import ImageSaveButton from "../Custom-Design/ImageSaveButton";
 
 import "../Components/Products.css";
 
-function WhiteBack({ setProductsitemOpen }) {
-  const [uploadedImage, setUploadedImage] = useState(null);
-  const [savedImage, setSavedImage] = useState(null);
+function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
+  //const [uploadedImage, setUploadedImage] = useState(null);
+  //const [savedImage, setSavedImage] = useState(null);
 
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
@@ -23,6 +27,26 @@ function WhiteBack({ setProductsitemOpen }) {
 
     objectPosition: "left 0px top 164px",
   });
+
+  const navigate = useNavigate();
+
+  const handleImageUpload = (uploadedImageBack) => {
+    setUploadedImageBack(uploadedImageBack);
+  };
+
+  //const handleSaveImage = () => {
+    //navigate(`/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImageFront)}`);
+  //};
+
+  const handleSaveImage = () => {
+    // ทำการ dispatch action เพื่อบันทึกรูป
+    setUploadedImageBack(uploadedImageBack);
+    //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
+    navigate('/T-shirt/White-Right');
+  };
+
+
+
 
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
@@ -79,25 +103,18 @@ function WhiteBack({ setProductsitemOpen }) {
     }
   }, [showDropdown, imageStyleOption]);
 
-  const handleImageUpload = (selectedImage) => {
-    setUploadedImage(URL.createObjectURL(selectedImage));
-  };
-
-  const handleSaveImage = () => {
-    setSavedImage(uploadedImage);
-  };
-
   const handleGoBack = () => {
     const confirmed = window.confirm(
-      "คุณต้องการย้อนกลับ ?"
+      "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      window.location.href = "/T-shirt/White-Front";
+      navigate("/T-shirt/White-Back");
     }
   };
 
   return (
     <>
+    <PersistGate loading={null} persistor={persistor}>
       <div className="container">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
@@ -116,10 +133,10 @@ function WhiteBack({ setProductsitemOpen }) {
             <div className="FieldCustom">
               <div className="CustomFront">
                 <img id="MockupFront1" src={WhiteBackMockup} alt="Mockup" />
-                {uploadedImage ? (
+                {uploadedImageBack ? (
                   <img
                     id="FieldUploadB"
-                    src={uploadedImage}
+                    src={uploadedImageBack}
                     alt="FieldUpload"
                     style={imageStyle}
                   />
@@ -149,10 +166,7 @@ function WhiteBack({ setProductsitemOpen }) {
               </div>
               <div className="Box6">
                 <Upload onUpload={handleImageUpload} />
-                <ImageSaveButton
-                  onSave={handleSaveImage}
-                  savedImage={savedImage}
-                />
+                <button className='Btnsave' onClick={handleSaveImage}>บันทึกและถัดไป</button>
               </div>
             </div>
             <div className="Box4">
@@ -178,9 +192,19 @@ function WhiteBack({ setProductsitemOpen }) {
           </div>
         </div>
       </div>
-
+      </PersistGate>
     </>
   );
 }
 
-export default WhiteBack;
+const mapStateToProps = (state) => ({
+  // จะต้อง import mapStateToProps เพื่อให้มีการเชื่อมต่อกับ Redux state
+  // ถ้าคุณยังไม่ได้ import มัน
+  uploadedImageBack: state.images.uploadedImageBack,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setUploadedImageBack: (image) => dispatch(setUploadedImageBack(image)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(WhiteBack);
