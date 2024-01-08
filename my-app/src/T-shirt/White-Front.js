@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 //import { useDispatch, connect } from 'react-redux';
 import { connect } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { setUploadedImageFront } from '../Actions/actions';  // แก้ชื่อ action creator ที่นี่
+import { setUploadedImageFront } from '../Actions/actionsFront';  // แก้ชื่อ action creator ที่นี่
 import { useNavigate } from 'react-router-dom';
 import { persistor } from '../store';
 import "./Style.css";

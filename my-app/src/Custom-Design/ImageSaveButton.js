@@ -2,9 +2,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
-import { setUploadedImageFront } from '../Actions/actions';
+import { setUploadedImageFront } from '../Actions/actionsFront';
+import { setUploadedImageBack } from '../Actions/actionsBack';
 
-const ImageSaveButton = ({ onSave, savedImage, setUploadedImageFront }) => {
+const ImageSaveButton = ({ onSave, savedImage, setUploadedImageFront, setUploadedImageBack }) => {
   const handleSave = () => {
     onSave(savedImage);
     setUploadedImageFront(null); // ล้างรูปภาพที่อัพโหลดเมื่อบันทึกเสร็จ
@@ -24,4 +25,4 @@ const mapStateToProps = (state) => ({
   savedImage: state.uploadedImage,
 });
 
-export default connect(mapStateToProps, { setUploadedImageFront })(ImageSaveButton);
+export default connect(mapStateToProps, { setUploadedImageFront, setUploadedImageBack })(ImageSaveButton);

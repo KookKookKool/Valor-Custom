@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { setUploadedImageBack } from '../Actions/actions'; 
+import { setUploadedImageBack } from '../Actions/actionsBack'; 
 import { useNavigate } from 'react-router-dom';
 import { persistor } from '../store';
 
