@@ -4,25 +4,22 @@ import { connect } from 'react-redux';
 
 class Main2 extends Component {
   render() {
-    const { uploadedImageFront, uploadedImageBack, uploadedImageRight, uploadedImageLeft } = this.props;
+    const { uploadedImageFront, uploadedImageBack } = this.props;
 
     return (
       <div>
         {uploadedImageFront && <img src={uploadedImageFront} alt="" />}
         {uploadedImageBack && <img src={uploadedImageBack} alt="" />}
-        {uploadedImageRight && <img src={uploadedImageRight} alt="" />}
-        {uploadedImageLeft && <img src={uploadedImageLeft} alt="" />}
-        {/* ทำอะไรต่อไป */}
+        {/* Add more images if needed */}
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  uploadedImageFront: state.images.uploadedImageFront,
-  uploadedImageBack: state.images.uploadedImageBack,
-  uploadedImageRight: state.images.uploadedImageRight,
-  uploadedImageLeft: state.images.uploadedImageLeft,
+  uploadedImageFront: state.whiteFront.uploadedImageFront,
+  uploadedImageBack: state.whiteBack.uploadedImageBack,
+  // Add more mappings for other images if needed
 });
 
 export default connect(mapStateToProps)(Main2);

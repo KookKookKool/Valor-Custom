@@ -1,3 +1,4 @@
+//whiteBack.js
 import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -16,9 +17,8 @@ import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่ค�
 
 import "../Components/Products.css";
 
-function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
-  //const [uploadedImage, setUploadedImage] = useState(null);
-  //const [savedImage, setSavedImage] = useState(null);
+function WhiteBack({ setUploadedImageBack }) {
+  const [uploadedImageBack, setLocalUploadedImageBack] = useState(null);
 
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
@@ -30,8 +30,9 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
 
   const navigate = useNavigate();
 
-  const handleImageUpload = (uploadedImageBack) => {
-    setUploadedImageBack(uploadedImageBack);
+  const handleImageUpload = (image) => {
+    setLocalUploadedImageBack(image);
+    setUploadedImageBack(image);  // Dispatch action to Redux store if needed
   };
 
   //const handleSaveImage = () => {
@@ -43,6 +44,7 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
     setUploadedImageBack(uploadedImageBack);
     //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
     navigate('/T-shirt/White-Right');
+    
   };
 
 
@@ -131,19 +133,18 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
               </div>
             </div>
             <div className="FieldCustom">
-              <div className="CustomFront">
-                <img id="MockupFront1" src={WhiteBackMockup} alt="Mockup" />
-                {uploadedImageBack ? (
-                  <img
-                    id="FieldUploadB"
-                    src={uploadedImageBack}
-                    alt="FieldUpload"
-                    style={imageStyle}
-                  />
-                ) : (
-                  <img id="FieldDesignBack" src={FieldFull} alt="FieldDesign" />
-                )}
-              </div>
+            <div className="CustomFront">
+              <img id="MockupFront1" src={WhiteBackMockup} alt="Mockup" />
+              {uploadedImageBack ? (
+                <img id="FieldUpload" src={uploadedImageBack} alt="FieldUpload" style={imageStyle}/>
+              ) : (
+                <img
+                  id="FieldDesign"
+                  src={FieldFull}
+                  alt="FieldDesign"
+                />
+              )}
+            </div>
 
               <div className="Box5">
                 <MenuWhiteBack />
@@ -198,9 +199,7 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
 }
 
 const mapStateToProps = (state) => ({
-  // จะต้อง import mapStateToProps เพื่อให้มีการเชื่อมต่อกับ Redux state
-  // ถ้าคุณยังไม่ได้ import มัน
-  uploadedImageBack: state.images.uploadedImageBack,
+  uploadedImageBack: state.whiteBack.uploadedImageBack,
 });
 
 const mapDispatchToProps = (dispatch) => ({

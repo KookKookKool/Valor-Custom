@@ -39,6 +39,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
     setUploadedImageFront(uploadedImageFront);
     //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
     navigate('/T-shirt/White-Back');
+    
   };
 
 
@@ -126,14 +127,13 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
             <div className="CustomFront">
               <img id="MockupFront1" src={WhiteFrontMockup} alt="Mockup" />
               {uploadedImageFront ? (
-                <img
-                  id="FieldUpload"
-                  src={uploadedImageFront}
-                  alt="FieldUpload"
-                  style={imageStyle}
-                />
+                <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={imageStyle}/>
               ) : (
-                <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
+                <img
+                  id="FieldDesign"
+                  src={FieldFull}
+                  alt="FieldDesign"
+                />
               )}
             </div>
 
@@ -189,7 +189,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
 }
 
 const mapStateToProps = (state) => ({
-  uploadedImageFront: state.images.uploadedImageFront,
+  uploadedImageFront: state.whiteFront.uploadedImageFront,
 });
 
 const mapDispatchToProps = (dispatch) => ({

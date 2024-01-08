@@ -2,7 +2,8 @@
 import { createStore, combineReducers } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
-import imagesReducer from './Actions/reducer';
+import { whiteFrontReducer } from './Actions/whiteFrontReducer'; // Import the correct reducers
+import { whiteBackReducer } from './Actions/whiteBackReducer'; 
 
 const persistConfig = {
   key: 'root',
@@ -10,7 +11,8 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  images: imagesReducer,
+  whiteFront: whiteFrontReducer,
+  whiteBack: whiteBackReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
