@@ -16,7 +16,6 @@ function Upload({ onUpload, setUploadedImageFront, setUploadedImageBack }) {
     }
   }
 
-
   return (
     <div className="Upload">
       <input

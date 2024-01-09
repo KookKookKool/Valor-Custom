@@ -1,10 +1,9 @@
 //whiteBack.js
 import React, { useState, useEffect } from "react";
-import { connect } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import { setUploadedImageBack } from '../Actions/actionsBack'; 
-import { useNavigate } from 'react-router-dom';
-import { persistor } from '../store';
+import { connect } from "react-redux";
+import { setUploadedImageBack } from "../Actions/actionsBack";
+//import { storeBack, persistorBack } from '../Store/storeBack';
+import { useNavigate } from "react-router-dom";
 
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
@@ -17,7 +16,6 @@ import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่ค�
 import "../Components/Products.css";
 
 function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
-
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
@@ -33,19 +31,15 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
   };
 
   //const handleSaveImage = () => {
-    //navigate(`/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImageFront)}`);
+  //navigate(`/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImageFront)}`);
   //};
 
   const handleSaveImage = () => {
     // ทำการ dispatch action เพื่อบันทึกรูป
     setUploadedImageBack(uploadedImageBack);
     //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
-    navigate('/T-shirt/White-Right');
-    
+    navigate("/T-shirt/White-Right");
   };
-
-
-
 
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
@@ -113,13 +107,12 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
 
   return (
     <>
-    <PersistGate loading={null} persistor={persistor}>
       <div className="container">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
           <div>
-        <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
-        </div>
+            <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+          </div>
           <div className="Box">
             <div className="Box2">
               <button id="BntBack" onClick={handleGoBack}>
@@ -130,18 +123,19 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
               </div>
             </div>
             <div className="FieldCustom">
-            <div className="CustomFront">
-              <img id="MockupFront1" src={WhiteBackMockup} alt="Mockup" />
-              {uploadedImageBack ? (
-                <img id="FieldUpload" src={uploadedImageBack} alt="FieldUpload" style={{ ...imageStyle, backgroundImage: 'none' }}/>
-              ) : (
-                <img
-                  id="FieldDesign"
-                  src={FieldFull}
-                  alt="FieldDesign"
-                />
-              )}
-            </div>
+              <div className="CustomFront">
+                <img id="MockupFront1" src={WhiteBackMockup} alt="Mockup" />
+                {uploadedImageBack ? (
+                  <img
+                    id="FieldUpload"
+                    src={uploadedImageBack}
+                    alt="FieldUpload"
+                    style={{ ...imageStyle }}
+                  />
+                ) : (
+                  <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
+                )}
+              </div>
 
               <div className="Box5">
                 <MenuWhiteBack />
@@ -164,7 +158,9 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
               </div>
               <div className="Box6">
                 <Upload onUpload={handleImageUpload} />
-                <button className='Btnsave' onClick={handleSaveImage}>บันทึกและถัดไป</button>
+                <button className="Btnsave" onClick={handleSaveImage}>
+                  บันทึกและถัดไป
+                </button>
               </div>
             </div>
             <div className="Box4">
@@ -184,24 +180,23 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
                     <option value="6">A8</option>
                   </select>
                 </div>
-                
               )}
             </div>
           </div>
         </div>
       </div>
-      </PersistGate>
     </>
   );
 }
 
-const mapStateToProps = (state) => ({
-  uploadedImageBack: state.whiteBack.images[1],
-  imageStyleOption: state.whiteBack.imageStyleOption,
+const mapStateToPropsBack = (state) => ({
+  uploadedImageBack: (state.whiteBack && state.whiteBack.images && state.whiteBack.images[1]) || null,
+  imageStyleOptionBack: state.whiteBack ? state.whiteBack.imageStyleOption : null,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  setUploadedImageBack: (image) => dispatch(setUploadedImageBack(image)),
+const mapDispatchToPropsBack = (dispatch) => ({
+  setUploadedImageBack: (image) => dispatch(setUploadedImageBack(image, 1)),
+  setImageStyleOptionBack: (imageStyleOption) => dispatch({ type: "SET_IMAGE_STYLE_OPTION_BACK", imageStyleOption }),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(WhiteBack);
+export default connect(mapStateToPropsBack, mapDispatchToPropsBack)(WhiteBack);

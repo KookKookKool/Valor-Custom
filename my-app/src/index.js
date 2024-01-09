@@ -7,7 +7,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { store, persistor } from './store';
+import { store, persistor } from './Store/store'; // ใช้ store ที่รวมทั้ง storeFront และ storeBack
 
 const root = document.getElementById('root');
 const rootElement = createRoot(root);

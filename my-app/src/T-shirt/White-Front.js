@@ -2,10 +2,9 @@
 import React, { useState, useEffect } from 'react';
 //import { useDispatch, connect } from 'react-redux';
 import { connect } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import { setUploadedImageFront } from '../Actions/actionsFront';  // แก้ชื่อ action creator ที่นี่
+import { setUploadedImageFront, setImageStyleOptionFront } from '../Actions/actionsFront'; // แก้ชื่อ action creator ที่นี่
+//import { storeFront, persistorFront } from '../Store/storeFront';
 import { useNavigate } from 'react-router-dom';
-import { persistor } from '../store';
 import "./Style.css";
 import Navigation from "../Components/Navigation";
 import Back from "../Asset/icon/Back.png";
@@ -34,16 +33,15 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
   const handleSaveImage = () => {
     // ทำการ dispatch action เพื่อบันทึกรูป
     setUploadedImageFront(uploadedImageFront);
+    setImageStyleOptionFront(imageStyleOption);
     //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
     navigate('/T-shirt/White-Back');
     
   };
 
-
-
-
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
+    setImageStyleOptionFront(selectedOption);
   };
 
   useEffect(() => {
@@ -93,16 +91,6 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
     }
   }, [showDropdown, imageStyleOption]);
 
-  useEffect(() => {
-    if (uploadedImageFront) {
-      setImageStyle((prevStyle) => ({
-        ...prevStyle,
-        backgroundImage: `url(${uploadedImageFront})`,
-      }));
-    }
-  }, [uploadedImageFront]);
-  
-
   const handleGoBack = () => {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
@@ -114,7 +102,6 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
 
   return (
     <>
-    <PersistGate loading={null} persistor={persistor}>
       <div className="container">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
@@ -134,7 +121,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
             <div className="CustomFront">
               <img id="MockupFront1" src={WhiteFrontMockup} alt="Mockup" />
               {uploadedImageFront ? (
-                <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={{ ...imageStyle, backgroundImage: 'none' }}/>
+                <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={{ ...imageStyle }}/>
 
               ) : (
                 <img
@@ -190,18 +177,20 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
           </div>
         </div>
       </div>
-      </PersistGate>
+
     </>
   );
 }
-
-const mapStateToProps = (state) => ({
-  uploadedImageFront: state.whiteFront.images[0],
-  imageStyleOption: state.whiteFront.imageStyleOption, 
+const mapStateToPropsFront = (state) => ({
+  uploadedImageFront: (state.whiteFront && state.whiteFront.images && state.whiteFront.images[0]) || null,
+  imageStyleOption: state.whiteFront ? state.whiteFront.imageStyleOption : null,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  setUploadedImageFront: (image) => dispatch(setUploadedImageFront(image)),
+const mapDispatchToPropsFront = (dispatch) => ({
+  setUploadedImageFront: (image) => dispatch(setUploadedImageFront(image, 0)),
+  setImageStyleOptionFront: (imageStyleOption) => dispatch(setImageStyleOptionFront(imageStyleOption)), // เพิ่มบรรทัดนี้
+  getImageStyleOptionFront: () => dispatch({ type: "GET_IMAGE_STYLE_OPTION_FRONT" }),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(WhiteFront);
+
+export default connect(mapStateToPropsFront, mapDispatchToPropsFront)(WhiteFront);

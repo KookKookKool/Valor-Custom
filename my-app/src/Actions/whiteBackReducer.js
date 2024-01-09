@@ -1,25 +1,24 @@
-// whiteBackReducer.js
-const initialState = {
-  images: [], // บันทึกรูปทั้งหมดใน array
-  // other state properties specific to whiteBack
+// whiteBackReducer.js (หรือตำแหน่งที่นำ reducer มาใช้)
+const initialStateBack = {
+  images: [],
+  imageStyleOption: "1",
 };
 
-const whiteBackReducer = (state = initialState, action) => {
+const whiteBackReducer = (state = initialStateBack, action) => {
   switch (action.type) {
-    case 'SET_UPLOADED_IMAGE_BACK':
-      const { image, index } = action.payload;
-      const updatedImagesBack = [...state.images];
-      updatedImagesBack[index] = image;
-
+    case "SET_UPLOADED_IMAGE_BACK":
       return {
         ...state,
-        images: updatedImagesBack,
+        images: [...state.images.slice(0, action.index), action.image, ...state.images.slice(action.index + 1)],
       };
-
-    // handle other action types if needed
+    case "SET_IMAGE_STYLE_OPTION_BACK":
+      return {
+        ...state,
+        imageStyleOption: action.imageStyleOption,
+      };
     default:
       return state;
   }
 };
 
-export { whiteBackReducer };
+export default whiteBackReducer;
