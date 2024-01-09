@@ -1,7 +1,7 @@
 // actionsBack.js
-const setUploadedImageBack = (image) => ({
+const setUploadedImageBack = (image, index) => ({
   type: 'SET_UPLOADED_IMAGE_BACK',
-  payload: image,
+  payload: { image, index },
 });
 
 export { setUploadedImageBack };

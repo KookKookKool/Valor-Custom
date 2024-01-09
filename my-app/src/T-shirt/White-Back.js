@@ -14,11 +14,9 @@ import MenuWhiteBack from "../Components/White/MenuWhiteBack";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่คือการ import 'FieldFull'
 
-
 import "../Components/Products.css";
 
-function WhiteBack({ setUploadedImageBack }) {
-  const [uploadedImageBack, setLocalUploadedImageBack] = useState(null);
+function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
 
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
@@ -30,9 +28,8 @@ function WhiteBack({ setUploadedImageBack }) {
 
   const navigate = useNavigate();
 
-  const handleImageUpload = (image) => {
-    setLocalUploadedImageBack(image);
-    setUploadedImageBack(image);  // Dispatch action to Redux store if needed
+  const handleImageUpload = (uploadedImageBack) => {
+    setUploadedImageBack(uploadedImageBack, 1); // index 1 สำหรับ WhiteBack
   };
 
   //const handleSaveImage = () => {
@@ -136,7 +133,7 @@ function WhiteBack({ setUploadedImageBack }) {
             <div className="CustomFront">
               <img id="MockupFront1" src={WhiteBackMockup} alt="Mockup" />
               {uploadedImageBack ? (
-                <img id="FieldUpload" src={uploadedImageBack} alt="FieldUpload" style={imageStyle}/>
+                <img id="FieldUpload" src={uploadedImageBack} alt="FieldUpload" style={{ ...imageStyle, backgroundImage: 'none' }}/>
               ) : (
                 <img
                   id="FieldDesign"
@@ -199,7 +196,8 @@ function WhiteBack({ setUploadedImageBack }) {
 }
 
 const mapStateToProps = (state) => ({
-  uploadedImageBack: state.whiteBack.uploadedImageBack,
+  uploadedImageBack: state.whiteBack.images[1],
+  imageStyleOption: state.whiteBack.imageStyleOption,
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -11,10 +11,11 @@ function Upload({ onUpload, setUploadedImageFront, setUploadedImageBack }) {
     if (selectedFile) {
       const fileURL = URL.createObjectURL(selectedFile);
       onUpload(selectedFile);
-      setUploadedImageFront(fileURL);
-      setUploadedImageBack(fileURL);
+      setUploadedImageFront(fileURL, 0);
+      setUploadedImageBack(fileURL, 1);
     }
   }
+
 
   return (
     <div className="Upload">

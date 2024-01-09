@@ -27,12 +27,9 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
   const navigate = useNavigate();
 
   const handleImageUpload = (uploadedImageFront) => {
-    setUploadedImageFront(uploadedImageFront);
+    console.log("Uploaded Image Front:", uploadedImageFront);
+    setUploadedImageFront(uploadedImageFront, 0); // index 0 สำหรับ WhiteFront
   };
-
-  //const handleSaveImage = () => {
-    //navigate(`/Custom-Design/Main2?uploadedImage=${encodeURIComponent(uploadedImageFront)}`);
-  //};
 
   const handleSaveImage = () => {
     // ทำการ dispatch action เพื่อบันทึกรูป
@@ -96,6 +93,16 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
     }
   }, [showDropdown, imageStyleOption]);
 
+  useEffect(() => {
+    if (uploadedImageFront) {
+      setImageStyle((prevStyle) => ({
+        ...prevStyle,
+        backgroundImage: `url(${uploadedImageFront})`,
+      }));
+    }
+  }, [uploadedImageFront]);
+  
+
   const handleGoBack = () => {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
@@ -127,7 +134,8 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
             <div className="CustomFront">
               <img id="MockupFront1" src={WhiteFrontMockup} alt="Mockup" />
               {uploadedImageFront ? (
-                <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={imageStyle}/>
+                <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={{ ...imageStyle, backgroundImage: 'none' }}/>
+
               ) : (
                 <img
                   id="FieldDesign"
@@ -136,7 +144,6 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
                 />
               )}
             </div>
-
               <div className="Box5">
                 <MenuW />
                 {showDropdown && (
@@ -189,7 +196,8 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
 }
 
 const mapStateToProps = (state) => ({
-  uploadedImageFront: state.whiteFront.uploadedImageFront,
+  uploadedImageFront: state.whiteFront.images[0],
+  imageStyleOption: state.whiteFront.imageStyleOption, 
 });
 
 const mapDispatchToProps = (dispatch) => ({
