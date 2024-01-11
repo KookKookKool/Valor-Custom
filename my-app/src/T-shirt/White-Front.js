@@ -57,5 +57,13 @@ function WhiteFront({ setProductsitemOpen }) {
     </>
   );
 }
+<<<<<<< Updated upstream
+=======
+
+const mapStateToPropsFront = (state) => ({
+  uploadedImageFront: (state.whiteFront && state.whiteFront.images_2 && state.whiteFront.images_2[0]) || null,
+  imageStyleOption: state.whiteFront ? state.whiteFront.imageStyleOption : null,
+});
+>>>>>>> Stashed changes
 
 export default WhiteFront;

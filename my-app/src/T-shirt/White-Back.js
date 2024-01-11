@@ -40,4 +40,14 @@ function WhiteBack({ setProductsitemOpen }) {
   );
 }
 
-export default WhiteBack;
+const mapStateToPropsBack = (state) => ({
+  uploadedImageBack: (state.whiteBack && state.whiteBack.images && state.whiteBack.images[1]) || null,
+  imageStyleOptionBack: state.whiteBack ? state.whiteBack.imageStyleOption : null,
+});
+
+const mapDispatchToPropsBack = (dispatch) => ({
+  setUploadedImageBack: (image) => dispatch(setUploadedImageBack(image, 1)),
+  setImageStyleOptionBack: (imageStyleOption) => dispatch({ type: "SET_IMAGE_STYLE_OPTION_BACK", imageStyleOption }),
+});
+
+export default connect(mapStateToPropsBack, mapDispatchToPropsBack)(WhiteBack);

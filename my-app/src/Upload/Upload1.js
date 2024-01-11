@@ -26,4 +26,4 @@ function Upload({ onUpload }) {
   );
 }
 
-export default Upload;
+export default connect(null, { setUploadedImageFront, setUploadedImageBack })(Upload);
