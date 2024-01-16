@@ -157,7 +157,7 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
                 )}
               </div>
               <div className="Box6">
-                <Upload onUpload={handleImageUpload} />
+              <Upload onUpload={handleImageUpload} index={1} />
                 <button className="Btnsave" onClick={handleSaveImage}>
                   บันทึกและถัดไป
                 </button>

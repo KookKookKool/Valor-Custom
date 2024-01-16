@@ -14,7 +14,7 @@ import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png";
 import "../Components/Products.css";
 
-function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
+function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOptionFront }) {
   //const dispatch = useDispatch();
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1");
@@ -36,7 +36,6 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
     setImageStyleOptionFront(imageStyleOption);
     //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
     navigate('/T-shirt/White-Back');
-    
   };
 
   const handleImageStyleChange = (selectedOption) => {
@@ -151,7 +150,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront }) {
                 )}
               </div>
               <div className="Box6">
-                <Upload onUpload={handleImageUpload} />
+              <Upload onUpload={handleImageUpload} index={0} />
                 <button className='Btnsave' onClick={handleSaveImage}>บันทึกและถัดไป</button>
               </div>
             </div>
@@ -188,7 +187,7 @@ const mapStateToPropsFront = (state) => ({
 
 const mapDispatchToPropsFront = (dispatch) => ({
   setUploadedImageFront: (image) => dispatch(setUploadedImageFront(image, 0)),
-  setImageStyleOptionFront: (imageStyleOption) => dispatch(setImageStyleOptionFront(imageStyleOption)), // เพิ่มบรรทัดนี้
+  setImageStyleOptionFront: (imageStyleOption) => dispatch(setImageStyleOptionFront(imageStyleOption)), 
   getImageStyleOptionFront: () => dispatch({ type: "GET_IMAGE_STYLE_OPTION_FRONT" }),
 });
 

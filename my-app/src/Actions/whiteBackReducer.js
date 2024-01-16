@@ -1,4 +1,4 @@
-// whiteBackReducer.js (หรือตำแหน่งที่นำ reducer มาใช้)
+// whiteBackReducer.js
 const initialStateBack = {
   images: [],
   imageStyleOption: "1",
@@ -9,7 +9,7 @@ const whiteBackReducer = (state = initialStateBack, action) => {
     case "SET_UPLOADED_IMAGE_BACK":
       return {
         ...state,
-        images: [...state.images.slice(0, action.index), action.image, ...state.images.slice(action.index + 1)],
+        images: state.images ? [...state.images.slice(0, action.index), action.image, ...state.images.slice(action.index + 1)] : [action.image],
       };
     case "SET_IMAGE_STYLE_OPTION_BACK":
       return {

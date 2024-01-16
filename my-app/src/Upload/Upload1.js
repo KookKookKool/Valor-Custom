@@ -1,18 +1,18 @@
 // Upload1.js
-import React from "react";
-import "./Upload1.css";
-import { connect } from 'react-redux';
-import { setUploadedImageFront } from '../Actions/actionsFront';
-import { setUploadedImageBack } from "../Actions/actionsBack";
+import React from 'react';
+import './Upload1.css';
+import { connect } from 'react-redux';  // Make sure to import connect
+import { setUploadedImageFront } from '../Actions/actionsFront';  // Import your action creators
+import { setUploadedImageBack } from '../Actions/actionsBack';  // Import your action creators
 
-function Upload({ onUpload, setUploadedImageFront, setUploadedImageBack }) {
+function Upload({ onUpload, setUploadedImageFront, setUploadedImageBack, index }) {
   function handleChange(e) {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
       const fileURL = URL.createObjectURL(selectedFile);
       onUpload(selectedFile);
-      setUploadedImageFront(fileURL, 0);
-      setUploadedImageBack(fileURL, 1);
+      setUploadedImageFront(fileURL, index);
+      setUploadedImageBack(fileURL, index);
     }
   }
 
