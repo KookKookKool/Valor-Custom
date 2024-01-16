@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Route, Link, Routes, } from "react-router-dom"; // ลบ BrowserRouter ออก
 import "../Components/Products.css";
 import Card1 from "../T-shirt/Index";
-//import Card2 from "../Combatshirt/Index";
+import Card2 from "../Combatshirt/Index";
 import Card3 from "../Cup/Index";
-import Card4 from "../LaserPatch/Index";
 
 // เราจะเปลี่ยนการเรียกใช้ Components อื่น ๆ ให้ตรงกับโครงสร้างของ Routes
 import White from "../T-shirt/White-Front";
@@ -43,7 +42,6 @@ export default function Products() {
 
   return (
     <>
-    
     <div className="Frame1">
       <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
       <ul
@@ -60,10 +58,10 @@ export default function Products() {
         </div>
         <div className="Link">
           <Link
-            to="/LaserPatch"
+            to="/Combatshirt/Combatshirt"
             onClick={() => setIsProductsitemOpen(false)}
           >
-            <Card4 />
+            <Card2 />
           </Link>
         </div>
         <div className="Link">
@@ -72,7 +70,6 @@ export default function Products() {
           </Link>
         </div>
       </ul>
-     
       <Routes>
         {/*เสื้อขาว*/}
         <Route
@@ -162,7 +159,7 @@ export default function Products() {
       <button onClick={handleGoBack} style={{ display: "none" }}>
         ย้อนกลับ
       </button>
-      </div>
+    </div>
     </>
   );
 }

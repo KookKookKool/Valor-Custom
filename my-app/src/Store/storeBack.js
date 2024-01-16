@@ -15,4 +15,3 @@ const storeBack = createStore(persistedReducerBack);
 const persistorBack = persistStore(storeBack);
 
 export { storeBack, persistorBack };
-
