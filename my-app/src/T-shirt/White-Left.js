@@ -1,6 +1,11 @@
+//whiteLeft.js
 import React, { useState, useEffect } from "react";
 
+import { connect } from 'react-redux';
+import { setUploadedImageLeft, setImageStyleOptionLeft } from '../Actions/actionsLeft';
+import { useNavigate } from 'react-router-dom';
 import "./Style.css";
+
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
 import WhiteLeftMockup from "../Asset/T-shirt/White-Left.png";
@@ -8,11 +13,9 @@ import MenuWhiteLeft from "../Components/White/MenuWhiteLeft";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Arm-Black.png"; 
 
-import ImageSaveButton from "../Custom-Design/ImageSaveButton";
 
-function WhiteLeft({ setProductsitemOpen }) {
-  const [uploadedImage, setUploadedImage] = useState(null);
-  const [savedImage, setSavedImage] = useState(null);
+
+function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOptionLeft }) {
 
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
@@ -22,8 +25,23 @@ function WhiteLeft({ setProductsitemOpen }) {
     objectPosition: "left 0px top 210px",
   });
 
+  const navigate = useNavigate();
+
+  const handleImageUpload = (uploadedImageLeft) => {
+    console.log("Uploaded Image Left:", uploadedImageLeft);
+    setUploadedImageLeft(uploadedImageLeft, 3); 
+  };
+
+  const handleSaveImage = () => {
+    // ทำการ dispatch action เพื่อบันทึกรูป
+    setUploadedImageLeft(uploadedImageLeft);
+    setImageStyleOptionLeft(imageStyleOption);
+    navigate("/Main2");
+  };
+
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
+    setImageStyleOptionLeft(selectedOption);
   };
 
   useEffect(() => {
@@ -57,20 +75,12 @@ function WhiteLeft({ setProductsitemOpen }) {
     }
   }, [showDropdown, imageStyleOption]);
 
-  const handleImageUpload = (selectedImage) => {
-    setUploadedImage(URL.createObjectURL(selectedImage));
-  };
-
-  const handleSaveImage = () => {
-    setSavedImage(uploadedImage);
-  };
-
   const handleGoBack = () => {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ ?"
     );
     if (confirmed) {
-      window.location.href = "/T-shirt/White-Back";
+      navigate("/T-shirt/White-Right");
     }
   };
 
@@ -94,10 +104,10 @@ function WhiteLeft({ setProductsitemOpen }) {
             <div className="FieldCustom">
               <div className="CustomFront">
                 <img id="MockupFront1" src={WhiteLeftMockup} alt="Mockup" />
-                {uploadedImage ? (
+                {uploadedImageLeft ? (
                   <img
                     id="FieldUploadLeft"
-                    src={uploadedImage}
+                    src={uploadedImageLeft}
                     alt="FieldUpload"
                     style={imageStyle}
                   />
@@ -123,11 +133,10 @@ function WhiteLeft({ setProductsitemOpen }) {
                 )}
               </div>
               <div className="Box6">
-                <Upload onUpload={handleImageUpload} />
-                <ImageSaveButton
-                  onSave={handleSaveImage}
-                  savedImage={savedImage}
-                />
+              <Upload onUpload={handleImageUpload} index={3} />
+                <button className="Btnsave" onClick={handleSaveImage}>
+                  บันทึกและถัดไป
+                </button>
               </div>
             </div>
             <div className="Box4">
@@ -156,4 +165,15 @@ function WhiteLeft({ setProductsitemOpen }) {
 }
 
 
-export default WhiteLeft;
+const mapStateToPropsLeft = (state) => ({
+  uploadedImageLeft: (state.whiteLeft && state.whiteLeft.images && state.whiteLeft.images[3]) || null,
+  imageStyleOptionLeft: state.whiteLeft ? state.whiteLeft.imageStyleOption : null,
+});
+
+const mapDispatchToPropsLeft = (dispatch) => ({
+  setUploadedImageLeft: (image) => dispatch(setUploadedImageLeft(image, 3)),
+  setImageStyleOptionLeft: (imageStyleOption) => dispatch(setImageStyleOptionLeft(imageStyleOption)), 
+  setImageStyleOptionLeftDispatch: (imageStyleOption) => dispatch({ type: "SET_IMAGE_STYLE_OPTION_LEFT", imageStyleOption }),
+});
+
+export default connect(mapStateToPropsLeft, mapDispatchToPropsLeft)(WhiteLeft);

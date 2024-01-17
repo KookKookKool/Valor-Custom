@@ -5,8 +5,9 @@ import { connect } from 'react-redux';  // Make sure to import connect
 import { setUploadedImageFront } from '../Actions/actionsFront';  // Import your action creators
 import { setUploadedImageBack } from '../Actions/actionsBack';  // Import your action creators
 import { setUploadedImageRight } from '../Actions/actionsRight'; 
+import { setUploadedImageLeft } from '../Actions/actionsLeft'; 
 
-function Upload({ onUpload, setUploadedImageFront, setUploadedImageBack, setUploadedImageRight, index }) {
+function Upload({ onUpload, setUploadedImageFront, setUploadedImageBack, setUploadedImageRight, setUploadedImageLeft, index }) {
   function handleChange(e) {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
@@ -15,6 +16,7 @@ function Upload({ onUpload, setUploadedImageFront, setUploadedImageBack, setUplo
       setUploadedImageFront(fileURL, index);
       setUploadedImageBack(fileURL, index);
       setUploadedImageRight(fileURL, index);
+      setUploadedImageLeft(fileURL, index);
     }
   }
 
@@ -34,4 +36,4 @@ function Upload({ onUpload, setUploadedImageFront, setUploadedImageBack, setUplo
   );
 }
 
-export default connect(null, { setUploadedImageFront, setUploadedImageBack, setUploadedImageRight })(Upload);
+export default connect(null, { setUploadedImageFront, setUploadedImageBack, setUploadedImageRight, setUploadedImageLeft })(Upload);
