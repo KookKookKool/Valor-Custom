@@ -1,6 +1,11 @@
+//whiteRight.js
 import React, { useState, useEffect } from "react";
 
+import { connect } from 'react-redux';
+import { setUploadedImageRight, setImageStyleOptionRight } from '../Actions/actionsRight';
+import { useNavigate } from 'react-router-dom';
 import "./Style.css";
+
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
 import WhiteRightMockup from "../Asset/T-shirt/White-Right.png";
@@ -8,11 +13,8 @@ import MenuWhiteRight from "../Components/White/MenuWhiteRight";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Arm-Black.png"; 
 
-import ImageSaveButton from "../Custom-Design/ImageSaveButton";
 
-function WhiteRight({ setProductsitemOpen }) {
-  const [uploadedImage, setUploadedImage] = useState(null);
-  const [savedImage, setSavedImage] = useState(null);
+function WhiteRight({ uploadedImageRight, setUploadedImageRight, setImageStyleOptionRight }) {
 
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
@@ -22,8 +24,23 @@ function WhiteRight({ setProductsitemOpen }) {
     objectPosition: "left 0px top 210px",
   });
 
+  const navigate = useNavigate();
+
+  const handleImageUpload = (uploadedImageRight) => {
+    console.log("Uploaded Image Right:", uploadedImageRight);
+    setUploadedImageRight(uploadedImageRight, 2); 
+  };
+
+  const handleSaveImage = () => {
+    // ทำการ dispatch action เพื่อบันทึกรูป
+    setUploadedImageRight(uploadedImageRight);
+    setImageStyleOptionRight(imageStyleOption);
+    navigate("/T-shirt/White-Left");
+  };
+
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
+    setImageStyleOptionRight(selectedOption);
   };
 
   useEffect(() => {
@@ -57,20 +74,12 @@ function WhiteRight({ setProductsitemOpen }) {
     }
   }, [showDropdown, imageStyleOption]);
 
-  const handleImageUpload = (selectedImage) => {
-    setUploadedImage(URL.createObjectURL(selectedImage));
-  };
-
-  const handleSaveImage = () => {
-    setSavedImage(uploadedImage);
-  };
-
   const handleGoBack = () => {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ ?"
     );
     if (confirmed) {
-      window.location.href = "/T-shirt/White-Back";
+      navigate("/T-shirt/White-Back");
     }
   };
 
@@ -94,10 +103,10 @@ function WhiteRight({ setProductsitemOpen }) {
             <div className="FieldCustom">
               <div className="CustomFront">
                 <img id="MockupFront1" src={WhiteRightMockup} alt="Mockup" />
-                {uploadedImage ? (
+                {uploadedImageRight ? (
                   <img
                     id="FieldUploadRight"
-                    src={uploadedImage}
+                    src={uploadedImageRight}
                     alt="FieldUpload"
                     style={imageStyle}
                   />
@@ -123,11 +132,10 @@ function WhiteRight({ setProductsitemOpen }) {
                 )}
               </div>
               <div className="Box6">
-                <Upload onUpload={handleImageUpload} />
-                <ImageSaveButton
-                  onSave={handleSaveImage}
-                  savedImage={savedImage}
-                />
+                <Upload onUpload={handleImageUpload} index={2} />
+                <button className="Btnsave" onClick={handleSaveImage}>
+                  บันทึกและถัดไป
+                </button>
               </div>
             </div>
             <div className="Box4">
@@ -156,4 +164,15 @@ function WhiteRight({ setProductsitemOpen }) {
 }
 
 
-export default WhiteRight;
+const mapStateToPropsRight = (state) => ({
+  uploadedImageRight: (state.whiteRight && state.whiteRight.images && state.whiteRight.images[2]) || null,
+  imageStyleOptionRight: state.whiteRight ? state.whiteRight.imageStyleOption : null,
+});
+
+const mapDispatchToPropsRight = (dispatch) => ({
+  setUploadedImageRight: (image) => dispatch(setUploadedImageRight(image, 2)),
+  setImageStyleOptionRight: (imageStyleOption) => dispatch(setImageStyleOptionRight(imageStyleOption)), 
+  setImageStyleOptionRightDispatch: (imageStyleOption) => dispatch({ type: "SET_IMAGE_STYLE_OPTION_RIGHT", imageStyleOption }),
+});
+
+export default connect(mapStateToPropsRight, mapDispatchToPropsRight)(WhiteRight);

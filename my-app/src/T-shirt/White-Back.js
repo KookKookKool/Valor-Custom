@@ -1,7 +1,7 @@
 //whiteBack.js
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { setUploadedImageBack } from "../Actions/actionsBack";
+import { setUploadedImageBack, setImageStyleOptionBack } from "../Actions/actionsBack";
 //import { storeBack, persistorBack } from '../Store/storeBack';
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +15,7 @@ import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่ค�
 
 import "../Components/Products.css";
 
-function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
+function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptionBack }) {
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
@@ -27,6 +27,7 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
   const navigate = useNavigate();
 
   const handleImageUpload = (uploadedImageBack) => {
+    console.log("Uploaded Image Back:", uploadedImageBack);
     setUploadedImageBack(uploadedImageBack, 1); // index 1 สำหรับ WhiteBack
   };
 
@@ -37,12 +38,13 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
   const handleSaveImage = () => {
     // ทำการ dispatch action เพื่อบันทึกรูป
     setUploadedImageBack(uploadedImageBack);
-    //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
+    setImageStyleOptionBack(imageStyleOption);
     navigate("/T-shirt/White-Right");
   };
 
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
+    setImageStyleOptionBack(selectedOption);
   };
 
   useEffect(() => {
@@ -101,7 +103,7 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack }) {
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      navigate("/T-shirt/White-Back");
+      navigate("/T-shirt/White-Front");
     }
   };
 
@@ -196,7 +198,8 @@ const mapStateToPropsBack = (state) => ({
 
 const mapDispatchToPropsBack = (dispatch) => ({
   setUploadedImageBack: (image) => dispatch(setUploadedImageBack(image, 1)),
-  setImageStyleOptionBack: (imageStyleOption) => dispatch({ type: "SET_IMAGE_STYLE_OPTION_BACK", imageStyleOption }),
+  setImageStyleOptionBack: (imageStyleOption) => dispatch(setImageStyleOptionBack(imageStyleOption)), 
+  setImageStyleOptionBackDispatch: (imageStyleOption) => dispatch({ type: "SET_IMAGE_STYLE_OPTION_BACK", imageStyleOption }),
 });
 
 export default connect(mapStateToPropsBack, mapDispatchToPropsBack)(WhiteBack);
