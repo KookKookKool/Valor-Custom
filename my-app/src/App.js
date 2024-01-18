@@ -28,8 +28,7 @@ import GreenRight from "./T-shirt/Green-Right";
 
 import LaserPatch from "./LaserPatch/LaserPatch";
 
-
-import Main2 from "./Custom-Design/Main2"; //แสดงรูปบันทึกส่วนหน้ารูปภาพที่ทำการอัพโหลด
+import Main2 from "./Custom-Design/Main2";
 
 export default function App() {
   return (
@@ -64,10 +63,11 @@ export default function App() {
         <Route path="/T-shirt/Green-Right" element={<GreenLeft />} />
         <Route path="/T-shirt/Green-Left" element={<GreenRight />} />
 
-        <Route path="/Custom-Design/Main2" element={<Main2 />} />
-
         {/*Laser Patch*/}
         <Route path="/LaserPatch" element={<LaserPatch />} />
+
+
+        <Route path="/Main2" element={<Main2/>} />
       </Routes>
 
     </div>

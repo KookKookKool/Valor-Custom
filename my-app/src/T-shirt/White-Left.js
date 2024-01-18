@@ -36,7 +36,7 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
     // ทำการ dispatch action เพื่อบันทึกรูป
     setUploadedImageLeft(uploadedImageLeft);
     setImageStyleOptionLeft(imageStyleOption);
-    navigate("/Main2");
+    navigate("/Custom-Design/Main2");
   };
 
   const handleImageStyleChange = (selectedOption) => {

@@ -14,7 +14,7 @@ import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png";
 import "../Components/Products.css";
 
-function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOptionFront }) {
+function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOptionFront, onImageUpload }) {
   //const dispatch = useDispatch();
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1");
