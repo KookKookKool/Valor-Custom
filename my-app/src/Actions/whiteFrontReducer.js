@@ -16,6 +16,8 @@ const whiteFrontReducer = (state = initialStateFront, action) => {
         ...state,
         imageStyleOption: action.imageStyleOption,
       };
+    case "RESET_FRONT_STATE":
+        return initialStateFront; // Reset state to initial state
     default:
       return state;
   }

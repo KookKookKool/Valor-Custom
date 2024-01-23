@@ -16,6 +16,8 @@ const whiteBackReducer = (state = initialStateBack, action) => {
         ...state,
         imageStyleOption: action.imageStyleOption,
       };
+      case "RESET_BACK_STATE":
+        return initialStateBack; // Reset state to initial state
     default:
       return state;
   }

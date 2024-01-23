@@ -9,3 +9,7 @@ export const setUploadedImageFront = (image, index) => ({
   image,
   index,
 });
+
+export const resetFrontState = () => ({
+  type: "RESET_FRONT_STATE",
+});

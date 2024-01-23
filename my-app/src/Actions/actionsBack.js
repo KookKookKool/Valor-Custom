@@ -9,3 +9,7 @@ export const setUploadedImageBack = (image, index) => ({
   image,
   index,
 });
+
+export const resetBackState = () => ({
+  type: "RESET_BACK_STATE",
+});

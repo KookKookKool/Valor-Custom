@@ -16,6 +16,8 @@ const whiteLeftReducer = (state = initialStateLeft, action) => {
         ...state,
         imageStyleOption: action.imageStyleOption,
       };
+      case "RESET_LEFT_STATE":
+        return initialStateLeft; // Reset state to initial state
     default:
       return state;
   }

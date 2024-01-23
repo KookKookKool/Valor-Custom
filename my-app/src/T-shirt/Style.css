@@ -948,3 +948,10 @@ img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#Field
 }
 
 }
+
+/* summary */
+.SumMockup-Front .SumMockup-Back .SumMockup-Right .SumMockup-Left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

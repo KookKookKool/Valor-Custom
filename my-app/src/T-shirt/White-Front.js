@@ -1,7 +1,7 @@
 // WhiteFront.js
 import React, { useState, useEffect } from 'react';
-//import { useDispatch, connect } from 'react-redux';
-import { connect } from 'react-redux';
+import { useDispatch, connect } from 'react-redux';
+
 import { setUploadedImageFront, setImageStyleOptionFront } from '../Actions/actionsFront'; // แก้ชื่อ action creator ที่นี่
 //import { storeFront, persistorFront } from '../Store/storeFront';
 import { useNavigate } from 'react-router-dom';
@@ -23,6 +23,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
     objectPosition: "left 0px top 202px",
   });
 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleImageUpload = (uploadedImageFront) => {
@@ -34,6 +35,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
     // ทำการ dispatch action เพื่อบันทึกรูป
     setUploadedImageFront(uploadedImageFront);
     setImageStyleOptionFront(imageStyleOption);
+    dispatch(setImageStyleOptionFront(imageStyleOption));
     //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
     navigate('/T-shirt/White-Back');
   };
@@ -41,6 +43,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
     setImageStyleOptionFront(selectedOption);
+    
   };
 
   useEffect(() => {

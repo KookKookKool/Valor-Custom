@@ -9,3 +9,7 @@ export const setUploadedImageLeft = (image, index) => ({
   image,
   index,
 });
+
+export const resetLeftState = () => ({
+  type: "RESET_LEFT_STATE",
+});

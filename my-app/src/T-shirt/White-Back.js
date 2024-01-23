@@ -1,6 +1,6 @@
 //whiteBack.js
 import React, { useState, useEffect } from "react";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { setUploadedImageBack, setImageStyleOptionBack } from "../Actions/actionsBack";
 //import { storeBack, persistorBack } from '../Store/storeBack';
 import { useNavigate } from "react-router-dom";
@@ -24,6 +24,7 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptio
     objectPosition: "left 0px top 164px",
   });
 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleImageUpload = (uploadedImageBack) => {
@@ -39,6 +40,7 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptio
     // ทำการ dispatch action เพื่อบันทึกรูป
     setUploadedImageBack(uploadedImageBack);
     setImageStyleOptionBack(imageStyleOption);
+    dispatch(setImageStyleOptionBack(imageStyleOption));
     navigate("/T-shirt/White-Right");
   };
 

@@ -67,7 +67,7 @@ export default function App() {
         <Route path="/LaserPatch" element={<LaserPatch />} />
 
 
-        <Route path="/Main2" element={<Main2/>} />
+        <Route path="/Custom-Design/Main2" element={<Main2/>} />
       </Routes>
 
     </div>

@@ -16,6 +16,8 @@ const whiteRightReducer = (state = initialStateRight, action) => {
         ...state,
         imageStyleOption: action.imageStyleOption,
       };
+      case "RESET_RIGHT_STATE":
+        return initialStateRight; // Reset state to initial state
     default:
       return state;
   }
