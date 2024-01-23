@@ -424,7 +424,7 @@ img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#Field
   /* ระบุตำแหน่งที่ต้องการให้รูปอยู่ด้านบน */
   top: 0;
   left: 0;
-  width: 280px;
+  width: 400px;
   margin-top: 128px;
 }
 
@@ -560,7 +560,7 @@ img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#Field
     z-index: 0;
     top: 0;
     left: 0;
-    width: 280px;
+    width: 400px;
     margin-top: 7px;
   }
 

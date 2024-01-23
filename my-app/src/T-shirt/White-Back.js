@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
-import WhiteBackMockup from "../Asset/T-shirt/White-Back.png";
 import MenuWhiteBack from "../Components/White/MenuWhiteBack";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png"; // นี่คือการ import 'FieldFull'
@@ -19,9 +18,9 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptio
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
-    width: "54%", // ค่าเริ่มต้นสำหรับ A3
+    width: "44%", // ค่าเริ่มต้นสำหรับ A3
 
-    objectPosition: "left 0px top 164px",
+    objectPosition: "left 0px top 192px",
   });
 
   const dispatch = useDispatch();
@@ -54,43 +53,43 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptio
       switch (imageStyleOption) {
         case "1, default":
           setImageStyle({
-            width: "54%",
-            objectPosition: "left 0px top 164px",
+            width: "44%",
+            objectPosition: "left 0px top 192px",
           });
           break;
         case "2":
           setImageStyle({
-            width: "48%",
+            width: "38%",
 
-            objectPosition: "left 0px top 174px",
+            objectPosition: "left 0px top 192px",
           });
           break;
         case "3":
           setImageStyle({
-            width: "40%",
+            width: "30%",
 
-            objectPosition: "left 0px top 168px",
+            objectPosition: "left 0px top 200px",
           });
           break;
         case "4":
           setImageStyle({
-            width: "28%",
+            width: "22%",
 
-            objectPosition: "left 0px top 158px",
+            objectPosition: "left 0px top 200px",
           });
           break;
         case "5":
           setImageStyle({
-            width: "18%",
+            width: "12%",
             /*paddingLeft: "24%",*/
-            objectPosition: "left 0px top 162px",
+            objectPosition: "left 0px top 200px",
           });
           break;
         case "6":
           setImageStyle({
-            width: "14%",
+            width: "10%",
             /*paddingLeft: "29%",*/
-            objectPosition: "left 0px top 168px",
+            objectPosition: "left 0px top 200px",
           });
           break;
         default:
@@ -128,7 +127,7 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptio
             </div>
             <div className="FieldCustom">
               <div className="CustomFront">
-                <img id="MockupFront1" src={WhiteBackMockup} alt="Mockup" />
+                <img id="MockupFront1" src="/T-Shirt-White-back.png" alt="Mockup" />
                 {uploadedImageBack ? (
                   <img
                     id="FieldUpload"

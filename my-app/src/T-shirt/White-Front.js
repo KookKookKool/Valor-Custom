@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 import "./Style.css";
 import Navigation from "../Components/Navigation";
 import Back from "../Asset/icon/Back.png";
-import WhiteFrontMockup from "../Asset/T-shirt/White-Front.png";
 import MenuW from "../Components/White/MenuWhite";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-Black.png";
@@ -19,8 +18,9 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1");
   const [imageStyle, setImageStyle] = useState({
-    width: "54%",
-    objectPosition: "left 0px top 202px",
+    width: "44%",
+    paddingLeft: "4px",
+    objectPosition: "left 0px top 220px",
   });
 
   const dispatch = useDispatch();
@@ -51,40 +51,44 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
       switch (imageStyleOption) {
         case "1, default":
           setImageStyle({
-            width: "54%",
-            objectPosition: "left 0px top 202px",
+            width: "44%",
+            paddingLeft: "5px",
+            objectPosition: "left 0px top 220px",
           });
           break;
         case "2":
           setImageStyle({
-            width: "48%",
-            objectPosition: "left 0px top 202px",
+            width: "38%",
+            paddingLeft: "5px",
+            objectPosition: "left 0px top 220px",
           });
           break;
         case "3":
           setImageStyle({
-            width: "40%",
-            objectPosition: "left 0px top 202px",
+            width: "30%",
+            paddingLeft: "5px",
+            objectPosition: "left 0px top 220px",
           });
           break;
         case "4":
           setImageStyle({
-            width: "28%",
-            objectPosition: "left 0px top 202px",
+            width: "22%",
+            paddingLeft: "5px",
+            objectPosition: "left 0px top 220px",
           });
           break;
         case "5":
           setImageStyle({
-            width: "18%",
+            width: "12%",
             paddingLeft: "24%",
-            objectPosition: "left 0px top 212px",
+            objectPosition: "left 0px top 228px",
           });
           break;
         case "6":
           setImageStyle({
-            width: "14%",
-            paddingLeft: "29%",
-            objectPosition: "left 0px top 218px",
+            width: "10%",
+            paddingLeft: "24%",
+            objectPosition: "left 0px top 228px",
           });
           break;
         default:
@@ -121,7 +125,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
             </div>
             <div className="FieldCustom">
             <div className="CustomFront">
-              <img id="MockupFront1" src={WhiteFrontMockup} alt="Mockup" />
+              <img id="MockupFront1" src="/T-Shirt-White.png" alt="Mockup" />
               {uploadedImageFront ? (
                 <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={{ ...imageStyle }}/>
 
