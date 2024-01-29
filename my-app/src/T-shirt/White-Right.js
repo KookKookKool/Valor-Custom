@@ -8,7 +8,7 @@ import "./Style.css";
 
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
-import WhiteRightMockup from "../Asset/T-shirt/White-Right.png";
+//import WhiteRightMockup from "../Asset/T-shirt/White-Right.png";
 import MenuWhiteRight from "../Components/White/MenuWhiteRight";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Arm-Black.png"; 
@@ -19,9 +19,9 @@ function WhiteRight({ uploadedImageRight, setUploadedImageRight, setImageStyleOp
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
-    width: "25%", 
-    paddingLeft: "8px",
-    objectPosition: "left 0px top 210px",
+    width: "16%", 
+    paddingRight: "30px",
+    objectPosition: "left 0px top 208px",
   });
 
   const navigate = useNavigate();
@@ -46,25 +46,25 @@ function WhiteRight({ uploadedImageRight, setUploadedImageRight, setImageStyleOp
   useEffect(() => {
     if (showDropdown) {
       switch (imageStyleOption) {
-        case "1":
+        case "9":
           setImageStyle({
-            width: "25%", 
-            paddingLeft: "8px",
-            objectPosition: "left 0px top 210px",
+            width: "16%", 
+            paddingRight: "30px",
+            objectPosition: "left 0px top 208px",
           });
           break;
-        case "2":
+        case "10":
           setImageStyle({
-            width: "18%",
-            paddingLeft: "8px",
-            objectPosition: "left 0px top 230px",
+            width: "12%",
+            paddingRight: "30px",
+            objectPosition: "left 0px top 218px",
           });
           break;
-        case "3":
+        case "11":
           setImageStyle({
-            width: "14%",
-            paddingLeft: "8px",
-            objectPosition: "left 0px top 240px",
+            width: "10%",
+            paddingRight: "30px",
+            objectPosition: "left 0px top 228px",
           });
           break;
         default:
@@ -102,7 +102,7 @@ function WhiteRight({ uploadedImageRight, setUploadedImageRight, setImageStyleOp
             </div>
             <div className="FieldCustom">
               <div className="CustomFront">
-                <img id="MockupFront1" src={WhiteRightMockup} alt="Mockup" />
+                <img id="MockupFront1" src="/shirt-white-side.png" alt="Mockup" style={{ mixBlendMode: 'multiply', filter: 'contrast(1)' }}/>
                 {uploadedImageRight ? (
                   <img
                     id="FieldUploadRight"
@@ -111,7 +111,7 @@ function WhiteRight({ uploadedImageRight, setUploadedImageRight, setImageStyleOp
                     style={imageStyle}
                   />
                 ) : (
-                  <img id="FieldDesignRight" src={FieldFull} alt="FieldDesign" />
+                  <img id="FieldDesignRight1" src={FieldFull} alt="FieldDesign" />
                 )}
               </div>
 
@@ -124,9 +124,9 @@ function WhiteRight({ uploadedImageRight, setUploadedImageRight, setImageStyleOp
                       value={imageStyleOption}
                       onChange={(e) => handleImageStyleChange(e.target.value)}
                     >
-                    <option value="1">A6</option>
-                    <option value="2">A7</option>
-                    <option value="3">A8</option>
+                    <option value="9">A6</option>
+                    <option value="10">A7</option>
+                    <option value="11">A8</option>
                     </select>
                   </div>
                 )}
@@ -147,9 +147,9 @@ function WhiteRight({ uploadedImageRight, setUploadedImageRight, setImageStyleOp
                     value={imageStyleOption}
                     onChange={(e) => handleImageStyleChange(e.target.value)}
                   >
-                    <option value="1">A6</option>
-                    <option value="2">A7</option>
-                    <option value="3">A8</option>
+                    <option value="9">A6</option>
+                    <option value="10">A7</option>
+                    <option value="11">A8</option>
                   </select>
                 </div>
                 

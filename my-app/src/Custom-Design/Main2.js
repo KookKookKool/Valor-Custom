@@ -1,14 +1,10 @@
 // Main2.js
-import React, { useEffect, useState } from 'react'; 
+//import React, { useEffect, useState } from 'react'; 
 import { connect } from 'react-redux';
 import "../T-shirt/Style.css";
 import Back from "../Asset/icon/Back.png";
 import { useNavigate } from 'react-router-dom';
 
-import whiteFrontMockup from "../Asset/T-shirt/White-Front.png";
-import whiteBackMockup from "../Asset/T-shirt/White-Back.png";
-import whiteRightMockup from "../Asset/T-shirt/White-Right.png";
-import whiteLeftMockup from "../Asset/T-shirt/White-Left.png";
 
 const Main2 = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
   const navigate = useNavigate();
@@ -18,16 +14,20 @@ const Main2 = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      navigate("/Main");
+      navigate("/T-shirt/White-Left");
     }
-  }
+  };
+
+  const handleNext = () => {
+    navigate("/Custom-Design/UserInfo");    
+};
 
   const getImageStyle = (uploadedImage, imageStyleOption) => {
     let imageStyle = {};
 
     switch (imageStyleOption) {
       case "1, default":
-        imageStyle = { width: "114px" };
+        imageStyle = { width: "108px" };
         break;
       case "2":
         imageStyle = { width: "80px" };
@@ -36,13 +36,28 @@ const Main2 = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
         imageStyle = { width: "60px" };
         break;
       case "4":
-        imageStyle = { width: "50px" };
+        imageStyle = { width: "48px"};
         break;
       case "5":
-        imageStyle = { width: "40px", paddingLeft: "24%" };
+        imageStyle = { width: "36px", paddingLeft: "44px"};
         break;
       case "6":
-        imageStyle = { width: "30px", paddingLeft: "29%" };
+        imageStyle = { width: "32px", paddingLeft: "48px" };
+        break;
+      case "7":
+        imageStyle = { width: "36px"};
+        break;
+      case "8":
+        imageStyle = { width: "32px" };
+        break;
+      case "9":
+        imageStyle = { width: "40px",top: "120px"};
+        break;
+      case "10":
+        imageStyle = { width: "36px",top: "126px"};
+        break;
+      case "11":
+        imageStyle = { width: "32px",top: "130px"};
         break;
       default:
         break;
@@ -55,7 +70,7 @@ const Main2 = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
     <div>
       <div className="container">
         <img id="Logo" src={require("../logo.png")} alt="img" />
-        <div className="Frame1">
+        <div className="Frame2">
           <div>
             <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
           </div>
@@ -65,26 +80,56 @@ const Main2 = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
             </button>
           </div>
 
-          <div className='MockupSum' style={{ display: "flex", flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center' }}>
-            <div className='SumMockup-Front' style={{ display: 'flex', justifyContent: 'center' }}>
-              <img src={whiteFront.uploadedImage} alt="" style={{ width: "150px", ...getImageStyle(whiteFront.uploadedImage, whiteFront.imageStyleOption) }} />
-              <img src={whiteFrontMockup} alt="" style={{ width: "186px" }} />
+         
+         <div className='Layout' style={ { display: "flex", flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', flexDirection: 'column',alignItems: 'center'}}>
+          <div className='MockupSum' style={{ display: "flex", flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center',gap: '80px'}}>
+            <div className='SumMockup-Front' style={{ display: 'flex', justifyContent: 'center',position: 'relative' }}>
+              <div className='SumCenter'>
+              <div className='SumBtn'>
+                <div className='SumBtn-Text'>หน้า</div>
+              </div>
+              <img src="/T-Shirt-White.png" alt="" style={{ width: "230px",   zIndex: 0 }} />
+              <div className='SumBtn-Text' style={{ fontSize: "24px",marginTop: "10px"}}>100 -</div>
+              </div>
+              <img src={whiteFront.uploadedImage} alt="" style={{  position: "absolute" , width: "104px",top: "120px" ,   zIndex: 1  , ...getImageStyle(whiteFront.uploadedImage, whiteFront.imageStyleOption) }} />
             </div>
 
-            <div className='SumMockup-Back' style={{ display: 'flex', justifyContent: 'center' }}>
-              <img src={whiteBack.uploadedImage} alt="" style={{ width: "150px", ...getImageStyle(whiteBack.uploadedImage, whiteBack.imageStyleOption) }} />
-              <img src={whiteBackMockup} alt="" style={{ width: "186px" }} />
+            <div className='SumMockup-Back' style={{ display: 'flex', justifyContent: 'center',position: 'relative'  }}>
+            <div className='SumCenter'>
+              <div className='SumBtn'>
+                <div className='SumBtn-Text'>หลัง</div>
+              </div>
+            <img src="/T-Shirt-White-back.png" alt="" style={{ width: "230px",   zIndex: 0 }} />
+            <div className='SumBtn-Text' style={{ fontSize: "24px",marginTop: "10px"}}>100 -</div>
+            </div>
+              <img src={whiteBack.uploadedImage} alt="" style={{  position: "absolute" , width: "104px",top: "108px" ,  zIndex: 1  , ...getImageStyle(whiteBack.uploadedImage, whiteBack.imageStyleOption) }} />
             </div>
 
-            <div className='SumMockup-Right' style={{ display: 'flex', justifyContent: 'center' }}>
-              <img src={whiteRight.uploadedImage} alt="" style={{ width: "150px", ...getImageStyle(whiteRight.uploadedImage, whiteRight.imageStyleOption) }} />
-              <img src={whiteRightMockup} alt="" style={{ width: "186px" }} />
+            <div className='SumMockup-Right' style={{ display: 'flex', justifyContent: 'center',position: 'relative'  }}>
+            <div className='SumCenter'>
+              <div className='SumBtn'>
+                <div className='SumBtn-Text'>แขนขวา</div>
+              </div>
+            <img src="/shirt-white-side.png" alt="" style={{ width: "230px",   zIndex: 0 }} />
+            <div className='SumBtn-Text' style={{ fontSize: "24px",marginTop: "10px"}}>100 -</div>
+            </div>
+              <img src={whiteRight.uploadedImage} alt="" style={{ position: "absolute" , width: "48px", paddingRight: "20px", top: "120px" ,  zIndex: 1  , ...getImageStyle(whiteRight.uploadedImage, whiteRight.imageStyleOption) }} />
             </div>
 
-            <div className='SumMockup-Left' style={{ display: 'flex', justifyContent: 'center' }}>
-              <img src={whiteLeft.uploadedImage} alt="" style={{ width: "150px", ...getImageStyle(whiteLeft.uploadedImage, whiteLeft.imageStyleOption) }} />
-              <img src={whiteLeftMockup} alt="" style={{ width: "186px" }} />
+            <div className='SumMockup-Left' style={{ display: 'flex', justifyContent: 'center',position: 'relative'  }}>
+            <div className='SumCenter'>
+              <div className='SumBtn'>
+                <div className='SumBtn-Text'>แขนซ้าย</div>
+              </div>
+            <img src="/shirt-white-side.png" alt="" style={{ width: "230px",transform: 'scaleX(-1)',   zIndex: 0 }} />
+            <div className='SumBtn-Text' style={{ fontSize: "24px",marginTop: "10px"}}>100 -</div>
+              </div>
+              <img src={whiteLeft.uploadedImage} alt="" style={{ position: "absolute" , width: "48px", paddingLeft: "20px", top: "120px",  zIndex: 1  , ...getImageStyle(whiteLeft.uploadedImage, whiteLeft.imageStyleOption)  }} />
             </div>
+          </div>
+
+          <div className='SumBtn-Text' style={{ fontSize: "24px",marginTop: "38px", marginBottom: "10px"}}>รวม 200 -</div>
+          <button className='SamaryPrice' onClick={handleNext}>ชำระเงิน</button>
           </div>
         </div>
       </div>

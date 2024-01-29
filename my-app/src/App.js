@@ -29,6 +29,7 @@ import GreenRight from "./T-shirt/Green-Right";
 import LaserPatch from "./LaserPatch/LaserPatch";
 
 import Main2 from "./Custom-Design/Main2";
+import UserInfo from "./Custom-Design/UserInfo";
 
 export default function App() {
   return (
@@ -68,6 +69,7 @@ export default function App() {
 
 
         <Route path="/Custom-Design/Main2" element={<Main2/>} />
+        <Route path="/Custom-Design/UserInfo" element={<UserInfo />} />
       </Routes>
 
     </div>

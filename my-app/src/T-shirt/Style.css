@@ -32,6 +32,23 @@ button:hover {
   margin-left: 5%;
 }
 
+.SumBtn {
+  display: flex;
+  padding: 12px;
+  background-color: white;
+  border-radius: 17px;
+  width: 60px;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.SumCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .Btnsave {
   display: inline-block;
   padding: 10px 20px;
@@ -56,7 +73,7 @@ button:hover {
   flex-wrap: nowrap;
   justify-content: center; /* จัดกึ่งกลางตามแนวนอน */
   align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
-  gap: 20%;
+  gap: 16%;
   height: 752px;
   margin-top: -140px;
   z-index: 1;
@@ -365,8 +382,8 @@ img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#Field
 
 #FieldDesignRight {
   position: absolute;
-  top: 50%;
-  left: 49.5%;
+  top: 52%;
+  left: 54.5%;
   transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 100%;
@@ -376,13 +393,13 @@ img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#Field
 
 #FieldDesignRight1 {
   position: absolute;
-  top: 50%;
-  left: 42.5%;
+  top: 52%;
+  left: 43.5%;
   transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 100%;
   z-index: 1;
-  margin-top: -30px;
+  margin-top: -38px;
 }
 
 #FieldDesignRight2 {
@@ -500,6 +517,47 @@ img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#Field
   align-content: center;
   justify-content: center;
   align-items: center;
+}
+
+.Frame2 {
+  width: 80vw;
+  max-width: 1920px;
+  background: linear-gradient(180deg, rgba(213, 204, 179, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%);
+  box-shadow: 0px 9px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.SamaryPrice {
+  font-size: 32px;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    border-radius: 20px;
+    width: 218px;
+    margin-bottom: 2vh;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+.BtnNext {
+  display: flex;
+  background: white;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  width: 66vw;
+  max-width: 430px;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+
+.inputUserinfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Responsive 1100Px */

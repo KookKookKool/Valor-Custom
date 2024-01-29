@@ -73,19 +73,19 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptio
           break;
         case "4":
           setImageStyle({
-            width: "22%",
+            width: "16%",
 
             objectPosition: "left 0px top 200px",
           });
           break;
-        case "5":
+        case "7":
           setImageStyle({
             width: "12%",
             /*paddingLeft: "24%",*/
             objectPosition: "left 0px top 200px",
           });
           break;
-        case "6":
+        case "8":
           setImageStyle({
             width: "10%",
             /*paddingLeft: "29%",*/
@@ -153,8 +153,8 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptio
                       <option value="2">A4</option>
                       <option value="3">A5</option>
                       <option value="4">A6</option>
-                      <option value="5">A7</option>
-                      <option value="6">A8</option>
+                      <option value="7">A7</option>
+                      <option value="8">A8</option>
                     </select>
                   </div>
                 )}
@@ -179,8 +179,8 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptio
                     <option value="2">A4</option>
                     <option value="3">A5</option>
                     <option value="4">A6</option>
-                    <option value="5">A7</option>
-                    <option value="6">A8</option>
+                    <option value="7">A7</option>
+                    <option value="8">A8</option>
                   </select>
                 </div>
               )}

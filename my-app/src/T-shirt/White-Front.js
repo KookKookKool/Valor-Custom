@@ -72,7 +72,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
           break;
         case "4":
           setImageStyle({
-            width: "22%",
+            width: "16%",
             paddingLeft: "5px",
             objectPosition: "left 0px top 220px",
           });

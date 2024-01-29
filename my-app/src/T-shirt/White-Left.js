@@ -8,7 +8,7 @@ import "./Style.css";
 
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
-import WhiteLeftMockup from "../Asset/T-shirt/White-Left.png";
+//import WhiteLeftMockup from "../Asset/T-shirt/White-Left.png";
 import MenuWhiteLeft from "../Components/White/MenuWhiteLeft";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Arm-Black.png"; 
@@ -20,9 +20,9 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
-    width: "25%", 
-    paddingLeft: "8px",
-    objectPosition: "left 0px top 210px",
+    width: "16%", 
+    paddingLeft: "60px",
+    objectPosition: "left 0px top 208px",
   });
 
   const navigate = useNavigate();
@@ -47,25 +47,25 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
   useEffect(() => {
     if (showDropdown) {
       switch (imageStyleOption) {
-        case "1":
+        case "9":
           setImageStyle({
-            width: "25%", 
-            paddingLeft: "8px",
-            objectPosition: "left 0px top 210px",
+            width: "16%", 
+            paddingLeft: "60px",
+            objectPosition: "left 0px top 208px",
           });
           break;
-        case "2":
+        case "10":
           setImageStyle({
-            width: "18%",
-            paddingLeft: "8px",
-            objectPosition: "left 0px top 230px",
+            width: "12%",
+            paddingLeft: "60px",
+            objectPosition: "left 0px top 218px",
           });
           break;
-        case "3":
+        case "11":
           setImageStyle({
-            width: "14%",
-            paddingLeft: "8px",
-            objectPosition: "left 0px top 240px",
+            width: "10%",
+            paddingLeft: "60px",
+            objectPosition: "left 0px top 228px",
           });
           break;
         default:
@@ -103,7 +103,7 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
             </div>
             <div className="FieldCustom">
               <div className="CustomFront">
-                <img id="MockupFront1" src={WhiteLeftMockup} alt="Mockup" />
+                <img id="MockupFront1" src="/shirt-white-side.png" alt="Mockup" style={{ background: 'none', transform: 'scaleX(-1)' }} />
                 {uploadedImageLeft ? (
                   <img
                     id="FieldUploadLeft"
@@ -125,9 +125,9 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
                       value={imageStyleOption}
                       onChange={(e) => handleImageStyleChange(e.target.value)}
                     >
-                    <option value="1">A6</option>
-                    <option value="2">A7</option>
-                    <option value="3">A8</option>
+                    <option value="9">A6</option>
+                    <option value="10">A7</option>
+                    <option value="11">A8</option>
                     </select>
                   </div>
                 )}
@@ -148,9 +148,9 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
                     value={imageStyleOption}
                     onChange={(e) => handleImageStyleChange(e.target.value)}
                   >
-                    <option value="1">A6</option>
-                    <option value="2">A7</option>
-                    <option value="3">A8</option>
+                    <option value="9">A6</option>
+                    <option value="10">A7</option>
+                    <option value="11">A8</option>
                   </select>
                 </div>
                 
