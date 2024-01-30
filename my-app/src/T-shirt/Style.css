@@ -539,7 +539,7 @@ img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#Field
     border-radius: 20px;
     width: 218px;
     margin-bottom: 2vh;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    box-shadow: 0px 9px 7px rgba(0, 0, 0, 0.25);
 }
 
 .BtnNext {
@@ -551,13 +551,24 @@ img#FieldUpload, img#FieldUpload1, img#FieldUpload2, img#FieldUploadB, img#Field
   max-width: 430px;
   justify-content: center;
   border-radius: 8px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  box-shadow: 0px 9px 7px rgba(0, 0, 0, 0.25);
 }
 
 .inputUserinfo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.PaymentBtn {
+  display: flex;
+  background: white;
+  padding: 1rem;
+  width: 66vw;
+  max-width: 230px;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0px 9px 7px rgba(0, 0, 0, 0.25);
 }
 
 /* Responsive 1100Px */

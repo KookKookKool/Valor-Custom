@@ -15,6 +15,10 @@ const UserInfo = () => {
     }
   };
 
+  const handleNext = () => {
+    navigate("/Payment");
+  };
+
   return (
     <div>
       <div>
@@ -52,7 +56,7 @@ const UserInfo = () => {
 
             <TextField style={{ margin: "1rem", maxWidth: "430px" }}  id="outlined-basic" label="อีเมล" variant="outlined" />
 
-            <button className="BtnNext">ถัดไป</button>
+            <button className="BtnNext" onClick={handleNext} >ถัดไป</button>
           </div>
           </div>
         </div>

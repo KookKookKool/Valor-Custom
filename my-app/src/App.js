@@ -30,6 +30,7 @@ import LaserPatch from "./LaserPatch/LaserPatch";
 
 import Main2 from "./Custom-Design/Main2";
 import UserInfo from "./Custom-Design/UserInfo";
+import Payment from "./Payment/Payment";
 
 export default function App() {
   return (
@@ -70,6 +71,7 @@ export default function App() {
 
         <Route path="/Custom-Design/Main2" element={<Main2/>} />
         <Route path="/Custom-Design/UserInfo" element={<UserInfo />} />
+        <Route path="/Payment" element={<Payment />} />
       </Routes>
 
     </div>

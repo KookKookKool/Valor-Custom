@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Route, Link, Routes, } from "react-router-dom"; // ลบ BrowserRouter ออก
+import { useNavigate } from "react-router-dom";
 import "../Components/Products.css";
 import Card1 from "../T-shirt/Index";
 //import Card2 from "../Combatshirt/Index";
@@ -31,14 +32,18 @@ import Combatshirt from "../Combatshirt/Combatshirt";
 import Cup from "../Cup/Cup";
 
 import Main from "../Main"; 
+import Back from "../Asset/icon/Back.png";
 
 // Main component
 export default function Products() {
   const [isProductsitemOpen, setIsProductsitemOpen] = useState(true);
 
+  const navigate = useNavigate();
+
   const handleGoBack = () => {
-    setIsProductsitemOpen(true); // เปิด ul อีกครั้งเมื่อกดปุ่ม "ย้อนกลับ"
-    window.history.back();
+ {
+      navigate("/");
+    }
   };
 
   return (
@@ -46,10 +51,16 @@ export default function Products() {
     
     <div className="Frame1">
       <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+      <div className="">
+            <button id="" style={{ marginLeft:'5%' }}>
+            <img src={Back} alt="Back" onClick={handleGoBack} />
+            </button>
+          </div>
       <ul
         className="Productsitem"
         style={{ display: isProductsitemOpen ? "" : "none" }}
       >
+
         <div className="Link">
           <Link
             to="/T-shirt/White-Front"
