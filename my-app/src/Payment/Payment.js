@@ -5,7 +5,7 @@ import html2canvas from 'html2canvas';
 
 const Payment = () => {
   const [countdown, setCountdown] = useState(900); // 15 minutes in seconds
-  const [qrCodeImage, setQRCodeImage] = useState(null);
+  const [ setQRCodeImage ] = useState(null);
 
   const navigate = useNavigate();
 

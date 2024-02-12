@@ -1,53 +1,69 @@
+//whiteLeft.js
 import React, { useState, useEffect } from "react";
 
+import { connect } from 'react-redux';
+import { setUploadedImageLeft, setImageStyleOptionLeft } from '../Actions/actionsLeft';
+import { useNavigate } from 'react-router-dom';
 import "./Style.css";
+
 import Navigation from "../Components/Navigation1"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
-import BlackLeftMockup from "../Asset/T-shirt/Black-Left.png";
-import MenuBlackLeft from "../Components/Black/MenuBlackLeft";
+//import WhiteLeftMockup from "../Asset/T-shirt/White-Left.png";
+import MenuWhiteLeft from "../Components/Black/MenuBlackLeft";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Arm-White.png"; 
 
-import ImageSaveButton from "../Custom-Design/ImageSaveButton";
-
-function BlackLeft({ setProductsitemOpen }) {
-  const [uploadedImage, setUploadedImage] = useState(null);
-  const [savedImage, setSavedImage] = useState(null);
+function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOptionLeft }) {
 
   const [showDropdown] = useState(true);
   const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
   const [imageStyle, setImageStyle] = useState({
-    width: "25%", 
-    paddingLeft: "8px",
-    objectPosition: "left 0px top 210px",
+    width: "16%", 
+    paddingLeft: "60px",
+    objectPosition: "left 0px top 208px",
   });
+
+  const navigate = useNavigate();
+
+  const handleImageUpload = (uploadedImageLeft) => {
+    console.log("Uploaded Image Left:", uploadedImageLeft);
+    setUploadedImageLeft(uploadedImageLeft, 3); 
+  };
+
+  const handleSaveImage = () => {
+    // ทำการ dispatch action เพื่อบันทึกรูป
+    setUploadedImageLeft(uploadedImageLeft);
+    setImageStyleOptionLeft(imageStyleOption);
+    navigate("/Custom-Design/Preview-Black");
+  };
 
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
+    setImageStyleOptionLeft(selectedOption);
   };
 
   useEffect(() => {
     if (showDropdown) {
       switch (imageStyleOption) {
-        case "1":
+        case "9":
           setImageStyle({
-            width: "25%", 
-            paddingLeft: "8px",
-            objectPosition: "left 0px top 210px",
+            width: "16%", 
+            paddingLeft: "60px",
+            objectPosition: "left 0px top 208px",
           });
           break;
-        case "2":
+        case "10":
           setImageStyle({
-            width: "18%",
-            paddingLeft: "8px",
-            objectPosition: "left 0px top 230px",
+            width: "12%",
+            paddingLeft: "60px",
+            objectPosition: "left 0px top 218px",
           });
           break;
-        case "3":
+        case "11":
           setImageStyle({
-            width: "14%",
-            paddingLeft: "8px",
-            objectPosition: "left 0px top 240px",
+            width: "10%",
+            paddingLeft: "60px",
+            objectPosition: "left 0px top 228px",
           });
           break;
         default:
@@ -57,20 +73,12 @@ function BlackLeft({ setProductsitemOpen }) {
     }
   }, [showDropdown, imageStyleOption]);
 
-  const handleImageUpload = (selectedImage) => {
-    setUploadedImage(URL.createObjectURL(selectedImage));
-  };
-
-  const handleSaveImage = () => {
-    setSavedImage(uploadedImage);
-  };
-
   const handleGoBack = () => {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ ?"
     );
     if (confirmed) {
-      window.location.href = "/T-shirt/Black-Back";
+      navigate("/T-shirt/White-Right");
     }
   };
 
@@ -93,21 +101,21 @@ function BlackLeft({ setProductsitemOpen }) {
             </div>
             <div className="FieldCustom">
               <div className="CustomFront">
-                <img id="MockupFront1" src={BlackLeftMockup} alt="Mockup" />
-                {uploadedImage ? (
+                <img id="MockupFront1" src="/shirt-black-side.png" alt="Mockup" style={{ background: 'none', transform: 'scaleX(-1)' }} />
+                {uploadedImageLeft ? (
                   <img
-                    id="FieldUploadLeft1"
-                    src={uploadedImage}
+                    id="FieldUploadLeft"
+                    src={uploadedImageLeft}
                     alt="FieldUpload"
                     style={imageStyle}
                   />
                 ) : (
-                  <img id="FieldDesignLeft1" src={FieldFull} alt="FieldDesign" />
+                  <img id="FieldDesignLeft" src={FieldFull} alt="FieldDesign" />
                 )}
               </div>
 
               <div className="Box5">
-                <MenuBlackLeft />
+                <MenuWhiteLeft />
                 {showDropdown && (
                   <div className="dropdown">
                     <label>ขนาด:</label>
@@ -115,23 +123,22 @@ function BlackLeft({ setProductsitemOpen }) {
                       value={imageStyleOption}
                       onChange={(e) => handleImageStyleChange(e.target.value)}
                     >
-                    <option value="1">A6</option>
-                    <option value="2">A7</option>
-                    <option value="3">A8</option>
+                    <option value="9">A6</option>
+                    <option value="10">A7</option>
+                    <option value="11">A8</option>
                     </select>
                   </div>
                 )}
               </div>
               <div className="Box6">
-                <Upload onUpload={handleImageUpload} />
-                <ImageSaveButton
-                  onSave={handleSaveImage}
-                  savedImage={savedImage}
-                />
+              <Upload onUpload={handleImageUpload} index={3} />
+                <button className="Btnsave" onClick={handleSaveImage}>
+                  บันทึกและถัดไป
+                </button>
               </div>
             </div>
             <div className="Box4">
-              <MenuBlackLeft />
+              <MenuWhiteLeft />
               {showDropdown && (
                 <div className="dropdown">
                   <label>ขนาด:</label>
@@ -139,9 +146,9 @@ function BlackLeft({ setProductsitemOpen }) {
                     value={imageStyleOption}
                     onChange={(e) => handleImageStyleChange(e.target.value)}
                   >
-                    <option value="1">A6</option>
-                    <option value="2">A7</option>
-                    <option value="3">A8</option>
+                    <option value="9">A6</option>
+                    <option value="10">A7</option>
+                    <option value="11">A8</option>
                   </select>
                 </div>
                 
@@ -155,4 +162,16 @@ function BlackLeft({ setProductsitemOpen }) {
   );
 }
 
-export default BlackLeft;
+
+const mapStateToPropsLeft = (state) => ({
+  uploadedImageLeft: (state.whiteLeft && state.whiteLeft.images && state.whiteLeft.images[3]) || null,
+  imageStyleOptionLeft: state.whiteLeft ? state.whiteLeft.imageStyleOption : null,
+});
+
+const mapDispatchToPropsLeft = (dispatch) => ({
+  setUploadedImageLeft: (image) => dispatch(setUploadedImageLeft(image, 3)),
+  setImageStyleOptionLeft: (imageStyleOption) => dispatch(setImageStyleOptionLeft(imageStyleOption)), 
+  setImageStyleOptionLeftDispatch: (imageStyleOption) => dispatch({ type: "SET_IMAGE_STYLE_OPTION_LEFT", imageStyleOption }),
+});
+
+export default connect(mapStateToPropsLeft, mapDispatchToPropsLeft)(WhiteLeft);

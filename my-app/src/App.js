@@ -28,7 +28,9 @@ import GreenRight from "./T-shirt/Green-Right";
 
 import LaserPatch from "./LaserPatch/LaserPatch";
 
-import Main2 from "./Custom-Design/Main2";
+import PreviewWhite from "./Custom-Design/WhitePreview";
+import PreviewBlack from "./Custom-Design/BlackPreview";
+
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
 
@@ -69,7 +71,10 @@ export default function App() {
         <Route path="/LaserPatch" element={<LaserPatch />} />
 
 
-        <Route path="/Custom-Design/Main2" element={<Main2/>} />
+        <Route path="/Custom-Design/Preview-White" element={<PreviewWhite/>} />
+        <Route path="/Custom-Design/Preview-Black" element={<PreviewBlack/>} />
+
+
         <Route path="/Custom-Design/UserInfo" element={<UserInfo />} />
         <Route path="/Payment" element={<Payment />} />
       </Routes>

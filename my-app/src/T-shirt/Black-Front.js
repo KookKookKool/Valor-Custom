@@ -1,29 +1,49 @@
-import React, { useState, useEffect }  from "react";
+// BlackFront.js
+import React, { useState, useEffect } from 'react';
+import { useDispatch, connect } from 'react-redux';
+
+import { setUploadedImageFront, setImageStyleOptionFront } from '../Actions/actionsFront'; // แก้ชื่อ action creator ที่นี่
+//import { storeFront, persistorFront } from '../Store/storeFront';
+import { useNavigate } from 'react-router-dom';
 import "./Style.css";
 import Navigation from "../Components/Navigation1";
 import Back from "../Asset/icon/Back.png";
-import BlackFrontMockup from "../Asset/T-shirt/Black-Front.png";
 import MenuW from "../Components/Black/MenuBlack";
 import Upload from "../Upload/Upload1";
-import FieldFull from "../Asset/T-shirt/Field-Full-White.png"; // นี่คือการ import 'FieldFull'
-
-import ImageSaveButton from "../Custom-Design/ImageSaveButton";
-
+import FieldFull from "../Asset/T-shirt/Field-Full-White.png";
 import "../Components/Products.css";
 
-function BlackFront({ setProductsitemOpen }) {
-  const [uploadedImage, setUploadedImage] = useState(null);
-  const [savedImage, setSavedImage] = useState(null);
-
+function BlackFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOptionFront, onImageUpload }) {
+  //const dispatch = useDispatch();
   const [showDropdown] = useState(true);
-  const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
+  const [imageStyleOption, setImageStyleOption] = useState("1");
   const [imageStyle, setImageStyle] = useState({
-    width: "54%", // ค่าเริ่มต้นสำหรับ A3
-    objectPosition: "left 0px top 212px",
+    width: "44%",
+    paddingRight: "8px",
+    objectPosition: "left 0px top 220px",
   });
-  const handleImageStyleChange = (selectedValue) => {
-    // Add your logic to handle the style change here
-    setImageStyleOption(selectedValue);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleImageUpload = (uploadedImageFront) => {
+    console.log("Uploaded Image Front:", uploadedImageFront);
+    setUploadedImageFront(uploadedImageFront, 0); // index 0 สำหรับ WhiteFront
+  };
+
+  const handleSaveImage = () => {
+    // ทำการ dispatch action เพื่อบันทึกรูป
+    setUploadedImageFront(uploadedImageFront);
+    setImageStyleOptionFront(imageStyleOption);
+    dispatch(setImageStyleOptionFront(imageStyleOption));
+    //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
+    navigate('/T-shirt/Black-Back');
+  };
+
+  const handleImageStyleChange = (selectedOption) => {
+    setImageStyleOption(selectedOption);
+    setImageStyleOptionFront(selectedOption);
+    
   };
 
   useEffect(() => {
@@ -31,104 +51,93 @@ function BlackFront({ setProductsitemOpen }) {
       switch (imageStyleOption) {
         case "1, default":
           setImageStyle({
-            width: "54%",
-            objectPosition: "left 0px top 212px",
+            width: "44%",
+            paddingLeft: "5px",
+            objectPosition: "left 0px top 220px",
           });
           break;
         case "2":
           setImageStyle({
-            width: "48%",
-
-            objectPosition: "left 0px top 212px",
+            width: "38%",
+            paddingLeft: "5px",
+            objectPosition: "left 0px top 220px",
           });
           break;
         case "3":
           setImageStyle({
-            width: "40%",
-
-            objectPosition: "left 0px top 212px",
+            width: "30%",
+            paddingLeft: "5px",
+            objectPosition: "left 0px top 220px",
           });
           break;
         case "4":
           setImageStyle({
-            width: "28%",
-
-            objectPosition: "left 0px top 212px",
+            width: "16%",
+            paddingLeft: "5px",
+            objectPosition: "left 0px top 220px",
           });
           break;
         case "5":
           setImageStyle({
-            width: "18%",
+            width: "12%",
             paddingLeft: "24%",
-            objectPosition: "left 0px top 222px",
+            objectPosition: "left 0px top 228px",
           });
           break;
         case "6":
           setImageStyle({
-            width: "14%",
-            paddingLeft: "29%",
+            width: "10%",
+            paddingLeft: "24%",
             objectPosition: "left 0px top 228px",
           });
           break;
-          default:
-            // กระทำเมื่อไม่มี case ไหนตรงกับ imageStyleOption
-            break;
-        }
+        default:
+          break;
       }
-    }, [showDropdown, imageStyleOption]);
-
-  const handleImageUpload = (selectedImage) => {
-    setUploadedImage(URL.createObjectURL(selectedImage));
-  };
-
-  const handleSaveImage = () => {
-    setSavedImage(uploadedImage);
-  };
-
+    }
+  }, [showDropdown, imageStyleOption]);
 
   const handleGoBack = () => {
     const confirmed = window.confirm(
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      window.location.href = "/Main";
+      navigate("/Main");
     }
-
   };
 
   return (
     <>
       <div className="container">
-      <img id="Logo" src={require('../logo.png')} alt="img" />
-      <div className="Frame1">
-        <div>
-      <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
-      </div>
-      <div className="Box">
-          <div className="Box2">
-            <button id="BntBack" onClick={handleGoBack}>
-              <img src={Back} alt="Back" />
-            </button>
-            <div className="Box3">
-              <Navigation />
-            </div>
+        <img id="Logo" src={require("../logo.png")} alt="img" />
+        <div className="Frame1">
+          <div>
+            <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
           </div>
-          <div className="FieldCustom">
-            <div className="CustomFront">
-              <img id="MockupFront2" src={BlackFrontMockup} alt="Mockup" />
-              {uploadedImage ? (
-                  <img
-                    id="FieldUpload1"
-                    src={uploadedImage}
-                    alt="FieldUpload1"
-                    style={imageStyle}
-                  />
-                ) : (
-                  <img id="FieldDesign" src={FieldFull} alt="FieldDesign" />
-                )}
+          <div className="Box">
+            <div className="Box2">
+              <button id="BntBack" onClick={handleGoBack}>
+                <img src={Back} alt="Back" />
+              </button>
+              <div className="Box3">
+                <Navigation />
+              </div>
             </div>
+            <div className="FieldCustom">
+            <div className="CustomFront">
+              <img id="MockupFront1" src="/T-Shirt-Black.png" alt="Mockup" />
+              {uploadedImageFront ? (
+                <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={{ ...imageStyle }}/>
 
-            <div className="Box5">
+              ) : (
+                <img
+                  id="FieldDesign1"
+                  src={FieldFull}
+                  alt="FieldDesign"
+                />
+              )}
+            </div>
+              <div className="Box5">
                 <MenuW />
                 {showDropdown && (
                   <div className="dropdown">
@@ -147,18 +156,14 @@ function BlackFront({ setProductsitemOpen }) {
                   </div>
                 )}
               </div>
-
-            <div className="Box6">
-            <Upload onUpload={handleImageUpload} />
-            <ImageSaveButton
-                onSave={handleSaveImage}
-                savedImage={savedImage}
-              />
-          </div>
-          </div>
-          <div className="Box4">
-            <MenuW />
-            {showDropdown && (
+              <div className="Box6">
+              <Upload onUpload={handleImageUpload} index={0} />
+                <button className='Btnsave' onClick={handleSaveImage}>บันทึกและถัดไป</button>
+              </div>
+            </div>
+            <div className="Box4">
+              <MenuW />
+              {showDropdown && (
                 <div className="dropdown">
                   <label>ขนาด:</label>
                   <select
@@ -174,12 +179,24 @@ function BlackFront({ setProductsitemOpen }) {
                   </select>
                 </div>
               )}
+            </div>
           </div>
         </div>
       </div>
-      </div>
+
     </>
   );
 }
+const mapStateToPropsFront = (state) => ({
+  uploadedImageFront: (state.whiteFront && state.whiteFront.images && state.whiteFront.images[0]) || null,
+  imageStyleOption: state.whiteFront ? state.whiteFront.imageStyleOption : null,
+});
 
-export default BlackFront;
+const mapDispatchToPropsFront = (dispatch) => ({
+  setUploadedImageFront: (image) => dispatch(setUploadedImageFront(image, 0)),
+  setImageStyleOptionFront: (imageStyleOption) => dispatch(setImageStyleOptionFront(imageStyleOption)), 
+  getImageStyleOptionFront: () => dispatch({ type: "GET_IMAGE_STYLE_OPTION_FRONT" }),
+});
+
+
+export default connect(mapStateToPropsFront, mapDispatchToPropsFront)(BlackFront);

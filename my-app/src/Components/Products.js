@@ -41,9 +41,7 @@ export default function Products() {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
- {
       navigate("/");
-    }
   };
 
   return (

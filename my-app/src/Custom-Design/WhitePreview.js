@@ -1,4 +1,4 @@
-// Main2.js
+// WhitePreview.js
 //import React, { useEffect, useState } from 'react'; 
 import { connect } from 'react-redux';
 import "../T-shirt/Style.css";
@@ -6,7 +6,7 @@ import Back from "../Asset/icon/Back.png";
 import { useNavigate } from 'react-router-dom';
 
 
-const Main2 = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
+const WhitePreview = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
@@ -81,7 +81,7 @@ const Main2 = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
           </div>
 
          
-         <div className='Layout' style={ { display: "flex", flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', flexDirection: 'column',alignItems: 'center'}}>
+         <div className='Layout' style={ { display: "flex", flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'column',alignItems: 'center'}}>
           <div className='MockupSum' style={{ display: "flex", flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center',gap: '80px'}}>
             <div className='SumMockup-Front' style={{ display: 'flex', justifyContent: 'center',position: 'relative' }}>
               <div className='SumCenter'>
@@ -156,4 +156,4 @@ const mapStateToProps = (state) => ({
   },
 });
 
-export default connect(mapStateToProps)(Main2);
+export default connect(mapStateToProps)(WhitePreview);

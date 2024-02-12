@@ -65,13 +65,6 @@
     transform: scale(1.2); 
   }
   
-
-  .Menu-icons {    
-    display: grid;
-    gap: 20%;
-    justify-items: center;
-  }
-
   .HeaderMenuWhite {
     margin-top: -12%;
   }

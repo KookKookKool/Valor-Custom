@@ -1,6 +1,5 @@
 //whiteRight.js
 import React, { useState, useEffect } from "react";
-
 import { connect } from 'react-redux';
 import { setUploadedImageRight, setImageStyleOptionRight } from '../Actions/actionsRight';
 import { useNavigate } from 'react-router-dom';
@@ -12,7 +11,6 @@ import Back from "../Asset/icon/Back.png";
 import MenuWhiteRight from "../Components/White/MenuWhiteRight";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Arm-Black.png"; 
-
 
 function WhiteRight({ uploadedImageRight, setUploadedImageRight, setImageStyleOptionRight }) {
 

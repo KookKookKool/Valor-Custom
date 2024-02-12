@@ -13,8 +13,6 @@ import MenuWhiteLeft from "../Components/White/MenuWhiteLeft";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Arm-Black.png"; 
 
-
-
 function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOptionLeft }) {
 
   const [showDropdown] = useState(true);
@@ -36,7 +34,7 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
     // ทำการ dispatch action เพื่อบันทึกรูป
     setUploadedImageLeft(uploadedImageLeft);
     setImageStyleOptionLeft(imageStyleOption);
-    navigate("/Custom-Design/Main2");
+    navigate("/Custom-Design/Preview-White");
   };
 
   const handleImageStyleChange = (selectedOption) => {
@@ -112,7 +110,7 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
                     style={imageStyle}
                   />
                 ) : (
-                  <img id="FieldDesignRight" src={FieldFull} alt="FieldDesign" />
+                  <img id="FieldDesignLeft" src={FieldFull} alt="FieldDesign" />
                 )}
               </div>
 
