@@ -5,7 +5,8 @@ import "../T-shirt/Style.css";
 import Back from "../Asset/icon/Back.png";
 import { useNavigate } from 'react-router-dom';
 
-const BlackPreview = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
+
+const WhitePreview = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
@@ -13,7 +14,7 @@ const BlackPreview = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      navigate("/T-shirt/Black-Left");
+      navigate("/T-shirt/Navy-Left");
     }
   };
 
@@ -87,17 +88,18 @@ const BlackPreview = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
               <div className='SumBtn'>
                 <div className='SumBtn-Text'>หน้า</div>
               </div>
-              <img src="/T-Shirt-Black.png" alt="" style={{ width: "230px",   zIndex: 0 }} />
+              <img src="/T-Shirt-Navy.png" alt="" style={{ width: "230px",   zIndex: 0 }} />
               <div className='SumBtn-Text' style={{ fontSize: "24px",marginTop: "10px"}}>100 -</div>
               </div>
               <img src={whiteFront.uploadedImage} alt="" style={{  position: "absolute" , width: "104px",top: "120px" ,   zIndex: 1  , ...getImageStyle(whiteFront.uploadedImage, whiteFront.imageStyleOption) }} />
             </div>
+
             <div className='SumMockup-Back' style={{ display: 'flex', justifyContent: 'center',position: 'relative'  }}>
             <div className='SumCenter'>
               <div className='SumBtn'>
                 <div className='SumBtn-Text'>หลัง</div>
               </div>
-            <img src="/T-Shirt-Black-back.png" alt="" style={{ width: "230px",   zIndex: 0 }} />
+            <img src="/T-Shirt-navy-back.png" alt="" style={{ width: "230px",   zIndex: 0 }} />
             <div className='SumBtn-Text' style={{ fontSize: "24px",marginTop: "10px"}}>100 -</div>
             </div>
               <img src={whiteBack.uploadedImage} alt="" style={{  position: "absolute" , width: "104px",top: "108px" ,  zIndex: 1  , ...getImageStyle(whiteBack.uploadedImage, whiteBack.imageStyleOption) }} />
@@ -108,7 +110,7 @@ const BlackPreview = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
               <div className='SumBtn'>
                 <div className='SumBtn-Text'>แขนขวา</div>
               </div>
-            <img src="/shirt-black-side.png" alt="" style={{ width: "230px",   zIndex: 0 }} />
+            <img src="/shirt-navy-side.png" alt="" style={{ width: "230px",   zIndex: 0 }} />
             <div className='SumBtn-Text' style={{ fontSize: "24px",marginTop: "10px"}}>100 -</div>
             </div>
               <img src={whiteRight.uploadedImage} alt="" style={{ position: "absolute" , width: "48px", paddingRight: "20px", top: "120px" ,  zIndex: 1  , ...getImageStyle(whiteRight.uploadedImage, whiteRight.imageStyleOption) }} />
@@ -119,7 +121,7 @@ const BlackPreview = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
               <div className='SumBtn'>
                 <div className='SumBtn-Text'>แขนซ้าย</div>
               </div>
-            <img src="/shirt-black-side.png" alt="" style={{ width: "230px",transform: 'scaleX(-1)',   zIndex: 0 }} />
+            <img src="/shirt-navy-side.png" alt="" style={{ width: "230px",transform: 'scaleX(-1)',   zIndex: 0 }} />
             <div className='SumBtn-Text' style={{ fontSize: "24px",marginTop: "10px"}}>100 -</div>
               </div>
               <img src={whiteLeft.uploadedImage} alt="" style={{ position: "absolute" , width: "48px", paddingLeft: "20px", top: "120px",  zIndex: 1  , ...getImageStyle(whiteLeft.uploadedImage, whiteLeft.imageStyleOption)  }} />
@@ -154,4 +156,4 @@ const mapStateToProps = (state) => ({
   },
 });
 
-export default connect(mapStateToProps)(BlackPreview);
+export default connect(mapStateToProps)(WhitePreview);

@@ -30,6 +30,7 @@ import LaserPatch from "./LaserPatch/LaserPatch";
 
 import PreviewWhite from "./Custom-Design/WhitePreview";
 import PreviewBlack from "./Custom-Design/BlackPreview";
+import PreviewNavy from "./Custom-Design/NavyPreview";
 
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
@@ -73,6 +74,7 @@ export default function App() {
 
         <Route path="/Custom-Design/Preview-White" element={<PreviewWhite/>} />
         <Route path="/Custom-Design/Preview-Black" element={<PreviewBlack/>} />
+        <Route path="/Custom-Design/Preview-Navy" element={<PreviewNavy/>} />
 
 
         <Route path="/Custom-Design/UserInfo" element={<UserInfo />} />

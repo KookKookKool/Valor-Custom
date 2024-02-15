@@ -11,7 +11,7 @@ const UserInfo = () => {
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      navigate("/Custom-Design/Main2");
+      navigate(-1); // This will navigate back to the previous page
     }
   };
 

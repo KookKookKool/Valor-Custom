@@ -36,13 +36,13 @@ const WhitePreview = ({ whiteFront, whiteBack, whiteRight, whiteLeft }) => {
         imageStyle = { width: "60px" };
         break;
       case "4":
-        imageStyle = { width: "48px"};
+        imageStyle = { width: "46px"};
         break;
       case "5":
         imageStyle = { width: "36px", paddingLeft: "44px"};
         break;
       case "6":
-        imageStyle = { width: "32px", paddingLeft: "48px" };
+        imageStyle = { width: "32px", paddingLeft: "46px" };
         break;
       case "7":
         imageStyle = { width: "36px"};
