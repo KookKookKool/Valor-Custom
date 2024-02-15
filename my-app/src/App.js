@@ -36,6 +36,8 @@ import PreviewGreen from "./Custom-Design/GreenPreview";
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
 
+import Success from "./Payment/Success";
+
 export default function App() {
   return (
     <div>
@@ -78,6 +80,8 @@ export default function App() {
         <Route path="/Custom-Design/Preview-Navy" element={<PreviewNavy/>} />
         <Route path="/Custom-Design/Preview-Green" element={<PreviewGreen/>} />
 
+
+        <Route path="/Payment-Success" element={<Success />} />
         <Route path="/Custom-Design/UserInfo" element={<UserInfo />} />
         <Route path="/Payment" element={<Payment />} />
       </Routes>
