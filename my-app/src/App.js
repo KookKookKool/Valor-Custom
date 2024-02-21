@@ -3,11 +3,12 @@ import Home from "./Home";
 import Main from "./Main";
 import Shirt from "./Shirt";
 import QRF from "./QRF";
+import Polo from "./Polo";
 import { Route, Routes } from "react-router-dom";
 
 
 import "../src/Components/Products.css";
-
+// T Shirt
 import WhiteFront from "./T-shirt/White-Front";
 import WhiteBack from "./T-shirt/White-Back";
 import WhiteRight from "./T-shirt/White-Right";
@@ -35,6 +36,9 @@ import PreviewBlack from "./Custom-Design/BlackPreview";
 import PreviewNavy from "./Custom-Design/NavyPreview";
 import PreviewGreen from "./Custom-Design/GreenPreview";
 import PreviewLaser from "./Custom-Design/LaserPatchPreview";
+
+//Polo 
+import DownFront from "./Downrange-Polo-Shirt/DownFrontBlack";
 
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
@@ -80,6 +84,10 @@ export default function App() {
 
 
         <Route path="/T-Shirt/QRF" element={<QRF />} />
+        <Route path="/T-Shirt/Polo" element={<Polo />} />
+
+
+        <Route path="/Shirt/Downrange" element={<DownFront />} />
 
 
         <Route path="/Custom-Design/Preview-White" element={<PreviewWhite/>} />

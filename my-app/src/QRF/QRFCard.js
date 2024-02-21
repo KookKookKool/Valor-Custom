@@ -6,6 +6,7 @@ export default function Index() {
            <div className="Card1" style={{width:'240px'}}>
                   <img id="Logo1" src="/T-Shirt/QRF/QRF1/QRF1.png" alt="img" style={{width:'250px'}} />
                   <h5>QRF TEE T-Shirt</h5>
+                  <h5>เริ่มต้นที่ 180 บาท</h5>
             </div>
     </div>
   )

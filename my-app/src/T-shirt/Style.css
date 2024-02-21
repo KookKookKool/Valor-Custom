@@ -79,6 +79,18 @@ button:hover {
   z-index: 1;
 }
 
+
+.BoxDown {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; /* จัดกึ่งกลางตามแนวนอน */
+  align-items: center; /* จัดกึ่งกลางตามแนวตั้ง */
+  gap: 16%;
+  height: 999px;
+  margin-top: -140px;
+  z-index: 1;
+}
+
 .FieldCustom {
   display: flex;
   flex-direction: column;

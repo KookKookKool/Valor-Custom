@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom"; // ลบ BrowserRouter ออก
 import { useNavigate } from "react-router-dom";
 import "../Components/Products.css";
-import Card1 from "../QRF/QRFCard";
-import Card2 from "../Proper-Polo/Card";
-import Card3 from "../T-shirt/CardMenu";
+import Card1 from "../Downrange-Polo-Shirt/Card";
+import Card2 from "../Proper-Polo/CardMenu";
+import Card3 from "../Performance-Polo-Shirt/CardMenu";
+
 
 import Back from "../Asset/icon/Back.png";
 
@@ -15,14 +16,13 @@ export default function Products() {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-      navigate("/Main");
+      navigate("/Shirt");
   };
 
   return (
     <>
-    
     <div className="Frame1">
-      <h3 className="CenteredHeader">Shirt - เสื้อ</h3>
+      <h3 className="CenteredHeader">Polo Shirt Products</h3>
       <div className="">
             <button id="" style={{ marginLeft:'5%' }}>
             <img src={Back} alt="Back" onClick={handleGoBack} />
@@ -35,7 +35,7 @@ export default function Products() {
 
         <div className="Link">
           <Link
-            to="/T-Shirt/QRF"
+            to="/Shirt/Downrange"
             onClick={() => setIsProductsitemOpen(false)}
           >
             <Card1 />
@@ -44,7 +44,7 @@ export default function Products() {
 
         <div className="Link">
           <Link
-            to="/T-shirt/Polo"
+            to="/Shirt/Proper"
             onClick={() => setIsProductsitemOpen(false)}
           >
             <Card2 />
@@ -53,12 +53,13 @@ export default function Products() {
 
         <div className="Link">
           <Link
-            to="/T-shirt/White-Front"
+            to="/Shirt/Performance"
             onClick={() => setIsProductsitemOpen(false)}
           >
             <Card3 />
           </Link>
         </div>
+
       </ul>
      
       
