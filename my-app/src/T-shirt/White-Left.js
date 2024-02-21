@@ -82,6 +82,48 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
     }
   };
 
+
+  const DownrangePrice = () => {
+    return 290;
+  }
+
+  //const A3Price = () => {
+    //return 220;
+  //}
+
+  //const A4Price = () => {
+    //return 160;
+  //}
+
+  //const A5Price = () => {
+    //return 120;
+  //}
+
+  const A6Price = () => {
+    return 100;
+  }
+
+  const A7Price = () => {
+    return 80;
+  }
+
+  const A8Price = () => {
+    return 50;
+  }
+
+  const calculateSelectedOptionPrice = () => {
+    switch (imageStyleOption) {
+      case "9":
+        return A6Price();
+      case "10":
+        return A7Price();
+      case "11":
+        return A8Price();
+      default:
+        return 0;
+    }
+  };
+
   return (
     <>
       <div className="container">
@@ -123,14 +165,15 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
                       value={imageStyleOption}
                       onChange={(e) => handleImageStyleChange(e.target.value)}
                     >
-                    <option value="9">A6</option>
-                    <option value="10">A7</option>
-                    <option value="11">A8</option>
+                      <option value="9">A6 / {A6Price()} บาท</option>
+                      <option value="10">A7 / {A7Price()} บาท</option>
+                      <option value="11">A8 / {A8Price()} บาท</option>
                     </select>
                   </div>
                 )}
               </div>
               <div className="Box6">
+              <h3 className="Price">ราคา: {DownrangePrice() + calculateSelectedOptionPrice()} บาท</h3>
               <Upload onUpload={handleImageUpload} index={3} />
                 <button className="Btnsave" onClick={handleSaveImage}>
                   บันทึกและถัดไป
@@ -146,9 +189,9 @@ function WhiteLeft({  uploadedImageLeft, setUploadedImageLeft, setImageStyleOpti
                     value={imageStyleOption}
                     onChange={(e) => handleImageStyleChange(e.target.value)}
                   >
-                    <option value="9">A6</option>
-                    <option value="10">A7</option>
-                    <option value="11">A8</option>
+                      <option value="9">A6 / {A6Price()} บาท</option>
+                      <option value="10">A7 / {A7Price()} บาท</option>
+                      <option value="11">A8 / {A8Price()} บาท</option>
                   </select>
                 </div>
                 
