@@ -13,8 +13,6 @@
 }
 
 .logo-slider::before, .logo-slider::after {
-	
-
 	content: "";
 	height: 175px;
 	position: absolute;

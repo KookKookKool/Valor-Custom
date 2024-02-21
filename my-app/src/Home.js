@@ -8,8 +8,9 @@ import CTicon from "./Asset/icon/ValorCustom.png";
 export default function Home() {
   return (
     <div className="MainAll">
+      <Link to="/main">
       <div className="video-container">
-        <Link to="/main">
+        
 
           <video className="Video" autoPlay loop muted playsInline>
             <source src="/SQ1_2.mp4" type="video/mp4" />
@@ -19,8 +20,10 @@ export default function Home() {
           <div className="centered-button">
             <button>CUSTOM DESIGN</button>
           </div>
-        </Link>
+        
       </div>
+      </Link>
+      
       <Link to="/main">
       <div className="centered-button2">
             <button>CUSTOM DESIGN</button>

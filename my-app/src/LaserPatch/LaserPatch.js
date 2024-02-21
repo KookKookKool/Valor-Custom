@@ -1,42 +1,48 @@
+// LaserPatch.js
 import { useState, useEffect } from "react";
 import "./Index.css";
 import Back from "../Asset/icon/Back.png";
 import LaserPatchMockup from "../LaserPatch/LaserPatchHover.png";
+import { setUploadedImagePatch, setImageStyleOptionPatch } from '../Actions/actionsPatch'; // แก้ชื่อ action creator ที่นี่
 import Zone from "../LaserPatch/Zone.png";
 import Upload from "../Upload/Upload1";
-
-import ImageSaveButton from "../Custom-Design/ImageSaveButton";
+import { useDispatch, connect } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+//import ImageSaveButton from "../Custom-Design/ImageSaveButton";
 
 import "../Components/Products.css";
 
-function LaserPatch({ setProductsitemOpen }) {
-  const [uploadedImage, setUploadedImage] = useState(null);
-  const [savedImage, setSavedImage] = useState(null);
+function LaserPatch({ uploadedImageFront, setUploadedImageFront, setImageStyleOptionFront, onImageUpload }) {
+  //const dispatch = useDispatch();
   const [showDropdown] = useState(true);
-  const [imageStyleOption, setImageStyleOption] = useState("1"); // เริ่มต้นด้วย A3
+  const [imageStyleOption, setImageStyleOption] = useState("1");
   const [imageStyle, setImageStyle] = useState({
-    width: "100%", // ค่าเริ่มต้นสำหรับ A3
-
-    objectPosition: "left 0px top 105px",
+    width: "44%",
+    paddingLeft: "4px",
+    objectPosition: "left 0px top 220px",
   });
 
-  const handleImageUpload = (selectedImage) => {
-    setUploadedImage(URL.createObjectURL(selectedImage));
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleImageUpload = (uploadedImageFront) => {
+    console.log("Uploaded Image Front:", uploadedImageFront);
+    setUploadedImageFront(uploadedImageFront, 0); // index 0 สำหรับ WhiteFront
   };
 
   const handleSaveImage = () => {
-    setSavedImage(uploadedImage);
-
-    // Pass uploadedImage to OtherPage
-    window.location.href = `/Custom-Design/Main2?uploadedImage=${encodeURIComponent(
-      uploadedImage
-    )}`;
-    // Alternatively, you can use React Router's history object to navigate and pass state
-    // history.push("/Custom-Design/Main2", { uploadedImage });
+    // ทำการ dispatch action เพื่อบันทึกรูป
+    setUploadedImageFront(uploadedImageFront);
+    setImageStyleOptionFront(imageStyleOption);
+    dispatch(setImageStyleOptionFront(imageStyleOption));
+    //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
+    navigate('/T-shirt/White-Back');
   };
 
   const handleImageStyleChange = (selectedOption) => {
     setImageStyleOption(selectedOption);
+    setImageStyleOptionFront(selectedOption);
+    
   };
 
   useEffect(() => {
@@ -90,7 +96,7 @@ function LaserPatch({ setProductsitemOpen }) {
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      window.location.href = "/Main";
+      navigate("/Main");
     }
   };
 
@@ -111,10 +117,10 @@ function LaserPatch({ setProductsitemOpen }) {
             <div className="FieldCustom">
               <div className="CustomFront">
                 <img id="MockupLaserPatch" src={Zone} alt="Mockup" />
-                {uploadedImage ? (
+                {uploadedImageFront ? (
                   <img
                     id="FieldUploadPatch"
-                    src={uploadedImage}
+                    src={uploadedImageFront}
                     alt="FieldUpload"
                     style={imageStyle}
                   />
@@ -164,11 +170,8 @@ function LaserPatch({ setProductsitemOpen }) {
                 )}
               </div>
               <div className="Box6">
-                <Upload onUpload={handleImageUpload} />
-                <ImageSaveButton
-                  onSave={handleSaveImage}
-                  savedImage={savedImage}
-                />
+              <Upload onUpload={handleImageUpload} index={5} />
+                <button className='Btnsave' onClick={handleSaveImage}>บันทึกและถัดไป</button>
               </div>
             </div>
           </div>
@@ -178,4 +181,16 @@ function LaserPatch({ setProductsitemOpen }) {
   );
 }
 
-export default LaserPatch;
+const mapStateToPropsPatch = (state) => ({
+  uploadedImagePatch: (state.Patch && state.Patch.images && state.Patch.images[0]) || null,
+  imageStyleOption: state.Patch ? state.Patch.imageStyleOption : null,
+});
+
+const mapDispatchToPropsPatch = (dispatch) => ({
+  setUploadedImagePatch: (image) => dispatch(setUploadedImagePatch(image, 0)),
+  setImageStyleOptionPatch: (imageStyleOption) => dispatch(setImageStyleOptionPatch(imageStyleOption)), 
+  getImageStyleOptionPatch: () => dispatch({ type: "GET_IMAGE_STYLE_OPTION_FRONT" }),
+});
+
+
+export default connect(mapStateToPropsPatch, mapDispatchToPropsPatch)(LaserPatch);

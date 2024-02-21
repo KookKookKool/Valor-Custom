@@ -20,7 +20,7 @@ const Navigation = () => {
   return (
     <>
     <nav className="navigation">
-      <h4 className="HeaderNavi">COLORS</h4>
+      <h4 className="HeaderNavi">COLORS - สี</h4>
 
       <div className="Menu-iconsWhite">
         <div className={`Icon ${selectedIcon === "White" ? "active" : ""}`}>

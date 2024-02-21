@@ -5,8 +5,8 @@ import "./MenuNavyLeft.css"; // สร้างไฟล์ CSS สำหรั�
 const MenuW = () => {
   return (
     <nav className="MenuW">
-      <h4 className="HeaderMenuWhite">MENU</h4>
-
+      <h4 className="HeaderMenuWhite">Position</h4>
+      <h4 className="HeaderMenuWhite">ตำแหน่งบนสินค้า</h4>
       <div className="Menu-icons">
         <Link to="/T-shirt/Navy-Front">
           <div className="Btn11">หน้า</div>

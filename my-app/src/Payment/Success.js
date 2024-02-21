@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
 const Success = () => {
-  const [countdown, setCountdown] = useState(900); 
+  const [ setCountdown] = useState(900); 
 
   const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCountdown((prevCountdown) => prevCountdown - 1);
     }, 1000);
 
     return () => clearInterval(timer);
@@ -30,7 +29,7 @@ const Success = () => {
             <img src='./Success.png' alt="Success"
             />
           </div>
-          <p>ขอบคุณที่ชำระเงิน สินค้ากำลังดำเนินการผลิต และจะทำการจัดส่งถึงมือลูกค้าอย่าเร็วที่สุด</p>
+          <p>ขอบคุณที่ชำระเงิน สินค้ากำลังดำเนินการผลิตและจะทำการจัดส่งถึงมือลูกค้าอย่าเร็วที่สุด</p>
           <button className="PaymentBtn" onClick={handleNext} style={{ marginBottom: "2vh" }} >ตกลง</button>
         </div>
       </div>

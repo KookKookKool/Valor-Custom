@@ -102,7 +102,7 @@ function NavyFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOpt
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      navigate("/Main");
+      navigate("/Shirt");
     }
   };
 
@@ -112,7 +112,7 @@ function NavyFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOpt
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
           <div>
-            <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+            <h3 className="CenteredHeader">T Shirt เสื้อยืด</h3>
           </div>
           <div className="Box">
             <div className="Box2">

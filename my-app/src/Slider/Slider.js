@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Slider.css';
 import M1 from '../Asset/Mockup/1.png';
 import M2 from '../Asset/Mockup/2.png';
@@ -18,12 +18,31 @@ import M15 from '../Asset/Mockup/15.png';
 import M16 from '../Asset/Mockup/16.png';
 import M17 from '../Asset/Mockup/17.png';
 
-
 function Slider() {
-  return (
-    <div>
-<h1 className="head">CUSTOM DESIGN</h1>
-<div className="logo-slider">
+	// State to control the animation play state
+	const [isSliderPaused, setSliderPaused] = useState(false);
+  
+	// Function to handle mouse enter event
+	const handleMouseEnter = () => {
+	  setSliderPaused(true);
+	};
+  
+	// Function to handle mouse leave event
+	const handleMouseLeave = () => {
+	  setSliderPaused(false);
+	};
+  
+	return (
+	  <div>
+		<h1 className="head">ตัวอย่างสินค้าที่เคยผลิต</h1>
+		<div
+		  className="logo-slider"
+		  onMouseEnter={handleMouseEnter}
+		  onMouseLeave={handleMouseLeave}
+		  style={{
+			animationPlayState: isSliderPaused ? 'paused' : 'running'
+		  }}
+		>
 	<div className="logo-slide-track">
 		<div className="slide">
 			<img src={M1} alt="" />

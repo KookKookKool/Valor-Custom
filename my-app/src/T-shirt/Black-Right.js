@@ -87,7 +87,7 @@ function BlackRight({ uploadedImageRight, setUploadedImageRight, setImageStyleOp
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
           <div>
-        <h3 className="CenteredHeader">CUSTOM DESIGN</h3>
+        <h3 className="CenteredHeader">T Shirt เสื้อยืด</h3>
         </div>
           <div className="Box">
             <div className="Box2">

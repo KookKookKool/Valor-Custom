@@ -1,6 +1,8 @@
 import React from "react";
 import Home from "./Home";
 import Main from "./Main";
+import Shirt from "./Shirt";
+import QRF from "./QRF";
 import { Route, Routes } from "react-router-dom";
 
 
@@ -32,6 +34,7 @@ import PreviewWhite from "./Custom-Design/WhitePreview";
 import PreviewBlack from "./Custom-Design/BlackPreview";
 import PreviewNavy from "./Custom-Design/NavyPreview";
 import PreviewGreen from "./Custom-Design/GreenPreview";
+import PreviewLaser from "./Custom-Design/LaserPatchPreview";
 
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
@@ -46,6 +49,7 @@ export default function App() {
         
         <Route path="/" element={<Home />} />
         <Route path="/Main" element={<Main />} />
+        <Route path="/Shirt" element={<Shirt />} />
 
         {/*เสื้อขาว*/}
         <Route path="/T-shirt/White-Front" element={<WhiteFront />} />
@@ -75,11 +79,15 @@ export default function App() {
         <Route path="/LaserPatch" element={<LaserPatch />} />
 
 
+        <Route path="/T-Shirt/QRF" element={<QRF />} />
+
+
         <Route path="/Custom-Design/Preview-White" element={<PreviewWhite/>} />
         <Route path="/Custom-Design/Preview-Black" element={<PreviewBlack/>} />
         <Route path="/Custom-Design/Preview-Navy" element={<PreviewNavy/>} />
         <Route path="/Custom-Design/Preview-Green" element={<PreviewGreen/>} />
 
+        <Route path="/Custom-Design/LaserPatchPreview" element={<PreviewLaser />} />
 
         <Route path="/Payment-Success" element={<Success />} />
         <Route path="/Custom-Design/UserInfo" element={<UserInfo />} />
