@@ -6,7 +6,7 @@ import { setUploadedImageFront, setImageStyleOptionFront } from '../Actions/acti
 //import { storeFront, persistorFront } from '../Store/storeFront';
 import { useNavigate } from 'react-router-dom';
 //import "../Style.css";
-import Navigation from "./Navigation";
+import Navigation from "./Navigation2";
 import Back from "../Asset/icon/Back.png";
 import MenuW from "./Menu/MenuDownBlackFront";
 import Upload from "../Upload/Upload1";
@@ -173,7 +173,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
             </div>
             <div className="FieldCustom">
             <div className="CustomFront">
-              <img id="MockupFront1" src="/T-Shirt/Downrange-Polo-Shirt/Downrange-Polo-Shirt-03.png" alt="Mockup" />
+              <img id="MockupFront1" src="/T-Shirt/Downrange-Polo-Shirt/Downrange-Polo-Shirt-02.png" alt="Mockup" />
               {uploadedImageFront ? (
                 <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={{ ...imageStyle }}/>
 

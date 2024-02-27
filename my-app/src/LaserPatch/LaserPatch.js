@@ -36,7 +36,7 @@ function LaserPatch({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
     setImageStyleOptionFront(imageStyleOption);
     dispatch(setImageStyleOptionFront(imageStyleOption));
     //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
-    navigate('/T-shirt/White-Back');
+    navigate('/');
   };
 
   const handleImageStyleChange = (selectedOption) => {

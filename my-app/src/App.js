@@ -4,6 +4,7 @@ import Main from "./Main";
 import Shirt from "./Shirt";
 import QRF from "./QRF";
 import Polo from "./Polo";
+import Tshirt from "./Tshirt"
 import { Route, Routes } from "react-router-dom";
 
 
@@ -38,7 +39,22 @@ import PreviewGreen from "./Custom-Design/GreenPreview";
 import PreviewLaser from "./Custom-Design/LaserPatchPreview";
 
 //Polo 
-import DownFront from "./Downrange-Polo-Shirt/DownFrontBlack";
+import DownFrontBlack from "./Downrange-Polo-Shirt/DownFrontBlack";
+//import DownBackBlack from "./Downrange-Polo-Shirt/DownBackBlack";
+//import DownRightBlack from "./Downrange-Polo-Shirt/DownRightBlack";
+//import DownLeftBlack from "./Downrange-Polo-Shirt/DownLeftBlack";
+
+import DownFrontGreen from "./Downrange-Polo-Shirt/DownFrontGreen";
+//import DownBackGreen from "./Downrange-Polo-Shirt/DownBackGreen";
+//import DownRightGreen from "./Downrange-Polo-Shirt/DownRightGreen";
+//import DownLeftGreen from "./Downrange-Polo-Shirt/DownLeftGreen";
+
+import DownFrontNavy from "./Downrange-Polo-Shirt/DownFrontNavy";
+//import DownBackNavy from "./Downrange-Polo-Shirt/DownBackNavy";
+//import DownRightNavy from "./Downrange-Polo-Shirt/DownRightNavy";
+//import DownLeftNavy from "./Downrange-Polo-Shirt/DownLeftNavy";
+
+
 
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
@@ -85,9 +101,16 @@ export default function App() {
 
         <Route path="/T-Shirt/QRF" element={<QRF />} />
         <Route path="/T-Shirt/Polo" element={<Polo />} />
+        <Route path="/T-Shirt/T-shirt" element={<Tshirt />} />
+
+        {/*Polo*/}
+        <Route path="/Shirt/DownFrontBlack" element={<DownFrontBlack />} />
+
+        <Route path="/Shirt/DownFrontGreen" element={<DownFrontGreen />} />
+
+        <Route path="/Shirt/DownFrontNavy" element={<DownFrontNavy />} />
 
 
-        <Route path="/Shirt/Downrange" element={<DownFront />} />
 
 
         <Route path="/Custom-Design/Preview-White" element={<PreviewWhite/>} />

@@ -20,7 +20,7 @@ const Navigation = () => {
       <h4 className="HeaderNavi">COLORS - สี</h4>
 
       <div className="Menu-iconsWhite">
-        <div className={`Icon1 ${selectedIcon === "White" ? "active" : ""}`}>
+        <div className={`Icon ${selectedIcon === "White" ? "active" : ""}`}>
           <Link to="/Shirt/DownFrontBlack" onClick={() => handleIconClick("White")}>
             <img src={Black} alt="WhiteIcon" />
           </Link>
@@ -30,7 +30,7 @@ const Navigation = () => {
             <img src={Green} alt="GreenIcon" />
           </Link>
         </div>
-        <div className={`Icon ${selectedIcon === "Navy" ? "active" : ""}`}>
+        <div className={`Icon1 ${selectedIcon === "Navy" ? "active" : ""}`}>
           <Link to="/Shirt/DownFrontNavy" onClick={() => handleIconClick("Navy")}>
             <img src={Navy} alt="NavyIcon" />
           </Link>

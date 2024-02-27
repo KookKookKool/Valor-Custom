@@ -155,8 +155,6 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptio
     }
   };
 
-
-
   return (
     <>
       <div className="container">
