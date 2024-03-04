@@ -8,7 +8,7 @@ import "./Style.css";
 import Navigation from "../Components/Navigation"; //เลือกสี
 import Back from "../Asset/icon/Back.png";
 //import WhiteRightMockup from "../Asset/T-shirt/White-Right.png";
-import MenuWhiteRight from "../Components/White/MenuWhiteRight";
+import MenuWhiteRight from "../Components/White/MenuWhiteright";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Arm-Black.png"; 
 
