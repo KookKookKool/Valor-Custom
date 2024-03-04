@@ -35,7 +35,6 @@ function LaserPatch({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
     setUploadedImageFront(uploadedImageFront);
     setImageStyleOptionFront(imageStyleOption);
     dispatch(setImageStyleOptionFront(imageStyleOption));
-    //navigate('/Custom-Design/Main2'); ส่งรูปไปแสดงตาม path
     navigate('/');
   };
 

@@ -44,7 +44,7 @@ export default function Products() {
 
         <div className="Link">
           <Link
-            to="/Shirt/Proper"
+            to="/Shirt/ProperFrontBlack"
             onClick={() => setIsProductsitemOpen(false)}
           >
             <Card2 />

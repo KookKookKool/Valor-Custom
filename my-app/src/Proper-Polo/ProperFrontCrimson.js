@@ -6,9 +6,9 @@ import { setUploadedImageFront, setImageStyleOptionFront } from '../Actions/acti
 //import { storeFront, persistorFront } from '../Store/storeFront';
 import { useNavigate } from 'react-router-dom';
 //import "../Style.css";
-import Navigation from "./Navigation";
+import Navigation from "./Navigation3";
 import Back from "../Asset/icon/Back.png";
-import MenuW from "./Menu/Black/MenuDownBlackFront";
+import MenuW from "./Menu/Back/MenuDownBlackFront";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-White.png";
 import "../Components/Products.css";
@@ -107,7 +107,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
   };
 
   const DownrangePrice = () => {
-    return 250;
+    return 490;
   }
 
   const A3Price = () => {
@@ -173,7 +173,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
             </div>
             <div className="FieldCustom">
             <div className="CustomFront">
-              <img id="MockupFront1" src="/T-Shirt/Downrange-Polo-Shirt/Downrange-Polo-Shirt-03.png" alt="Mockup" />
+              <img id="MockupFront1" src="/T-Shirt/Proper-Polo/ProperPoloShirtCrimson.png" alt="Mockup" />
               {uploadedImageFront ? (
                 <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={{ ...imageStyle }}/>
 

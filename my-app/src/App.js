@@ -54,6 +54,22 @@ import DownFrontNavy from "./Downrange-Polo-Shirt/DownFrontNavy";
 //import DownRightNavy from "./Downrange-Polo-Shirt/DownRightNavy";
 //import DownLeftNavy from "./Downrange-Polo-Shirt/DownLeftNavy";
 
+//Proper
+import ProperFrontBlack from "./Proper-Polo/ProperFrontBlack";
+
+import ProperFrontCrimson from "./Proper-Polo/ProperFrontCrimson";
+
+import ProperFrontGreen from "./Proper-Polo/ProperFrontGreen";
+
+import ProperFrontNavy from "./Proper-Polo/ProperFrontNavy";
+
+
+//Performance
+import PerformanceFrontBlack from "./Performance-Polo-Shirt/PerformanceFrontBlack";
+
+import PerformanceFrontGreen from "./Performance-Polo-Shirt/PerformanceFrontGreen";
+
+import PerformanceFrontNavy from "./Performance-Polo-Shirt/PerformanceFrontNavy";
 
 
 import UserInfo from "./Custom-Design/UserInfo";
@@ -109,6 +125,25 @@ export default function App() {
         <Route path="/Shirt/DownFrontGreen" element={<DownFrontGreen />} />
 
         <Route path="/Shirt/DownFrontNavy" element={<DownFrontNavy />} />
+
+        {/*Proper*/}
+        <Route path="/Shirt/ProperFrontBlack" element={<ProperFrontBlack />} />
+
+        <Route path="/Shirt/ProperFrontCrimson" element={<ProperFrontCrimson />} />
+
+        <Route path="/Shirt/ProperFrontGreen" element={<ProperFrontGreen />} />
+
+        <Route path="/Shirt/ProperFrontNavy" element={<ProperFrontNavy />} />
+
+
+        {/*Performance*/}
+
+        <Route path="/Shirt/Performance" element={<PerformanceFrontBlack />} />
+
+        <Route path="/Shirt/PerformanceGreen" element={<PerformanceFrontGreen />} />
+
+        <Route path="/Shirt/PerformanceNavy" element={<PerformanceFrontNavy />} />
+
 
 
 

@@ -6,9 +6,9 @@ import { setUploadedImageFront, setImageStyleOptionFront } from '../Actions/acti
 //import { storeFront, persistorFront } from '../Store/storeFront';
 import { useNavigate } from 'react-router-dom';
 //import "../Style.css";
-import Navigation from "./Navigation";
+import Navigation from "./Navigation2";
 import Back from "../Asset/icon/Back.png";
-import MenuW from "./Menu/Black/MenuDownBlackFront";
+import MenuW from "./Menu/Back/MenuFront";
 import Upload from "../Upload/Upload1";
 import FieldFull from "../Asset/T-shirt/Field-Full-White.png";
 import "../Components/Products.css";
@@ -107,7 +107,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
   };
 
   const DownrangePrice = () => {
-    return 250;
+    return 490;
   }
 
   const A3Price = () => {
@@ -160,7 +160,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
           <div>
-            <h3 className="CenteredHeader">Downrange Polo Shirt</h3>
+            <h3 className="CenteredHeader">Performance Polo Shirt</h3>
           </div>
           <div className="BoxDown">
             <div className="Box2">
@@ -173,7 +173,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
             </div>
             <div className="FieldCustom">
             <div className="CustomFront">
-              <img id="MockupFront1" src="/T-Shirt/Downrange-Polo-Shirt/Downrange-Polo-Shirt-03.png" alt="Mockup" />
+              <img id="MockupFront1" src="/T-Shirt/Performance-Polo-Shirt/PerformancePoloShirtNavy.png" alt="Mockup" />
               {uploadedImageFront ? (
                 <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={{ ...imageStyle }}/>
 
