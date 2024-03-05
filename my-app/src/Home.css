@@ -216,6 +216,7 @@
     display: flex;
     justify-content: space-around; /* จัดวางโลโก้ต่าง ๆ ในรูปแบบที่คุณต้องการ */
     margin-left: 8%;
+    padding: 12px;
   }
   
   /* เพิ่มสไตล์ตัวอื่น ๆ ที่คุณต้องการสำหรับโลโก้ */
