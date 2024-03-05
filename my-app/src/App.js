@@ -71,6 +71,18 @@ import PerformanceFrontGreen from "./Performance-Polo-Shirt/PerformanceFrontGree
 
 import PerformanceFrontNavy from "./Performance-Polo-Shirt/PerformanceFrontNavy";
 
+//DuskPanther
+import DuskPantherFrontBlack from "./DuskPanther/DuskPantherFrontBlack";
+
+import DuskPantherFrontGreen from "./DuskPanther/DuskPantherFrontGreen";
+
+import DuskPantherFrontNavy from "./DuskPanther/DuskPantherFrontNavy";
+
+//Operative Tee
+import OperativeFrontBlack from "./Operative-Tee/OperativeFrontBlack";
+
+import OperativeFrontGrey from "./Operative-Tee/OperativeFrontGrey";
+
 
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
@@ -87,32 +99,30 @@ export default function App() {
         <Route path="/Main" element={<Main />} />
         <Route path="/Shirt" element={<Shirt />} />
 
-        {/*เสื้อขาว*/}
+        {/*T Shirt เสื้อขาว*/}
         <Route path="/T-shirt/White-Front" element={<WhiteFront />} />
         <Route path="/T-shirt/White-Back" element={<WhiteBack />} />
         <Route path="/T-shirt/White-Right" element={<WhiteRight />} />
         <Route path="/T-shirt/White-Left" element={<WhiteLeft />} />
 
-        {/*เสื้อดำ*/}
+        {/*T Shirt เสื้อดำ*/}
         <Route path="/T-shirt/Black-Front" element={<BlackFront />} />
         <Route path="/T-shirt/Black-Back" element={<BlackBack />} />
         <Route path="/T-shirt/Black-Right" element={<BlackRight />} />
         <Route path="/T-shirt/Black-Left" element={<BlackLeft />} />
 
-        {/*เสื้อน้ำเงิน*/}
+        {/*T Shirt เสื้อน้ำเงิน*/}
         <Route path="/T-shirt/Navy-Front" element={<NavyFront />} />
         <Route path="/T-shirt/Navy-Back" element={<NavyBack />} />
         <Route path="/T-shirt/Navy-Right" element={<NavyRight />} />
         <Route path="/T-shirt/Navy-Left" element={<NavyLeft />} />
 
-        {/*เสื้อน้ำเขียว*/}
+        {/*T Shirt เสื้อน้ำเขียว*/}
         <Route path="/T-shirt/Green-Front" element={<GreenFront />} />
         <Route path="/T-shirt/Green-Back" element={<GreenBack />} />
         <Route path="/T-shirt/Green-Right" element={<GreenLeft />} />
         <Route path="/T-shirt/Green-Left" element={<GreenRight />} />
 
-        {/*Laser Patch*/}
-        <Route path="/LaserPatch" element={<LaserPatch />} />
 
 
         <Route path="/T-Shirt/QRF" element={<QRF />} />
@@ -145,6 +155,20 @@ export default function App() {
         <Route path="/Shirt/PerformanceNavy" element={<PerformanceFrontNavy />} />
 
 
+        {/*DuskPanther*/}
+
+        <Route path="/T-Shirt/DuskPanther" element={<DuskPantherFrontBlack />} />
+
+        <Route path="/T-Shirt/DuskPantherGreen" element={<DuskPantherFrontGreen />} />
+
+        <Route path="/T-Shirt/DuskPantherNavy" element={<DuskPantherFrontNavy />} />
+
+
+
+        {/*Operative Tee*/}
+        <Route path="/T-Shirt/Operative" element={<OperativeFrontBlack />} />
+
+        <Route path="/T-Shirt/OperativeGrey" element={<OperativeFrontGrey />} />
 
 
 
@@ -153,6 +177,8 @@ export default function App() {
         <Route path="/Custom-Design/Preview-Navy" element={<PreviewNavy/>} />
         <Route path="/Custom-Design/Preview-Green" element={<PreviewGreen/>} />
 
+        {/*Patch*/}
+        <Route path="/LaserPatch" element={<LaserPatch />} />
         <Route path="/Custom-Design/LaserPatchPreview" element={<PreviewLaser />} />
 
         <Route path="/Payment-Success" element={<Success />} />

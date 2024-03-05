@@ -6,7 +6,7 @@ import { setUploadedImageFront, setImageStyleOptionFront } from '../Actions/acti
 //import { storeFront, persistorFront } from '../Store/storeFront';
 import { useNavigate } from 'react-router-dom';
 //import "../Style.css";
-import Navigation from "./Navigation2";
+import Navigation from "./Navigation";
 import Back from "../Asset/icon/Back.png";
 import MenuW from "./Menu/Black/MenuFront";
 import Upload from "../Upload/Upload1";
@@ -102,7 +102,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      navigate("/T-shirt/Polo");
+      navigate("/T-Shirt/T-shirt");
     }
   };
 
@@ -160,7 +160,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
           <div>
-            <h3 className="CenteredHeader">Performance Polo Shirt</h3>
+            <h3 className="CenteredHeader">DuskPanther T-Shirt</h3>
           </div>
           <div className="BoxDown">
             <div className="Box2">
@@ -173,7 +173,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
             </div>
             <div className="FieldCustom">
             <div className="CustomFront">
-              <img id="MockupFront1" src="/T-Shirt/Performance-Polo-Shirt/PerformancePoloShirtNavy.png" alt="Mockup" />
+              <img id="MockupFront1" src="/T-Shirt/Operative-Tee/Oprt02.png" alt="Mockup" />
               {uploadedImageFront ? (
                 <img id="FieldUpload" src={uploadedImageFront} alt="FieldUpload" style={{ ...imageStyle }}/>
 

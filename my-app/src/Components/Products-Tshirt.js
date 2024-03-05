@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // ลบ BrowserRouter ออก
 import { useNavigate } from "react-router-dom";
-import "../Components/Products.css";
+import "./Products.css";
 import Card1 from "../DuskPanther/Card";
 import Card2 from "../T-shirt/CardMenu";
 import Card3 from "../Operative-Tee/Card";

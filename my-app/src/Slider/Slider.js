@@ -19,30 +19,32 @@ import M16 from '../Asset/Mockup/16.png';
 import M17 from '../Asset/Mockup/17.png';
 
 function Slider() {
-	// State to control the animation play state
-	const [isSliderPaused, setSliderPaused] = useState(false);
-  
-	// Function to handle mouse enter event
-	const handleMouseEnter = () => {
-	  setSliderPaused(true);
-	};
-  
-	// Function to handle mouse leave event
-	const handleMouseLeave = () => {
-	  setSliderPaused(false);
-	};
-  
-	return (
-	  <div>
-		<h1 className="head">ตัวอย่างสินค้าที่เคยผลิต</h1>
-		<div
-		  className="logo-slider"
-		  onMouseEnter={handleMouseEnter}
-		  onMouseLeave={handleMouseLeave}
-		  style={{
-			animationPlayState: isSliderPaused ? 'paused' : 'running'
-		  }}
-		>
+  // State to control the animation play state
+  const [isMouseOverSlider, setIsMouseOverSlider] = useState(false);
+  const [isSliderPaused, setSliderPaused] = useState(false);
+
+  // Function to handle mouse enter event
+  const handleMouseOverSlider = () => {
+    setSliderPaused(true);
+    setIsMouseOverSlider(true);
+  };
+
+  const handleMouseLeaveSlider = () => {
+    setSliderPaused(false);
+    setIsMouseOverSlider(false);
+  };
+
+  return (
+    <div>
+      <h1 className="head">ตัวอย่างสินค้าที่เคยผลิต</h1>
+      <div
+        className="logo-slider"
+        onMouseEnter={handleMouseOverSlider}
+        onMouseLeave={handleMouseLeaveSlider}
+        style={{
+          animationPlayState: isSliderPaused || isMouseOverSlider ? 'paused' : 'running'
+        }}
+      >
 	<div className="logo-slide-track">
 		<div className="slide">
 			<img src={M1} alt="" />

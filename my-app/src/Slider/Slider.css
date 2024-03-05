@@ -2,15 +2,6 @@
 .head {
 	margin-left: 3%;
 }
-.logo-slider {
-	background: white;
-	-webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
-	box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
-	margin: auto;
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-}
 
 .logo-slider::before, .logo-slider::after {
 	content: "";
@@ -32,16 +23,30 @@
 	top: 0;
 }
 
-.logo-slider .logo-slide-track {
+.logo-slider {
+	background: white;
+	-webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+	box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+  
+	&:hover .logo-slide-track {
+	  animation-play-state: paused;
+	}
+  }
+  
+  .logo-slider .logo-slide-track {
 	-webkit-animation: logo-scroll 60s linear infinite;
 	animation: logo-scroll 60s linear infinite;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	width: calc(250px * 14);
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
-}
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+  }
 
 .logo-slider .slide {
 	height: 100%;
