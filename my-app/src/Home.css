@@ -93,10 +93,10 @@
     font-family: 'Dameron', sans-serif; /* ใช้ font ที่กำหนด */
     background-color: #000000;
     color: #fff;
-    padding: 10px 20px;
+    padding: 18px 26px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 24px;
     border-radius: 8px;
     z-index: 3; 
   }

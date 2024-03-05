@@ -18,7 +18,10 @@ function Header() {
     </label>
     <ul className="menu">
       <li>
-        <a href="#">SERVICE</a>
+        <a href="#">OUR SERVICE</a>
+      </li>
+      <li>
+        <a href="#">OUR PRODUCTS</a>
       </li>
       <li>
         <a href="#">ABOUT US</a>
