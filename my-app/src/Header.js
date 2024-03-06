@@ -21,7 +21,7 @@ function Header() {
         <a href="#">OUR SERVICE</a>
       </li>
       <li>
-        <a href="#">OUR PRODUCTS</a>
+        <a href="/Product">OUR PRODUCTS</a>
       </li>
       <li>
         <a href="#">ABOUT US</a>
@@ -30,7 +30,7 @@ function Header() {
         <a href="#">DEALER</a>
       </li>
       <li>
-        <a href="#">CONTACT</a>
+        <a href="/Contact">CONTACT</a>
       </li>
     </ul>
   </nav>

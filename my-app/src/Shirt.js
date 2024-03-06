@@ -4,7 +4,7 @@ import './Main.css';
 
 export default function Shirt() {
   return (
-    <div className="container">
+    <div className="containerCSS">
       <img id="Logo" src={require('./logo.png')} alt="img" />
       <Products />
     </div>

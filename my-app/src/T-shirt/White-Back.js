@@ -157,7 +157,7 @@ function WhiteBack({ uploadedImageBack, setUploadedImageBack, setImageStyleOptio
 
   return (
     <>
-      <div className="container">
+      <div className="containerCSS">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
           <div>

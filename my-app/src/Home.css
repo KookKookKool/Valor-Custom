@@ -39,7 +39,7 @@
   
   .Video {
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
     object-fit: cover; 
     z-index: 1;
   }

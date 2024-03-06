@@ -1,6 +1,8 @@
 /* Logo Slider */
 .head {
 	margin-left: 3%;
+	font-size: 24px;
+    font-weight: 900;
 }
 
 .logo-slider::before, .logo-slider::after {

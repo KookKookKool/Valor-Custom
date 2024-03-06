@@ -77,19 +77,19 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
             objectPosition: "left 0px top 220px",
           });
           break;
-        case "5":
-          setImageStyle({
-            width: "12%",
-            paddingLeft: "24%",
-            objectPosition: "left 0px top 228px",
-          });
-          break;
-        case "6":
-          setImageStyle({
-            width: "10%",
-            paddingLeft: "24%",
-            objectPosition: "left 0px top 228px",
-          });
+          case "5":
+            setImageStyle({
+              width: "12%",
+              left: "60%",
+              objectPosition: "left 0px top 228px",
+            });
+            break;
+          case "6":
+            setImageStyle({
+              width: "10%",
+              left: "60%",
+              objectPosition: "left 0px top 228px",
+            });
           break;
         default:
           break;
@@ -156,7 +156,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
   
   return (
     <>
-      <div className="container">
+      <div className="containerCSS">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
           <div>

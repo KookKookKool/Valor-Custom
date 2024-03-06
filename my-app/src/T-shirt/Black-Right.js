@@ -125,7 +125,7 @@ function BlackRight({ uploadedImageRight, setUploadedImageRight, setImageStyleOp
 
   return (
     <>
-      <div className="container">
+      <div className="containerCSS">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame1">
           <div>

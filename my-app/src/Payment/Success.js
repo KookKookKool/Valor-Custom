@@ -18,7 +18,7 @@ const Success = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="containerCSS">
         <img id="Logo" src={require("../logo.png")} alt="img" />
         <div className="Frame2" style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
           <div>
