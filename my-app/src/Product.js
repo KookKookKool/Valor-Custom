@@ -216,7 +216,7 @@ function Product() {
     
     {/*   ✅ Product card 1 - Starts Here 👇 */}
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">       
-      <a href="#">
+      <a href="/Shirt/DownFrontBlack">
         <img
           src="/T-Shirt/Downrange-Polo-Shirt/Downrange-Polo-Shirt-01.png"
           alt="Product"
@@ -255,7 +255,7 @@ function Product() {
 
     {/*   ✅ Product card 2 - Starts Here 👇 */}
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">       
-      <a href="#">
+      <a href="/Shirt/ProperFrontBlack">
         <img
           src="/T-Shirt/Proper-Polo/ProperPoloShirtBlack.png"
           alt="Product"
@@ -293,7 +293,7 @@ function Product() {
     </div>
     {/*   ✅ Product card 3 - Starts Here 👇 */}
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">       
-      <a href="#">
+      <a href="/Shirt/Performance">
         <img
           src="/T-Shirt/Performance-Polo-Shirt/PerformancePoloShirtBlack.png"
           alt="Product"
@@ -341,7 +341,7 @@ function Product() {
     
     {/*   ✅ Product card 1 - Starts Here 👇 */}
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">       
-      <a href="#">
+      <a href="/T-Shirt/DuskPanther">
         <img
           src="/T-Shirt/DuskPanther/DuskParnterShirt-01.png"
           alt="Product"
@@ -380,7 +380,7 @@ function Product() {
 
     {/*   ✅ Product card 2 - Starts Here 👇 */}
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">       
-      <a href="#">
+      <a href="/T-shirt/White-Front">
         <img
           src="/T-Shirt-White.png"
           alt="Product"
@@ -418,7 +418,7 @@ function Product() {
     </div>
     {/*   ✅ Product card 3 - Starts Here 👇 */}
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">       
-      <a href="#">
+      <a href="/T-shirt/Operative">
         <img
           src="/T-Shirt/Operative-Tee/Oprt01.png"
           alt="Product"

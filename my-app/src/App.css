@@ -12,6 +12,11 @@ body {
   overflow-y: auto; /* เพิ่มการเลื่อนแนวตั้งเมื่อเนื้อหาเกินหน้าจอ */
 }
 
+.button .select {
+  padding: 10px;
+  border-radius: 8px;
+}
+
 .App {
   background: linear-gradient(180deg, black 0%, rgba(255, 255, 255, 0) 100%, white 100%);
   /* กำหนดสีพื้นหลังเป็น linear-gradient ตามที่คุณต้องการ */
