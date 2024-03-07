@@ -87,6 +87,8 @@ import OperativeFrontGrey from "./Operative-Tee/OperativeFrontGrey";
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
 
+import AboutUs from "./AboutUs";
+import Service from "./Service";
 import Contact from "./Contact-Us";
 import Product from "./Product";
 
@@ -103,6 +105,8 @@ export default function App() {
         <Route path="/Contact" element={<Contact />} />
 
         <Route path="/Product" element={<Product />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/Service" element={<Service />} />
 
         <Route path="/Main" element={<Main />} />
         <Route path="/Shirt" element={<Shirt />} />

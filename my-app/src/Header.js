@@ -18,13 +18,13 @@ function Header() {
     </label>
     <ul className="menu">
       <li>
-        <a href="#">OUR SERVICE</a>
+        <a href="/Service">OUR SERVICE</a>
       </li>
       <li>
         <a href="/Product">OUR PRODUCTS</a>
       </li>
       <li>
-        <a href="#">ABOUT US</a>
+        <a href="/AboutUs">ABOUT US</a>
       </li>
       <li>
         <a href="#">DEALER</a>
