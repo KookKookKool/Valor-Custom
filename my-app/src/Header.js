@@ -27,13 +27,22 @@ function Header() {
         <a href="/AboutUs">ABOUT US</a>
       </li>
       <li>
-        <a href="#">DEALER</a>
+        <a href="/Dealer">DEALER</a>
       </li>
       <li>
         <a href="/Contact">CONTACT</a>
       </li>
-    </ul>
+    
+    <li>
+    <a href="/login">
+    <div>
+    <img src="/Picture/user.png" style={{width:"30px",height:"30px"}}/>
+  </div>
+  </a>
+  </li>
+  </ul>
   </nav>
+
 </header>
 
     </div>

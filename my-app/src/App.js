@@ -92,6 +92,9 @@ import Service from "./Service";
 import Contact from "./Contact-Us";
 import Product from "./Product";
 
+import Login from "./Login";
+import Register from "./Register";
+
 import Success from "./Payment/Success";
 
 export default function App() {
@@ -107,6 +110,11 @@ export default function App() {
         <Route path="/Product" element={<Product />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Service" element={<Service />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/register" element={<Register />} />
+
 
         <Route path="/Main" element={<Main />} />
         <Route path="/Shirt" element={<Shirt />} />

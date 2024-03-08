@@ -6,7 +6,7 @@ function Product() {
 
  <>
  <Header/>
- <div className="relative bg-gray-50 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
+ <div className="relative  px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
   <div className="text-center p-10">
     <h1 className="font-bold text-4xl mb-4">Valor Px Products</h1>
   </div>
