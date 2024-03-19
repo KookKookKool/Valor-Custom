@@ -94,9 +94,9 @@ function Dealer() {
           <div className="bg-white lg:h-full p-6 -mt-6 md:mt-0 relative mb-4 md:mb-0 flex flex-wrap md:flex-wrap items-center">
             {/* Card title and subtitle */}
             <div className="w-full lg:w-2/5 lg:border-right lg:border-solid text-center md:text-left">
-              <h3>Valor Tactical Store</h3>
+              <h3>SWCOM STORE by valor tactical</h3>
               <p className="mb-0 mt-3 text-grey-dark text-sm italic">
-              284 Satreewittaya 2, Soi 23, Lat Phrao, Bangkok 10230
+            Thale Chup Son, Mueang Lop Buri District, Lopburi 15000
               </p>
               <hr className="w-1/4 md:ml-0 mt-4  border lg:hidden" />
             </div>
