@@ -33,7 +33,7 @@ function Dealer() {
         {/* Card body - outer wrapper */}
         <div className="h-full mx-auto px-6 md:px-0 md:pt-6 md:-ml-6 relative">
           {/* Card body - inner wrapper */}
-          <div className="bg-white lg:h-full p-6 -mt-6 md:mt-0 relative mb-4 md:mb-0 flex flex-wrap md:flex-wrap items-center">
+          <div className="bg-white lg:h-full p-6 -mt-6 md:mt-2 relative mb-4 md:mb-0 flex flex-wrap md:flex-wrap items-center shadow-md">
             {/* Card title and subtitle */}
             <div className="w-full lg:w-2/5 lg:border-right lg:border-solid text-center md:text-left">
               <h3>Valor Tactical Store</h3>
@@ -51,7 +51,7 @@ function Dealer() {
             </div>
             {/* ./Card description */}
             {/* Call to action button */}
-            <div className="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
+            <div className="w-full lg:w-1/5 mt-6 lg:mt-8 lg:px-4 text-center md:text-left">
               <button className="bg-white hover:bg-grey-darker hover:text-black border border-solid border-grey w-1/3 lg:w-full py-2"
               onClick={() => window.location.href = "https://www.google.com/maps/place/Valor+Tactical+Store+Bangkok/@13.8206637,100.6001909,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29dc343852e65:0x7d2deabd1d65b484!8m2!3d13.8206637!4d100.6027658!16s%2Fg%2F11j64y48sb?entry=ttu"}>
                 Map
@@ -91,7 +91,7 @@ function Dealer() {
         {/* Card body - outer wrapper */}
         <div className="h-full mx-auto px-6 md:px-0 md:pt-6 md:-ml-6 relative">
           {/* Card body - inner wrapper */}
-          <div className="bg-white lg:h-full p-6 -mt-6 md:mt-0 relative mb-4 md:mb-0 flex flex-wrap md:flex-wrap items-center">
+          <div className="bg-white lg:h-full p-6 -mt-6 md:mt-8 relative mb-4 md:mb-0 flex flex-wrap md:flex-wrap items-center shadow-md">
             {/* Card title and subtitle */}
             <div className="w-full lg:w-2/5 lg:border-right lg:border-solid text-center md:text-left">
               <h3>SWCOM STORE by valor tactical</h3>
@@ -109,7 +109,7 @@ function Dealer() {
             </div>
             {/* ./Card description */}
             {/* Call to action button */}
-            <div className="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
+            <div className="w-full lg:w-1/5 mt-6 lg:mt-2 lg:px-4 text-center md:text-left">
               <button className="bg-white hover:bg-grey-darker hover:text-black border border-solid border-grey w-1/3 lg:w-full py-2"
               onClick={() => window.location.href = "https://www.google.com/maps/place/SWCOM+STORE+by+valor+tactical/@14.8016952,100.6181361,17z/data=!3m1!4b1!4m6!3m5!1s0x311e01d930ffa68d:0xa485893a2095534f!8m2!3d14.80169!4d100.620711!16s%2Fg%2F11s7w9p55n?entry=ttu"}>
                 Map
