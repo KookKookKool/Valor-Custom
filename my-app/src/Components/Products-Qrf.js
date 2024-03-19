@@ -6,6 +6,7 @@ import Card1 from "../QRF/QRF1Card";
 import Card2 from "../QRF/QRF2Card";
 import Card3 from "../QRF/QRF3Card";
 import Card4 from "../QRF/QRF4Card";
+import Card5 from "../QRF/QRF5Card";
 
 import Back from "../Asset/icon/Back.png";
 
@@ -68,6 +69,16 @@ export default function Products() {
             <Card4 />
           </Link>
         </div>
+
+        <div className="Link">
+          <Link
+            to="/Shirt/QRF5"
+            onClick={() => setIsProductsitemOpen(false)}
+          >
+            <Card5 />
+          </Link>
+        </div>
+
       </ul>
      
       

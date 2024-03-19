@@ -102,7 +102,7 @@ function NavyFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOpt
       "คุณต้องการย้อนกลับ โดยรายการจะไม่ถูกบันทึกหรือไม่ ?"
     );
     if (confirmed) {
-      navigate("/Shirt");
+      navigate("/T-Shirt/T-shirt");
     }
   };
 

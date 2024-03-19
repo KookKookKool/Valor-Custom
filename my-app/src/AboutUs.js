@@ -5,15 +5,13 @@ function AboutUs() {
   return (
     <div>
         <Header/>
-        <div className="relative px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
-        <div className="text-center">
-      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        About Us
-      </h2>
-      <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
-      </p>
-    </div>
-        <div className="relative  px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
+        <div className="flex justify-center flex-col px-5 py-24 mx-auto bg-white max-w-[1600px]">
+        <div className="flex flex-col text-center w-full mb-12">
+            <h1 className="sm:text-3xl  text-2xl font-medium title-font mb-4 text-gray-900">
+              About Us
+            </h1>
+          </div>
+        <div className="relative  px-6 pt-4 pb-20 lg:px-8 lg:pt-4 lg:pb-28">
         <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
   <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
     <div className="max-w-lg">

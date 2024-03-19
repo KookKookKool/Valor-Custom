@@ -91,6 +91,7 @@ import AboutUs from "./AboutUs";
 import Service from "./Service";
 import Contact from "./Contact-Us";
 import Product from "./Product";
+import Dealer from "./Dealer";
 
 import Login from "./Login";
 import Register from "./Register";
@@ -110,6 +111,7 @@ export default function App() {
         <Route path="/Product" element={<Product />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Service" element={<Service />} />
+        <Route path="/Dealer" element={<Dealer />} />
 
         <Route path="/login" element={<Login />} />
 
