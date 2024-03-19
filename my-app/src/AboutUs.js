@@ -12,7 +12,7 @@ function AboutUs() {
             </h1>
           </div>
         <div className="relative  px-6 pt-4 pb-20 lg:px-8 lg:pt-4 lg:pb-28">
-        <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto py-2 px-4 sm:px-6 lg:px-8">
   <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
     <div className="max-w-lg">
       <h2 className="text-3xl font-extrabold text-black sm:text-4xl">
