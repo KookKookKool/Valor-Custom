@@ -90,6 +90,12 @@ import QRFNF from "./QRF/1/QRF-N-F";
 import QRFGF from "./QRF/1/QRF-G-F";
 
 
+import QRF2BF from "./QRF/2/QRF-B-F";
+import QRF2WF from "./QRF/2/QRF-W-F";
+import QRF2NF from "./QRF/2/QRF-N-F";
+import QRF2GF from "./QRF/2/QRF-G-F";
+
+
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
 
@@ -205,13 +211,19 @@ export default function App() {
         <Route path="/Custom-Design/Preview-Navy" element={<PreviewNavy/>} />
         <Route path="/Custom-Design/Preview-Green" element={<PreviewGreen/>} />
 
-        {/*QRF*/}
+        {/*QRF1*/}
 
         <Route path="Shirt/QRF1" element={<QRFBF />} />
         <Route path="Shirt/QRF1_2" element={<QRFWF />} />
         <Route path="Shirt/QRF1_3" element={<QRFGF />} />
         <Route path="Shirt/QRF1_4" element={<QRFNF />} />
 
+        {/*QRF2*/}
+
+        <Route path="Shirt/QRF2" element={<QRF2BF />} />
+        <Route path="Shirt/QRF2_2" element={<QRF2WF />} />
+        <Route path="Shirt/QRF2_3" element={<QRF2GF />} />
+        <Route path="Shirt/QRF2_4" element={<QRF2NF />} />
 
         {/*Patch*/}
         <Route path="/LaserPatch" element={<LaserPatch />} />

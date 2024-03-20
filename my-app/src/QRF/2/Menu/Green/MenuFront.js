@@ -6,9 +6,9 @@ const MenuW = () => {
   return (
     <nav className="MenuW">
       <h4 className="HeaderMenuWhite">Position</h4>
-      <h4 className="HeaderMenuWhite mt-1">ตำแหน่งบนสินค้า</h4>
+      <h4 className="HeaderMenuWhite">ตำแหน่งบนสินค้า</h4>
       <div className="Menu-icons">
-        <Link to="/Shirt/QRF1">
+        <Link to="/T-shirt/White-Front">
           <div className="Btn1">หน้า</div>
         </Link>
         <Link to="/T-shirt/White-Back">

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Black from "../Asset/icon/Black.png";
-import Navy from "../Asset/icon/Navi.png";
-import Green from "../Asset/icon/Green.png";
-import Crimson from "../Asset/icon/Crimson.png";
+import Black from "../../Asset/icon/Black.png";
+import White from "../../Asset/icon/White.png";
+import Navy from "../../Asset/icon/Navi.png";
+import Green from "../../Asset/icon/Green.png";
+
 
 
 const Navigation = () => {
@@ -22,23 +23,23 @@ const Navigation = () => {
 
       <div className="Menu-iconsWhite">
         <div className={`Icon ${selectedIcon === "White" ? "active" : ""}`}>
-          <Link to="/Shirt/ProperFrontBlack" onClick={() => handleIconClick("White")}>
-            <img src={Black} alt="WhiteIcon" />
-          </Link>
-        </div>
-        <div className={`Icon ${selectedIcon === "Green" ? "active" : ""}`}>
-          <Link to="/Shirt/ProperFrontGreen" onClick={() => handleIconClick("Green")}>
-            <img src={Green} alt="GreenIcon" />
-          </Link>
-        </div>
-        <div className={`Icon1 ${selectedIcon === "Navy" ? "active" : ""}`}>
-          <Link to="/Shirt/ProperFrontNavy" onClick={() => handleIconClick("Navy")}>
-            <img src={Navy} alt="NavyIcon" />
+          <Link to="/Shirt/QRF2" onClick={() => handleIconClick("White")}>
+            <img src={Black} alt="Blackicon" />
           </Link>
         </div>
         <div className={`Icon ${selectedIcon === "Navy" ? "active" : ""}`}>
-          <Link to="/Shirt/ProperFrontCrimson" onClick={() => handleIconClick("Crimson")}>
-            <img src={Crimson} alt="NavyIcon" />
+          <Link to="/Shirt/QRF2_2" onClick={() => handleIconClick("Crimson")}>
+            <img src={White} alt="WhiteIcon" />
+          </Link>
+        </div>
+        <div className={`Icon1 ${selectedIcon === "Green" ? "active" : ""}`}>
+          <Link to="/Shirt/QRF2_3" onClick={() => handleIconClick("Green")}>
+            <img src={Green} alt="GreenIcon" />
+          </Link>
+        </div>
+        <div className={`Icon ${selectedIcon === "Navy" ? "active" : ""}`}>
+          <Link to="/Shirt/QRF2_4" onClick={() => handleIconClick("Navy")}>
+            <img src={Navy} alt="NavyIcon" />
           </Link>
         </div>
       </div>
