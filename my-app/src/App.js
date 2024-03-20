@@ -83,6 +83,12 @@ import OperativeFrontBlack from "./Operative-Tee/OperativeFrontBlack";
 
 import OperativeFrontGrey from "./Operative-Tee/OperativeFrontGrey";
 
+//QRF
+import QRFBF from "./QRF/1/QRF-B-F";
+import QRFWF from "./QRF/1/QRF-W-F";
+import QRFNF from "./QRF/1/QRF-N-F";
+import QRFGF from "./QRF/1/QRF-G-F";
+
 
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
@@ -198,6 +204,14 @@ export default function App() {
         <Route path="/Custom-Design/Preview-Black" element={<PreviewBlack/>} />
         <Route path="/Custom-Design/Preview-Navy" element={<PreviewNavy/>} />
         <Route path="/Custom-Design/Preview-Green" element={<PreviewGreen/>} />
+
+        {/*QRF*/}
+
+        <Route path="Shirt/QRF1" element={<QRFBF />} />
+        <Route path="Shirt/QRF1_2" element={<QRFWF />} />
+        <Route path="Shirt/QRF1_3" element={<QRFGF />} />
+        <Route path="Shirt/QRF1_4" element={<QRFNF />} />
+
 
         {/*Patch*/}
         <Route path="/LaserPatch" element={<LaserPatch />} />
