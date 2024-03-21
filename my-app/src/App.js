@@ -83,18 +83,26 @@ import OperativeFrontBlack from "./Operative-Tee/OperativeFrontBlack";
 
 import OperativeFrontGrey from "./Operative-Tee/OperativeFrontGrey";
 
-//QRF
+//QRF1
 import QRFBF from "./QRF/1/QRF-B-F";
 import QRFWF from "./QRF/1/QRF-W-F";
 import QRFNF from "./QRF/1/QRF-N-F";
 import QRFGF from "./QRF/1/QRF-G-F";
 
-
+//QRF2
 import QRF2BF from "./QRF/2/QRF-B-F";
 import QRF2WF from "./QRF/2/QRF-W-F";
 import QRF2NF from "./QRF/2/QRF-N-F";
 import QRF2GF from "./QRF/2/QRF-G-F";
 
+//QRF3
+import QRF3BF from "./QRF/3/QRF-B-F";
+import QRF3GF from "./QRF/3/QRF-G-F";
+import QRF3NF from "./QRF/3/QRF-N-F";
+
+//QRF4
+import QRF4WF from "./QRF/4/QRF-W-F";
+import QRF4GF from "./QRF/4/QRF-G-F";
 
 import UserInfo from "./Custom-Design/UserInfo";
 import Payment from "./Payment/Payment";
@@ -224,6 +232,15 @@ export default function App() {
         <Route path="Shirt/QRF2_2" element={<QRF2WF />} />
         <Route path="Shirt/QRF2_3" element={<QRF2GF />} />
         <Route path="Shirt/QRF2_4" element={<QRF2NF />} />
+
+        {/*QRF3*/}
+        <Route path="Shirt/QRF3" element={<QRF3BF />} />
+        <Route path="Shirt/QRF3_2" element={<QRF3GF />} />
+        <Route path="Shirt/QRF3_3" element={<QRF3NF />} />
+
+        {/*QRF4*/}
+        <Route path="Shirt/QRF4" element={<QRF4WF />} />
+        <Route path="Shirt/QRF4_2" element={<QRF4GF />} />
 
         {/*Patch*/}
         <Route path="/LaserPatch" element={<LaserPatch />} />

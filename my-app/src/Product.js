@@ -21,7 +21,7 @@ function Product() {
     
     {/*   ✅ Product card 1 - Starts Here 👇 */}
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">       
-      <a href="#">
+      <a href="/Shirt/QRF1">
         <img
           src="/T-Shirt/QRF/QRF1/QRF1.png"
           alt="Product"
@@ -58,7 +58,7 @@ function Product() {
     </div>
     {/*   ✅ Product card 2 - Starts Here 👇 */}
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-      <a href="#">
+      <a href="/Shirt/QRF2">
         <img
           src="/T-Shirt/QRF/QRF2/QRF2_1.png"
           alt="Product"
@@ -95,7 +95,7 @@ function Product() {
     </div>
     {/*   ✅ Product card 3 - Starts Here 👇 */}
     <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-      <a href="#">
+      <a href="/Shirt/QRF3">
         <img
           src="/T-Shirt/QRF/QRF3/QRF3Black.png"
           alt="Product"

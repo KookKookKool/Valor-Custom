@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./Products.css";
 import Card1 from "../T-shirt/Index";
 //import Card2 from "../Combatshirt/Index";
-import Card3 from "../Cup/Index";
+//import Card3 from "../Cup/Index";
 import Card4 from "../LaserPatch/Index";
 
 import Back from "../Asset/icon/Back.png";
@@ -50,11 +50,11 @@ export default function Products() {
             <Card4 />
           </Link>
         </div>
-        <div className="Link">
+        {/*<div className="Link">
           <Link to="/Cup/Cup" onClick={() => setIsProductsitemOpen(false)}>
             <Card3 />
           </Link>
-        </div>
+        </div>*/}
       </ul>
      
       
