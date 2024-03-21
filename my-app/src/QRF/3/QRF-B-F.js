@@ -160,7 +160,7 @@ function WhiteFront({ uploadedImageFront, setUploadedImageFront, setImageStyleOp
         <img id="Logo" src={require("../../logo.png")} alt="img" />
         <div className="Frame1">
           <div>
-            <h3 className="CenteredHeader">QRF II</h3>
+            <h3 className="CenteredHeader">QRF III</h3>
           </div>
           <div className="BoxDown">
             <div className="Box2">
